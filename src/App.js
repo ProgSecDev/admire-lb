@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Route, Routes, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Routes,
+  useLocation,
+} from "react-router-dom";
 import { Element, scroller } from "react-scroll";
 
 import Nav from "./Components/Nav";
@@ -17,9 +22,9 @@ const AppContent = () => {
   // Function to handle scrolling with a custom duration
   const scrollTo = (name) => {
     scroller.scrollTo(name, {
-      duration: 800, // Set the duration in milliseconds (e.g., 1000ms = 1 second)
+      duration: 800,
       delay: 0,
-      smooth: "easeInOutQuad", // You can choose different easing functions
+      smooth: "easeInOutQuad",
     });
   };
 
@@ -27,27 +32,8 @@ const AppContent = () => {
     <>
       {/* Conditionally render Nav */}
       {location.pathname !== "/recipes" && <Nav />}
-      
-      {/* Main Sections that should always be visible on the root page 
-      {location.pathname.toLowerCase().startsWith("/spicy") && (
-        <>
-          <Element name="home">
-            <Home />
-          </Element>
-          <Element name="story">
-            <Story />
-          </Element>
-          <Element name="product">
-            <Product />
-          </Element>
-          <Element name="footer">
-            <Footer />
-          </Element>
-        </>
-      )}
-      */}
-      
-      {/* Routes for other pages */}
+
+      {/* Routes */}
       <Routes>
         <Route path="/spicy" element={<SpicyPage />} />
         <Route path="/recipes" element={<Recipes />} />
@@ -58,7 +44,8 @@ const AppContent = () => {
 
 const App = () => {
   return (
-    <Router>
+    // 👇 THIS IS THE FIX for GitHub Pages
+    <Router basename="/Spicy-Food">
       <AppContent />
     </Router>
   );
