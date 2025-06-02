@@ -35,6 +35,7 @@ const AppContent = () => {
 
       {/* Routes */}
       <Routes>
+        <Route path="/" element={<SpicyPage />} />
         <Route path="/spicy" element={<SpicyPage />} />
         <Route path="/recipes" element={<Recipes />} />
       </Routes>
