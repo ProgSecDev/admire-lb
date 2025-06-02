@@ -53,8 +53,8 @@ function Nav() {
   };
 
   const handlePrivateLabelClick = () => {
-    if (location.pathname !== "/Spicy") {
-      navigate("/Spicy");
+    if (location.pathname !== "/Spicy-Food") {
+      navigate("/Spicy-Food");
       setTimeout(() => {
         scrollToSection("labels");
       }, 200);
