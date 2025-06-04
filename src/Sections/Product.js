@@ -1,46 +1,58 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import backgroundImage from "../assets/product.jpg";
-import steak from "../assets/steak.png";
-import seafood from "../assets/sea.png";
-import chicken from "../assets/chicken.png";
-import potato from "../assets/potato.png";
-import pasta from "../assets/italian.png";
-import mexican from "../assets/mexican.png";
+import blackpepper from '../assets/Powders/black pepper.jpg';
+import chilliflakes from '../assets/Powders/chilli-flakes.jpg';
+import cinnamon from '../assets/Powders/cinnamon.jpg';
+import cumin from '../assets/Powders/cumin.jpg';
+import curry from '../assets/Powders/curry.jpg';
+import paprika from '../assets/Powders/paprika.jpg';
+import redchilli from '../assets/Powders/red chilli.jpg';
+import sevenspices from '../assets/Powders/seven spices.jpg';
+import sumac from '../assets/Powders/sumac.jpg';
+import turmeric from '../assets/Powders/turmeric.jpg'
+import whitepepper from '../assets/Powders/white pepper.jpg';
+import chicken from '../assets/Blends/chicken.jpg';
+import italian from '../assets/Blends/italian.jpg';
+import lemonpepper from '../assets/Blends/lemon pepper.jpg';
+import mexican from '../assets/Blends/mexican.jpg';
+import potato from '../assets/Blends/potato.jpg';
+import seafood from '../assets/Blends/seafood.jpg';
+import steak from '../assets/Blends/steak.jpg';
+import blackP from '../assets/Powders/blackP.png';
+import chickenC from '../assets/Blends/chickenC.png';
 
 function Product() {
   const [selectedId, setSelectedId] = useState(null);
   const [detailProduct, setDetailProduct] = useState(null);
 
   const productsLeft = [
-    { name: "Powder 1", description: "Steak Marinade", image: steak, recipe: "Recipe for Steak." },
-    { name: "Powder 2", description: "Seafood Seasoning", image: seafood, recipe: "Seafood recipe." },
-    { name: "Powder 3", description: "Chicken Rub", image: chicken, recipe: "Chicken recipe." },
-    { name: "Powder 4", description: "Potato Mix", image: potato, recipe: "Potato recipe." },
-    { name: "Powder 5", description: "Italian Pasta", image: pasta, recipe: "Pasta recipe." },
-    { name: "Powder 6", description: "Mexican Spice", image: mexican, recipe: "Mexican recipe." },
-    { name: "Powder 7", description: "Tangy Blend", image: steak, recipe: "Tangy blend recipe." },
-    { name: "Powder 8", description: "8", image: steak, recipe: "Tangy blend recipe." },
-    { name: "Powder 9", description: "9", image: steak, recipe: "Tangy blend recipe." },
-    { name: "Powder 10", description: "10", image: steak, recipe: "Tangy blend recipe." },
-    { name: "Powder 11", description: "11", image: steak, recipe: "Tangy blend recipe." },
-    { name: "Powder 12", description: "12", image: steak, recipe: "Tangy blend recipe." },
-    { name: "Powder 13", description: "13", image: steak, recipe: "Tangy blend recipe." }
+    { name: "Powder 1", description: "Black Pepper", image: blackpepper, recipe: "Recipe for Black Pepper." },
+    { name: "Powder 2", description: "Chilli Flakes", image: chilliflakes, recipe: "Chilli Flakes Recipe." },
+    { name: "Powder 3", description: "Cinnamon", image: cinnamon, recipe: "Cinnamon Recipe." },
+    { name: "Powder 4", description: "Cumin", image: cumin, recipe: "Cumin Recipe." },
+    { name: "Powder 5", description: "Curry", image: curry, recipe: "Curry Recipe." },
+    { name: "Powder 6", description: "Paprika", image: paprika, recipe: "Paprika Recipe." },
+    { name: "Powder 7", description: "Red Chilli", image: redchilli, recipe: "Red Chilli Recipe." },
+    { name: "Powder 8", description: "Seven Spices", image: sevenspices, recipe: "Seven Spices Recipe." },
+    { name: "Powder 9", description: "Sumac", image: sumac, recipe: "Sumac Recipe." },
+    { name: "Powder 10", description: "Turmeric", image: turmeric, recipe: "Turmeric Recipe." },
+    { name: "Powder 11", description: "White Pepper", image: whitepepper, recipe: "White Pepper Recipe." }
   ];
 
   const productsRight = [
-    { name: "Blend 1", description: "Lemon Herb", image: seafood, recipe: "Lemon herb recipe." },
-    { name: "Blend 2", description: "Chili Garlic", image: chicken, recipe: "Chili garlic recipe." },
-    { name: "Blend 3", description: "Smoky BBQ", image: potato, recipe: "Smoky BBQ recipe." },
-    { name: "Blend 4", description: "Savory Onion", image: pasta, recipe: "Savory onion recipe." },
-    { name: "Blend 5", description: "Fiesta Mix", image: mexican, recipe: "Fiesta blend recipe." },
-    { name: "Blend 6", description: "Zesty Citrus", image: steak, recipe: "Zesty citrus seasoning." },
-    { name: "Blend 7", description: "Classic Salt", image: seafood, recipe: "Classic salt seasoning." }
+    { name: "Blend 1", description: "Chicken", image: chicken, recipe: "Chicken Recipe." },
+    { name: "Blend 2", description: "Italian", image: italian, recipe: "Italian Recipe." },
+    { name: "Blend 3", description: "Lemon Pepper", image: lemonpepper, recipe: "Lemon Pepper Recipe." },
+    { name: "Blend 4", description: "Mexican", image: mexican, recipe: "Mexican Recipe." },
+    { name: "Blend 5", description: "Potato", image: potato, recipe: "Potato Recipe." },
+    { name: "Blend 6", description: "Sea Food", image: seafood, recipe: "Sea Food Recipe." },
+    { name: "Blend 7", description: "Steak", image: steak, recipe: "Steak Recipe." }
   ];
 
   const groups = [
-    { id: "Powder 1", title: "POWDERS", data: productsLeft },
-    { id: "Blend 1", title: "BLENDS", data: productsRight },
+    { id: "Powder 1", title: "POWDERS", data: productsLeft, image: blackP },
+    { id: "Blend 1", title: "BLENDS", data: productsRight, image: chickenC },
   ];
 
   const handleCategoryClick = (id) => {
@@ -81,7 +93,7 @@ function Product() {
 
         <div className="bg-[#6F6D39] rounded-6xl shadow-2xl mx-auto mb-24 px-4 sm:px-28 p-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
-            {groups.map(({ id, title, data }, idx) => (
+            {groups.map(({ id, title, image }, idx) => (
               <motion.div
                 key={idx}
                 layoutId={id}
@@ -89,8 +101,8 @@ function Product() {
                 onClick={() => handleCategoryClick(id)}
               >
                 <img
-                  src={data[0].image}
-                  alt={data[0].name}
+                  src={image}
+                  alt={title}
                   className="w-36 h-56 object-cover rounded-lg mb-4 sm:mb-0 sm:mr-4"
                 />
                 <div className="flex flex-col justify-center items-center sm:items-start">
@@ -101,13 +113,6 @@ function Product() {
                   >
                     {title}
                   </motion.h2>
-                  <motion.h5
-                    layoutId={`subtitle-${id}`}
-                    className={`text-3xl text-white`}
-                    style={{ fontFamily: "Aldhabi, serif" }}
-                  >
-                    {data[0].description}
-                  </motion.h5>
                 </div>
               </motion.div>
             ))}
