@@ -51,30 +51,6 @@ function PrivateLabels() {
     { id: "Label D1", title: "Silver Vaccum BAG", data: premiums },
   ];
 
-  const getCategoryByLabel = (label) => {
-    if (!label) return [];
-    if (label.startsWith("Label A")) return formulations;
-    if (label.startsWith("Label B")) return specialties;
-    if (label.startsWith("Label C")) return exclusives;
-    if (label.startsWith("Label D")) return premiums;
-    return [];
-  };
-
-  const handleLabelClick = (id) => {
-    setSelectedLabel(id);
-  };
-
-  const handleCloseOverlay = () => {
-    setSelectedLabel(null);
-    setLabelDetail(null);
-  };
-
-  const handleDetailClick = (item) => {
-    setLabelDetail(item);
-  };
-
-  const selectedList = getCategoryByLabel(selectedLabel);
-
   return (
     <div className="relative min-h-screen flex justify-center items-center">
       <div
@@ -101,8 +77,7 @@ function PrivateLabels() {
               <motion.div
                 key={idx}
                 layoutId={id}
-                className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left p-4 sm:p-4 rounded-lg cursor-pointer"
-                onClick={() => handleLabelClick(id)}
+                className="flex flex-col sm:flex-row items-center justify-center text-center sm:text-left p-4 sm:p-4 rounded-lg cursor-default"
               >
                 <img
                   src={data[0].image}
@@ -119,7 +94,7 @@ function PrivateLabels() {
                   </motion.h2>
                   <motion.h5
                     layoutId={`subtitle-${id}`}
-                    className={`text-3xl text-white`}
+                    className="text-3xl text-white"
                     style={{ fontFamily: "Aldhabi, serif" }}
                   >
                     {data[0].claim}
@@ -130,71 +105,6 @@ function PrivateLabels() {
           </div>
         </div>
       </div>
-
-      <AnimatePresence>
-        {selectedLabel && (
-          <motion.div
-            layoutId={selectedLabel}
-            className="fixed inset-0 bg-white z-50 flex flex-col justify-start items-start p-4 md:p-6 overflow-y-auto"
-          >
-            <motion.button
-              layoutId={`close-${selectedLabel}`}
-              className="absolute top-4 right-4 text-3xl text-black"
-              onClick={handleCloseOverlay}
-            >
-              &times;
-            </motion.button>
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
-              {selectedList.map((item, i) => (
-                <div
-                  key={i}
-                  className="flex flex-col items-start text-center gap-2 mt-4 p-2 border rounded shadow-sm"
-                >
-                  <motion.h5 className="text-sm text-black font-calibri w-full text-center">
-                    {item.claim}
-                  </motion.h5>
-                  <motion.h2 className="text-lg w-full text-center">
-                    {item.name}
-                  </motion.h2>
-                  <motion.img
-                    src={item.image}
-                    alt={item.name}
-                    className="w-32 h-32 object-contain rounded-lg mx-auto"
-                  />
-                  <motion.button
-                    className="mt-2 px-4 py-1 bg-black text-white text-xs rounded mx-auto"
-                    onClick={() => handleDetailClick(item)}
-                  >
-                    Details
-                  </motion.button>
-                </div>
-              ))}
-            </div>
-
-            {labelDetail && (
-              <motion.div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-                <div className="bg-white p-6 rounded shadow-lg max-w-md w-full text-center">
-                  <h2 className="text-xl font-semibold mb-2">{labelDetail.name}</h2>
-                  <img
-                    src={labelDetail.image}
-                    alt={labelDetail.name}
-                    className="w-32 h-32 object-contain mx-auto mb-2"
-                  />
-                  <p className="text-sm mb-4">
-                    {labelDetail.spec}
-                  </p>
-                  <button
-                    className="px-4 py-1 bg-black text-white text-xs rounded"
-                    onClick={() => setLabelDetail(null)}
-                  >
-                    Close
-                  </button>
-                </div>
-              </motion.div>
-            )}
-          </motion.div>
-        )}
-      </AnimatePresence>
     </div>
   );
 }
