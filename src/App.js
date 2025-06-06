@@ -45,8 +45,7 @@ const AppContent = () => {
 
 const App = () => {
   return (
-    // 👇 THIS IS THE FIX for GitHub Pages
-    <Router basename="/Spicy-Food">
+    <Router basename="/spicy-food">
       <AppContent />
     </Router>
   );

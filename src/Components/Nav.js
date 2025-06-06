@@ -53,15 +53,15 @@ function Nav() {
   };
 
   const handlePrivateLabelClick = () => {
-    if (location.pathname !== "/Spicy-Food") {
-      navigate("/Spicy-Food");
-      setTimeout(() => {
-        scrollToSection("labels");
-      }, 200);
-    } else {
+  if (location.pathname === "/" || location.pathname === "/spicy") {
+    scrollToSection("labels");
+  } else {
+    navigate("/");
+    setTimeout(() => {
       scrollToSection("labels");
-    }
-  };
+    }, 300);
+  }
+};
 
   return (
     <nav
