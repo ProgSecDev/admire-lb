@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
-import one from "../assets/story1.jpeg";
-import two from "../assets/story2.jpeg";
-import three from "../assets/story3.jpeg";
+import one from "../assets/Banners/story1.jpeg";
+import two from "../assets/Banners/story2.jpeg";
+import three from "../assets/Banners/story3.jpeg";
 
 function Story() {
   const leftColumnRef = useRef(null);

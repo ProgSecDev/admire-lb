@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from "react";
 import { scroller } from "react-scroll";
 import { Link, useNavigate, useLocation } from "react-router-dom";
-import logo from "../assets/logo.png";
+import logo from "../assets/Logos and Favicons/logo.png";
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);

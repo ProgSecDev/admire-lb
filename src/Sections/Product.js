@@ -1,26 +1,28 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import backgroundImage from "../assets/product.jpg";
-import blackpepper from '../assets/Powders/black pepper.jpg';
-import chilliflakes from '../assets/Powders/chilli-flakes.jpg';
-import cinnamon from '../assets/Powders/cinnamon.jpg';
-import cumin from '../assets/Powders/cumin.jpg';
-import curry from '../assets/Powders/curry.jpg';
-import paprika from '../assets/Powders/paprika.jpg';
-import redchilli from '../assets/Powders/red chilli.jpg';
-import sevenspices from '../assets/Powders/seven spices.jpg';
-import sumac from '../assets/Powders/sumac.jpg';
-import turmeric from '../assets/Powders/turmeric.jpg'
-import whitepepper from '../assets/Powders/white pepper.jpg';
-import chicken from '../assets/Blends/chicken.jpg';
-import italian from '../assets/Blends/italian.jpg';
-import lemonpepper from '../assets/Blends/lemon pepper.jpg';
-import mexican from '../assets/Blends/mexican.jpg';
-import potato from '../assets/Blends/potato.jpg';
-import seafood from '../assets/Blends/seafood.jpg';
-import steak from '../assets/Blends/steak.jpg';
-import blackP from '../assets/Powders/blackP.png';
-import chickenC from '../assets/Blends/chickenC.png';
+import backgroundImage from "../assets/Banners/product.jpg";
+import blackpepper from '../assets/Our Products/Powders/black pepper.jpg';
+import chilliflakes from '../assets/Our Products/Powders/chilli-flakes.jpg';
+import cinnamon from '../assets/Our Products/Powders/cinnamon.jpg';
+import cumin from '../assets/Our Products/Powders/cumin.jpg';
+import curry from '../assets/Our Products/Powders/curry.jpg';
+import paprika from '../assets/Our Products/Powders/paprika.jpg';
+import redchilli from '../assets/Our Products/Powders/red chilli.jpg';
+import sevenspices from '../assets/Our Products/Powders/seven spices.jpg';
+import sumac from '../assets/Our Products/Powders/sumac.jpg';
+import turmeric from '../assets/Our Products/Powders/turmeric.jpg'
+import whitepepper from '../assets/Our Products/Powders/white pepper.jpg';
+import chicken from '../assets/Our Products/Blends/chicken.jpg';
+import italian from '../assets/Our Products/Blends/italian.jpg';
+import lemonpepper from '../assets/Our Products/Blends/lemon pepper.jpg';
+import mexican from '../assets/Our Products/Blends/mexican.jpg';
+import potato from '../assets/Our Products/Blends/potato.jpg';
+import seafood from '../assets/Our Products/Blends/seafood.jpg';
+import steak from '../assets/Our Products/Blends/steak.jpg';
+import blackP from '../assets/Our Products/Powders/blackP.png';
+import chickenC from '../assets/Our Products/Blends/chickenC.png';
+import keshek from '../assets/Our Products/Zaatar + Kishek/keshek.jpg';
+import zaatar from '../assets/Our Products/Zaatar + Kishek/zaatar.jpg';
 
 function Product() {
   const [selectedId, setSelectedId] = useState(null);
@@ -37,7 +39,9 @@ function Product() {
     { name: "Powder 8", description: "Seven Spices", image: sevenspices, recipe: "Seven Spices Recipe." },
     { name: "Powder 9", description: "Sumac", image: sumac, recipe: "Sumac Recipe." },
     { name: "Powder 10", description: "Turmeric", image: turmeric, recipe: "Turmeric Recipe." },
-    { name: "Powder 11", description: "White Pepper", image: whitepepper, recipe: "White Pepper Recipe." }
+    { name: "Powder 11", description: "White Pepper", image: whitepepper, recipe: "White Pepper Recipe." },
+    { name: "Powder 12", description: "Keshek", image: keshek, recipe: "Keshek Recipe." },
+    { name: "Powder 13", description: "Zaatar", image: zaatar, recipe: "Zaatar Recipe." }
   ];
 
   const productsRight = [

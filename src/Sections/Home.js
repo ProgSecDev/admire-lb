@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from "react";
 import { Carousel } from 'react-responsive-carousel';
 import 'react-responsive-carousel/lib/styles/carousel.min.css'; // Import carousel styles
-import backgroundImage1 from "../assets/bg5.jpg";
-import backgroundImage2 from "../assets/bg4.jpg";
-import backgroundImage3 from "../assets/bg3.jpg";
+import backgroundImage1 from "../assets/Banners/bg5.jpg";
+import backgroundImage2 from "../assets/Banners/bg4.jpg";
+import backgroundImage3 from "../assets/Banners/bg3.jpg";
 import "../Style/Home.css";
 
 function Home() {
