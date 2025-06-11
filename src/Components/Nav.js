@@ -18,7 +18,7 @@ function Nav() {
 
   const changeNavbarBg = () => {
     if (window.scrollY >= 50) {
-      setNavbarBg("transparent");
+      setNavbarBg("rgba(197, 113, 58, 0.5)");
       setTextColor("text-white");
       setTextFont("text-1xl");
       setLogoSize("h-32");
@@ -65,7 +65,7 @@ function Nav() {
 
   return (
     <nav
-      className={`navbar p-4 ${textColor} fixed top-0 w-full z-30 transition duration-300 ease-in-out`}
+      className={`navbar p-4 ${textColor} fixed top-0 w-full z-30 transition-colors duration-500 ease-in-out`}
       style={{ backgroundColor: navbarBg }}
     >
       <div
@@ -73,7 +73,10 @@ function Nav() {
         style={{ fontFamily: "Bookman Old Style, serif", fontWeight: 100 }}
       >
         <div className="lg:hidden">
-          <button className="text-white focus:outline-none" onClick={toggleMenu}>
+          <button
+            className="text-white focus:outline-none"
+            onClick={toggleMenu}
+          >
             <svg
               className="h-6 w-6"
               fill="none"
@@ -110,10 +113,15 @@ function Nav() {
           </div>
 
           <div className="relative group px-4 py-2 cursor-pointer">
-            <div className="hover:text-orange-200 whitespace-nowrap">Products</div>
+            <div
+              className="hover:text-orange-200 whitespace-nowrap"
+              onClick={() => scrollToSection("product")}
+            >
+              Products
+            </div>
             <div className="absolute hidden group-hover:block mt-2 bg-[#6F6D39] text-white shadow-md rounded-md whitespace-nowrap">
-              <div className="px-4 py-2 hover:bg-[#C5713A] cursor-pointer" onClick={() => scrollToSection("grill")}>Grill Master</div>
-              <div className="px-4 py-2 hover:bg-[#C5713A] cursor-pointer" onClick={() => scrollToSection("spicy")}>Spicy Food</div>
+              {/*<div className="px-4 py-2 hover:bg-[#C5713A] cursor-pointer" onClick={() => scrollToSection("grill")}>Grill Master</div>*/}
+              {/*<div className="px-4 py-2 hover:bg-[#C5713A] cursor-pointer" onClick={() => scrollToSection("spicy")}>Spicy Food</div>*/}
             </div>
           </div>
         </div>
@@ -123,7 +131,7 @@ function Nav() {
             <img
               src={logo}
               alt="Logo"
-              className={`nav-logo ${logoSize} transition duration-300 ease-in-out`}
+              className={`nav-logo ${logoSize} transition duration-300 ease-in-out hidden`}
             />
           </div>
         )}

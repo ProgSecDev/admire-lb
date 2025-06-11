@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import backgroundImage from "../assets/Banners/product.jpg";
+import asianfoodbackground from '../assets/Our Products/high-angle-asian-food-background.jpg';
 import blackpepper from '../assets/Our Products/Powders/black pepper.jpg';
 import chilliflakes from '../assets/Our Products/Powders/chilli-flakes.jpg';
 import cinnamon from '../assets/Our Products/Powders/cinnamon.jpg';
@@ -10,7 +11,7 @@ import paprika from '../assets/Our Products/Powders/paprika.jpg';
 import redchilli from '../assets/Our Products/Powders/red chilli.jpg';
 import sevenspices from '../assets/Our Products/Powders/seven spices.jpg';
 import sumac from '../assets/Our Products/Powders/sumac.jpg';
-import turmeric from '../assets/Our Products/Powders/turmeric.jpg'
+import turmeric from '../assets/Our Products/Powders/turmeric.jpg';
 import whitepepper from '../assets/Our Products/Powders/white pepper.jpg';
 import chicken from '../assets/Our Products/Blends/chicken.jpg';
 import italian from '../assets/Our Products/Blends/italian.jpg';
@@ -29,29 +30,29 @@ function Product() {
   const [detailProduct, setDetailProduct] = useState(null);
 
   const productsLeft = [
-    { name: "Powder 1", description: "Black Pepper", image: blackpepper, recipe: "Recipe for Black Pepper." },
-    { name: "Powder 2", description: "Chilli Flakes", image: chilliflakes, recipe: "Chilli Flakes Recipe." },
-    { name: "Powder 3", description: "Cinnamon", image: cinnamon, recipe: "Cinnamon Recipe." },
-    { name: "Powder 4", description: "Cumin", image: cumin, recipe: "Cumin Recipe." },
-    { name: "Powder 5", description: "Curry", image: curry, recipe: "Curry Recipe." },
-    { name: "Powder 6", description: "Paprika", image: paprika, recipe: "Paprika Recipe." },
-    { name: "Powder 7", description: "Red Chilli", image: redchilli, recipe: "Red Chilli Recipe." },
-    { name: "Powder 8", description: "Seven Spices", image: sevenspices, recipe: "Seven Spices Recipe." },
-    { name: "Powder 9", description: "Sumac", image: sumac, recipe: "Sumac Recipe." },
-    { name: "Powder 10", description: "Turmeric", image: turmeric, recipe: "Turmeric Recipe." },
-    { name: "Powder 11", description: "White Pepper", image: whitepepper, recipe: "White Pepper Recipe." },
-    { name: "Powder 12", description: "Keshek", image: keshek, recipe: "Keshek Recipe." },
-    { name: "Powder 13", description: "Zaatar", image: zaatar, recipe: "Zaatar Recipe." }
+    { name: "Turmeric", description: "", image: blackpepper, recipe: "Ground Turmeric." },
+    { name: "Red Chili", description: "", image: chilliflakes, recipe: "Ground Red Chili." },
+    { name: "Cinnamon", description: "", image: cinnamon, recipe: "Ground Ceylon Cinnamon." },
+    { name: "Cumin", description: "", image: cumin, recipe: "Ground Cumin." },
+    { name: "Curry", description: "", image: curry, recipe: "Garlic, Coriander, Cumin, Turmeric, Ginger, Fenugreek, Cloves, Fennel, Mustard." },
+    { name: "Sumac", description: "", image: paprika, recipe: "Ground Sumac." },
+    { name: "White Pepper", description: "", image: redchilli, recipe: "Ground White Pepper." },
+    { name: "Black Pepper", description: "", image: sevenspices, recipe: "Ground Black Pepper." },
+    { name: "Paprika", description: "", image: sumac, recipe: "Ground Sweet Paprika." },
+    { name: "Seven Spices", description: "", image: turmeric, recipe: "Allspices, Black Pepper, Cinnamon, Cloves, Nutmeg, White Pepper, Mahlab." },
+    { name: "Chili Flakes", description: "", image: whitepepper, recipe: "Ground Chili Flakes." },
+    { name: "Zaatar", description: "", image: keshek, recipe: "Thyme, Sumac, Salt, Sesame." },
+    { name: "Kishek", description: "", image: zaatar, recipe: "Dried Yogurt, Salt, Bulgur, Wheat." }
   ];
 
   const productsRight = [
-    { name: "Blend 1", description: "Chicken", image: chicken, recipe: "Chicken Recipe." },
-    { name: "Blend 2", description: "Italian", image: italian, recipe: "Italian Recipe." },
-    { name: "Blend 3", description: "Lemon Pepper", image: lemonpepper, recipe: "Lemon Pepper Recipe." },
-    { name: "Blend 4", description: "Mexican", image: mexican, recipe: "Mexican Recipe." },
-    { name: "Blend 5", description: "Potato", image: potato, recipe: "Potato Recipe." },
-    { name: "Blend 6", description: "Sea Food", image: seafood, recipe: "Sea Food Recipe." },
-    { name: "Blend 7", description: "Steak", image: steak, recipe: "Steak Recipe." }
+    { name: "Seafood Blend", description: "", image: chicken, recipe: "Salt, White Pepper, Black Pepper, Coriander, Ginger Powder, Curry, Paprika, Cumin, Garlic Powder, Mustard Powder." },
+    { name: "Steak Blend", description: "", image: italian, recipe: "Coarse Garlic, Coarse Onion, Coarse Salt, Coriander, Coarse Black Pepper, Chili  Crushed, Paprika." },
+    { name: "Chicken Blend", description: "", image: lemonpepper, recipe: "Garlic Powder, Coarse Onion, Coarse Black Pepper, Coarse Garlic, Parsley, Coriander, Salt, Chili Crushed, Cinnamon Powder, Paprika, Thyme Powder, Oil." },
+    { name: "Potato Blend", description: "", image: mexican, recipe: "Salt, Sugar, Monosodium, Onion Powder, Paprika, Oil, Cornstrach." },
+    { name: "Italian Blend", description: "", image: potato, recipe: "Garlic Powder, Onion Powder, Salt, Chili Crushed, Black Pepper, Basil, Paprika, Oregano." },
+    { name: "Mexican Blend", description: "", image: seafood, recipe: "Paprika, Turmeric, Coriander, Cumin, Onion Powder, Fenugreek, Fennel, Salt, Garlic Powder, Black Pepper, Rosemary, Chili Crushed." },
+    { name: "Lemon Pepper Blend", description: "", image: steak, recipe: "Turmeric, Black Pepper, Citric Acid, Salt, Dried Lime." }
   ];
 
   const groups = [
@@ -128,15 +129,21 @@ function Product() {
         {selectedId && (
           <motion.div
             layoutId={selectedId}
-            className="fixed inset-0 bg-white z-50 flex flex-col justify-start items-start p-4 md:p-6 overflow-y-auto"
+            className="fixed inset-0 z-50 flex flex-col justify-start items-start p-4 md:p-6 overflow-y-auto"
+            style={{
+              backgroundImage: `url(${asianfoodbackground})`,
+              backgroundSize: "cover",
+              backgroundPosition: "center",
+              backgroundRepeat: "no-repeat",
+            }}
           >
-            <motion.button
+            {/* <motion.button
               layoutId={`close-${selectedId}`}
               className="absolute top-4 right-4 text-3xl text-black"
               onClick={handleCloseOverlay}
             >
               &times;
-            </motion.button>
+            </motion.button> */}
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
               {selectedProducts.map((prod, i) => (
                 <div
@@ -167,15 +174,15 @@ function Product() {
             {detailProduct && (
               <motion.div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
                 <div className="bg-white p-6 rounded shadow-lg max-w-md w-full text-center">
-                  <h2 className="text-xl font-semibold mb-2">{detailProduct.name}</h2>
+                  <h2 className="text-xl font-semibold mb-2">
+                    {detailProduct.name}
+                  </h2>
                   <img
                     src={detailProduct.image}
                     alt={detailProduct.name}
                     className="w-32 h-32 object-contain mx-auto mb-2"
                   />
-                  <p className="text-sm mb-4">
-                    {detailProduct.recipe}
-                  </p>
+                  <p className="text-sm mb-4">{detailProduct.recipe}</p>
                   <button
                     className="px-4 py-1 bg-black text-white text-xs rounded"
                     onClick={() => setDetailProduct(null)}
@@ -185,6 +192,16 @@ function Product() {
                 </div>
               </motion.div>
             )}
+
+            {/* <div className="sticky bottom-0 w-full bg-white bg-opacity-70 backdrop-blur-md py-4 flex justify-center z-50"> */}
+            <div className="sticky bottom-0 w-full py-4 flex justify-center z-50">
+              <button
+                className="bg-[#C5713A] hover:bg-[#a85c2f] text-white text-sm font-semibold px-6 py-2 rounded-full shadow-md transition duration-300"
+                onClick={handleCloseOverlay}
+              >
+                Back to the Home Page
+              </button>
+            </div>
           </motion.div>
         )}
       </AnimatePresence>

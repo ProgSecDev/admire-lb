@@ -1,6 +1,8 @@
 import React from "react";
 import logo from "../assets/Logos and Favicons/logo.png";
-import {FontAwesomeIcon} from "@fortawesome/react-fontawesome";
+import facebookicon from '../assets/Logos and Favicons/facebook.png';
+import instagramicon from '../assets/Logos and Favicons/instagram.png';
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMapMarkerAlt,
   faPhone,
@@ -12,12 +14,12 @@ function Footer() {
     <footer className="relative min-h-[33vh] flex flex-col">
       <div
         className="bg-zinc-900 flex items-center justify-center"
-        style={{height: "33%"}}
+        style={{ height: "33%" }}
       >
         <div className="text-white text-center bg-black p-4 w-80 mt-5 ml-5 shadow-lg">
           <h1
             className="text-3xl font-semibold"
-            style={{fontFamily: "Allura, cursive"}}
+            style={{ fontFamily: "Allura, cursive" }}
           >
             Get in Touch
           </h1>
@@ -65,44 +67,43 @@ function Footer() {
         </div>
 
         {/* Location Column */}
-        <div className="flex items-start justify-start">
-          <div className="text-white text-sm">
-            <div
-              className="text-6xl mb-2"
-              style={{fontFamily: "Aldhabi, serif"}}
-            >
-              Our Location
-            </div>
-            <div
-              className="text-4xl font-thin flex items-start"
-              style={{fontFamily: "Aldhabi, serif", fontWeight: "100"}}
-            >
-              <FontAwesomeIcon
-                icon={faMapMarkerAlt}
-                className="mr-2"
-                style={{fontSize: "1.5rem"}}
-              />
-              Khaldeh, Lebanon
-            </div>
-            <div className="text-xl font-thin flex items-start">
-              <FontAwesomeIcon
-                icon={faPhone}
-                className="mr-2"
-                style={{fontFamily: "Aldhabi, serif", fontWeight: "300"}}
-              />
-              +961 03 730 627
-            </div>
-            <div
-              className="text-3xl font-thin flex items-start"
-              style={{fontFamily: "Aldhabi, serif", fontWeight: "100"}}
-            >
-              <FontAwesomeIcon
-                icon={faEnvelope}
-                className="mr-2"
-                style={{fontSize: "1.5rem"}}
-              />
-              info@spicyfoodlb.com
-            </div>
+        <div className="flex flex-col items-start justify-start p-4 text-white text-sm space-y-4">
+          <a
+            href="https://www.google.com/maps/place/Khaldeh,+Lebanon"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center space-x-2 hover:underline"
+          >
+            <FontAwesomeIcon icon={faMapMarkerAlt} className="text-xl" />
+            <span className="text-lg font-semibold">Khaldeh, Lebanon</span>
+          </a>
+
+          <a
+            href="https://wa.me/96103730627"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center space-x-2 hover:underline"
+          >
+            <FontAwesomeIcon icon={faPhone} className="text-xl" />
+            <span className="text-lg">+961 03 730 627</span>
+          </a>
+
+          <a
+            href="mailto:info@spicyfoodlb.com"
+            className="flex items-center space-x-2 hover:underline"
+          >
+            <FontAwesomeIcon icon={faEnvelope} className="text-xl" />
+            <span className="text-lg font-semibold">info@spicyfoodlb.com</span>
+          </a>
+
+          {/* Social Media Icons */}
+          <div className="flex space-x-4 mt-4">
+            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
+              <img src={facebookicon} alt="Facebook" className="w-8 h-8" />
+            </a>
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+              <img src={instagramicon} alt="Instagram" className="w-8 h-8" />
+            </a>
           </div>
         </div>
       </div>
