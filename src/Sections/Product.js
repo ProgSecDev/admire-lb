@@ -30,29 +30,29 @@ function Product() {
   const [detailProduct, setDetailProduct] = useState(null);
 
   const productsLeft = [
-    { name: "Turmeric", description: "", image: blackpepper, recipe: "Ground Turmeric." },
-    { name: "Red Chili", description: "", image: chilliflakes, recipe: "Ground Red Chili." },
-    { name: "Cinnamon", description: "", image: cinnamon, recipe: "Ground Ceylon Cinnamon." },
-    { name: "Cumin", description: "", image: cumin, recipe: "Ground Cumin." },
-    { name: "Curry", description: "", image: curry, recipe: "Garlic, Coriander, Cumin, Turmeric, Ginger, Fenugreek, Cloves, Fennel, Mustard." },
-    { name: "Sumac", description: "", image: paprika, recipe: "Ground Sumac." },
-    { name: "White Pepper", description: "", image: redchilli, recipe: "Ground White Pepper." },
-    { name: "Black Pepper", description: "", image: sevenspices, recipe: "Ground Black Pepper." },
-    { name: "Paprika", description: "", image: sumac, recipe: "Ground Sweet Paprika." },
-    { name: "Seven Spices", description: "", image: turmeric, recipe: "Allspices, Black Pepper, Cinnamon, Cloves, Nutmeg, White Pepper, Mahlab." },
-    { name: "Chili Flakes", description: "", image: whitepepper, recipe: "Ground Chili Flakes." },
-    { name: "Zaatar", description: "", image: keshek, recipe: "Thyme, Sumac, Salt, Sesame." },
-    { name: "Kishek", description: "", image: zaatar, recipe: "Dried Yogurt, Salt, Bulgur, Wheat." }
+    { name: "Turmeric", description: "Ground Turmeric.", image: blackpepper },
+    { name: "Red Chili", description: "Ground Red Chili.", image: chilliflakes },
+    { name: "Cinnamon", description: "Ground Ceylon Cinnamon.", image: cinnamon },
+    { name: "Cumin", description: "Ground Cumin.", image: cumin },
+    { name: "Curry", description: "Garlic, Coriander, Cumin, Turmeric, Ginger, Fenugreek, Cloves, Fennel, Mustard.", image: curry },
+    { name: "Sumac", description: "Ground Sumac.", image: paprika },
+    { name: "White Pepper", description: "Ground White Pepper.", image: redchilli },
+    { name: "Black Pepper", description: "Ground Black Pepper.", image: sevenspices },
+    { name: "Paprika", description: "Ground Sweet Paprika.", image: sumac },
+    { name: "Seven Spices", description: "Allspices, Black Pepper, Cinnamon, Cloves, Nutmeg, White Pepper, Mahlab.", image: turmeric },
+    { name: "Chili Flakes", description: "Ground Chili Flakes.", image: whitepepper },
+    { name: "Zaatar", description: "Thyme, Sumac, Salt, Sesame.", image: keshek },
+    { name: "Kishek", description: "Dried Yogurt, Salt, Bulgur, Wheat.", image: zaatar }
   ];
 
   const productsRight = [
-    { name: "Seafood Blend", description: "", image: chicken, recipe: "Salt, White Pepper, Black Pepper, Coriander, Ginger Powder, Curry, Paprika, Cumin, Garlic Powder, Mustard Powder." },
-    { name: "Steak Blend", description: "", image: italian, recipe: "Coarse Garlic, Coarse Onion, Coarse Salt, Coriander, Coarse Black Pepper, Chili  Crushed, Paprika." },
-    { name: "Chicken Blend", description: "", image: lemonpepper, recipe: "Garlic Powder, Coarse Onion, Coarse Black Pepper, Coarse Garlic, Parsley, Coriander, Salt, Chili Crushed, Cinnamon Powder, Paprika, Thyme Powder, Oil." },
-    { name: "Potato Blend", description: "", image: mexican, recipe: "Salt, Sugar, Monosodium, Onion Powder, Paprika, Oil, Cornstrach." },
-    { name: "Italian Blend", description: "", image: potato, recipe: "Garlic Powder, Onion Powder, Salt, Chili Crushed, Black Pepper, Basil, Paprika, Oregano." },
-    { name: "Mexican Blend", description: "", image: seafood, recipe: "Paprika, Turmeric, Coriander, Cumin, Onion Powder, Fenugreek, Fennel, Salt, Garlic Powder, Black Pepper, Rosemary, Chili Crushed." },
-    { name: "Lemon Pepper Blend", description: "", image: steak, recipe: "Turmeric, Black Pepper, Citric Acid, Salt, Dried Lime." }
+    { name: "Seafood Blend", description: "Salt, White Pepper, Black Pepper, Coriander, Ginger Powder, Curry, Paprika, Cumin, Garlic Powder, Mustard Powder.", image: chicken },
+    { name: "Steak Blend", description: "Coarse Garlic, Coarse Onion, Coarse Salt, Coriander, Coarse Black Pepper, Chili  Crushed, Paprika.", image: italian },
+    { name: "Chicken Blend", description: "Garlic Powder, Coarse Onion, Coarse Black Pepper, Coarse Garlic, Parsley, Coriander, Salt, Chili Crushed, Cinnamon Powder, Paprika, Thyme Powder, Oil.", image: lemonpepper },
+    { name: "Potato Blend", description: "Salt, Sugar, Monosodium, Onion Powder, Paprika, Oil, Cornstrach.", image: mexican },
+    { name: "Italian Blend", description: "Garlic Powder, Onion Powder, Salt, Chili Crushed, Black Pepper, Basil, Paprika, Oregano.", image: potato },
+    { name: "Mexican Blend", description: "Paprika, Turmeric, Coriander, Cumin, Onion Powder, Fenugreek, Fennel, Salt, Garlic Powder, Black Pepper, Rosemary, Chili Crushed.", image: seafood },
+    { name: "Lemon Pepper Blend", description: "Turmeric, Black Pepper, Citric Acid, Salt, Dried Lime.", image: steak }
   ];
 
   const groups = [
@@ -67,10 +67,6 @@ function Product() {
   const handleCloseOverlay = () => {
     setSelectedId(null);
     setDetailProduct(null);
-  };
-
-  const handleInfoClick = (product) => {
-    setDetailProduct(product);
   };
 
   const selectedGroup = groups.find(group => selectedId && selectedId.startsWith(group.id.split(' ')[0]));
@@ -96,7 +92,7 @@ function Product() {
           Our Product
         </h1>
 
-        <div className="bg-[#6F6D39] rounded-6xl shadow-2xl mx-auto mb-24 px-4 sm:px-28 p-8">
+        <div className="bg-[#6F6D39] bg-opacity-50 rounded-6xl shadow-2xl mx-auto mb-24 px-4 sm:px-28 p-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-2 gap-4">
             {groups.map(({ id, title, image }, idx) => (
               <motion.div
@@ -137,63 +133,27 @@ function Product() {
               backgroundRepeat: "no-repeat",
             }}
           >
-            {/* <motion.button
-              layoutId={`close-${selectedId}`}
-              className="absolute top-4 right-4 text-3xl text-black"
-              onClick={handleCloseOverlay}
-            >
-              &times;
-            </motion.button> */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-6">
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6 w-full">
               {selectedProducts.map((prod, i) => (
                 <div
                   key={i}
-                  className="flex flex-col items-start text-center gap-2 mt-4 p-2 border rounded shadow-sm"
+                  className="flex flex-col items-center text-center gap-2 mt-4 p-2 border rounded shadow-sm bg-white hover:scale-105 hover:z-10 transform transition duration-300"
                 >
-                  <motion.h5 className="text-sm text-black font-calibri w-full text-center">
-                    {prod.description}
-                  </motion.h5>
-                  <motion.h2 className="text-lg w-full text-center">
-                    {prod.name}
-                  </motion.h2>
                   <motion.img
                     src={prod.image}
                     alt={prod.name}
-                    className="w-32 h-32 object-contain rounded-lg mx-auto"
+                    className="w-30 h-30 object-contain rounded-lg"
                   />
-                  <motion.button
-                    className="mt-2 px-4 py-1 bg-black text-white text-xs rounded mx-auto"
-                    onClick={() => handleInfoClick(prod)}
-                  >
-                    Details
-                  </motion.button>
+                  <motion.h2 className="text-lg font-semibold text-black">
+                    {prod.name}
+                  </motion.h2>
+                  <motion.p className="text-sm text-gray-700">
+                    {prod.description}
+                  </motion.p>
                 </div>
               ))}
             </div>
 
-            {detailProduct && (
-              <motion.div className="fixed inset-0 bg-black bg-opacity-50 z-50 flex items-center justify-center">
-                <div className="bg-white p-6 rounded shadow-lg max-w-md w-full text-center">
-                  <h2 className="text-xl font-semibold mb-2">
-                    {detailProduct.name}
-                  </h2>
-                  <img
-                    src={detailProduct.image}
-                    alt={detailProduct.name}
-                    className="w-32 h-32 object-contain mx-auto mb-2"
-                  />
-                  <p className="text-sm mb-4">{detailProduct.recipe}</p>
-                  <button
-                    className="px-4 py-1 bg-black text-white text-xs rounded"
-                    onClick={() => setDetailProduct(null)}
-                  >
-                    Close
-                  </button>
-                </div>
-              </motion.div>
-            )}
-
-            {/* <div className="sticky bottom-0 w-full bg-white bg-opacity-70 backdrop-blur-md py-4 flex justify-center z-50"> */}
             <div className="sticky bottom-0 w-full py-4 flex justify-center z-50">
               <button
                 className="bg-[#C5713A] hover:bg-[#a85c2f] text-white text-sm font-semibold px-6 py-2 rounded-full shadow-md transition duration-300"

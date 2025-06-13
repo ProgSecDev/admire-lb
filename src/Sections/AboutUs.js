@@ -32,8 +32,8 @@ function Story() {
   }, []);
 
   return (
-    <div className="bg-[#6F6D39] flex justify-center items-center py-20">
-      <div className="max-w-6xl w-full px-4">
+    <div className="bg-[#212121] flex justify-center items-center py-20">
+      <div className="max-w-6xl w-full px-2">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 items-start">
           <div
             ref={leftColumnRef}
@@ -52,11 +52,26 @@ function Story() {
                 fontWeight: 100,
               }}
             >
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+              Founded in 2000 in the heart of Lebanon, our company has been dedicated to crafting 
+              premium-quality spices that embody the rich flavors and culinary heritage of the region. 
+              With a passion for excellence and a commitment to authenticity, 
+              we have grown to become a trusted name in the world of spices, offering a diverse 
+              range of products that elevate kitchens and dining experiences worldwide. 
+              Our journey began with a simple mission: to bring the essence of nature's finest 
+              ingredients to every table. Over the years, we have perfected the art of sourcing, 
+              blending, and preserving the natural aromas and flavors of spices. <br></br><br></br>
+              From vibrant herbs to exotic spice blends, each product reflects our unwavering dedication 
+              to quality, freshness, and taste. With a focus on sustainability and responsible 
+              sourcing, we partner with local farmers and global suppliers to ensure every spice 
+              meets the highest industry standards. Our modern production facilities and 
+              rigorous quality control processes guarantee that each product maintains its purity 
+              and freshness from farm to table. Beyond our presence in Lebanon, we proudly 
+              export our products to international markets, sharing the rich flavors of Lebanese 
+              culinary tradition with the world.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-4 justify-items-center md:flex md:justify-start">
+          <div className="grid grid-cols-1 gap-2 justify-items-center md:flex md:justify-start mt-24">
             {[two, one, three].map((img, idx) => (
               <div
                 key={idx}

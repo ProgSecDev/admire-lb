@@ -19,13 +19,13 @@ function Footer() {
         <div className="text-white text-center bg-black p-4 w-80 mt-5 ml-5 shadow-lg">
           <h1
             className="text-3xl font-semibold"
-            style={{ fontFamily: "Allura, cursive" }}
+            style={{ fontFamily: "Bookman Old Style, serif" }}
           >
             Get in Touch
           </h1>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 w-screen bg-orange-700">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-3 w-screen bg-[#C5713A]">
         {/* Logo Column */}
         <div className="flex items-center justify-center">
           <img src={logo} alt="Logo" className="w-52 h-auto" />
@@ -99,10 +99,10 @@ function Footer() {
           {/* Social Media Icons */}
           <div className="flex space-x-4 mt-4">
             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <img src={facebookicon} alt="Facebook" className="w-8 h-8" />
+              <img src={facebookicon} alt="Facebook" className="w-8 h-8 hover:scale-110" />
             </a>
             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <img src={instagramicon} alt="Instagram" className="w-8 h-8" />
+              <img src={instagramicon} alt="Instagram" className="w-8 h-8 hover:scale-110" />
             </a>
           </div>
         </div>
