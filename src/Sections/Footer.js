@@ -98,12 +98,33 @@ function Footer() {
 
           {/* Social Media Icons */}
           <div className="flex space-x-4 mt-4">
-            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-              <img src={facebookicon} alt="Facebook" className="w-8 h-8 hover:scale-110" />
+            <a
+              href="https://facebook.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={facebookicon}
+                alt="Facebook"
+                className="w-8 h-8 hover:scale-110"
+              />
             </a>
-            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
-              <img src={instagramicon} alt="Instagram" className="w-8 h-8 hover:scale-110" />
+            <a
+              href="https://instagram.com"
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <img
+                src={instagramicon}
+                alt="Instagram"
+                className="w-8 h-8 hover:scale-110"
+              />
             </a>
+          </div>
+
+          {/* Copyright */}
+          <div className="mt-4 text-white text-sm">
+            © {new Date().getFullYear()} Designed By AdmireLB. All rights reserved.
           </div>
         </div>
       </div>
