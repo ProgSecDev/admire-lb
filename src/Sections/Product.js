@@ -29,7 +29,17 @@ function Product() {
   const [selectedId, setSelectedId] = useState(null);
   const [detailProduct, setDetailProduct] = useState(null);
 
-  const productsLeft = [
+    const productsLeft = [
+    { name: "Seafood Blend", description: "Salt, White Pepper, Black Pepper, Coriander, Ginger Powder, Curry, Paprika, Cumin, Garlic Powder, Mustard Powder.", image: chicken },
+    { name: "Steak Blend", description: "Coarse Garlic, Coarse Onion, Coarse Salt, Coriander, Coarse Black Pepper, Chili  Crushed, Paprika.", image: italian },
+    { name: "Chicken Blend", description: "Garlic Powder, Coarse Onion, Coarse Black Pepper, Coarse Garlic, Parsley, Coriander, Salt, Chili Crushed, Cinnamon Powder, Paprika, Thyme Powder, Oil.", image: lemonpepper },
+    { name: "Potato Blend", description: "Salt, Sugar, Monosodium, Onion Powder, Paprika, Oil, Cornstrach.", image: mexican },
+    { name: "Italian Blend", description: "Garlic Powder, Onion Powder, Salt, Chili Crushed, Black Pepper, Basil, Paprika, Oregano.", image: potato },
+    { name: "Mexican Blend", description: "Paprika, Turmeric, Coriander, Cumin, Onion Powder, Fenugreek, Fennel, Salt, Garlic Powder, Black Pepper, Rosemary, Chili Crushed.", image: seafood },
+    { name: "Lemon Pepper Blend", description: "Turmeric, Black Pepper, Citric Acid, Salt, Dried Lime.", image: steak }
+  ];
+
+  const productsRight = [
     { name: "Turmeric", description: "Ground Turmeric.", image: blackpepper },
     { name: "Red Chili", description: "Ground Red Chili.", image: chilliflakes },
     { name: "Cinnamon", description: "Ground Ceylon Cinnamon.", image: cinnamon },
@@ -45,19 +55,9 @@ function Product() {
     { name: "Kishek", description: "Dried Yogurt, Salt, Bulgur, Wheat.", image: zaatar }
   ];
 
-  const productsRight = [
-    { name: "Seafood Blend", description: "Salt, White Pepper, Black Pepper, Coriander, Ginger Powder, Curry, Paprika, Cumin, Garlic Powder, Mustard Powder.", image: chicken },
-    { name: "Steak Blend", description: "Coarse Garlic, Coarse Onion, Coarse Salt, Coriander, Coarse Black Pepper, Chili  Crushed, Paprika.", image: italian },
-    { name: "Chicken Blend", description: "Garlic Powder, Coarse Onion, Coarse Black Pepper, Coarse Garlic, Parsley, Coriander, Salt, Chili Crushed, Cinnamon Powder, Paprika, Thyme Powder, Oil.", image: lemonpepper },
-    { name: "Potato Blend", description: "Salt, Sugar, Monosodium, Onion Powder, Paprika, Oil, Cornstrach.", image: mexican },
-    { name: "Italian Blend", description: "Garlic Powder, Onion Powder, Salt, Chili Crushed, Black Pepper, Basil, Paprika, Oregano.", image: potato },
-    { name: "Mexican Blend", description: "Paprika, Turmeric, Coriander, Cumin, Onion Powder, Fenugreek, Fennel, Salt, Garlic Powder, Black Pepper, Rosemary, Chili Crushed.", image: seafood },
-    { name: "Lemon Pepper Blend", description: "Turmeric, Black Pepper, Citric Acid, Salt, Dried Lime.", image: steak }
-  ];
-
   const groups = [
-    { id: "Powder 1", title: "POWDERS", data: productsLeft, image: blackP },
-    { id: "Blend 1", title: "BLENDS", data: productsRight, image: chickenC },
+    { id: "Blend 1", title: "BLENDS", data: productsLeft, image: chickenC },
+    { id: "Powder 1", title: "POWDERS", data: productsRight, image: blackP },
   ];
 
   const handleCategoryClick = (id) => {

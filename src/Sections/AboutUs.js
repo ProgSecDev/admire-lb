@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import one from "../assets/Banners/story1.jpeg";
 import two from "../assets/Banners/story2.jpeg";
-import three from "../assets/Banners/story3.jpeg";
+import three from "../assets/Banners/About us - 3rd picture - Turmeric.jpg";
 
 function Story() {
   const leftColumnRef = useRef(null);
@@ -79,7 +79,7 @@ function Story() {
                 className="relative w-64 h-96 transform translate-x-full"
               >
                 <img src={img} alt="Story" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-black opacity-50"></div>
+                <div className="absolute inset-0 bg-black opacity-10"></div>
               </div>
             ))}
           </div>
