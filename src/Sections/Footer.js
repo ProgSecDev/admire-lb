@@ -27,17 +27,20 @@ function Footer() {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 w-screen bg-[#C5713A]">
         {/* Logo Column */}
-        <div className="flex items-center justify-center">
-          <img src={logo} alt="Logo" className="w-52 h-auto" />
-        </div>
+        <div className="flex flex-col items-center justify-center -translate-y-10">
+  <img src={logo} alt="Logo" className="w-80 h-auto" />
+  <div className="text-white text-sm -mt-4 text-center -translate-y-12">
+    © {new Date().getFullYear()} Designed By AdmireLB. All rights reserved.
+  </div>
+</div>
 
         {/* Form Column */}
         <div className="flex items-center justify-center">
-          <div className="w-80 max-w-xs bg-black p-4 shadow-lg">
+          <div className="w-80 max-w-xs bg-black p-4 ml-1 shadow-lg -translate-y-7">
             <form
               action="https://fabform.io/f/{form-id}"
               method="post"
-              className="space-y-3 w-full"
+              className="space-y-6 w-full"
             >
               <input
                 className="w-full p-2 rounded border-b border-dashed bg-black text-white placeholder-white focus:outline-none focus:ring-2 focus:ring-orange-500"
@@ -120,11 +123,6 @@ function Footer() {
                 className="w-8 h-8 hover:scale-110"
               />
             </a>
-          </div>
-
-          {/* Copyright */}
-          <div className="mt-4 text-white text-sm">
-            © {new Date().getFullYear()} Designed By AdmireLB. All rights reserved.
           </div>
         </div>
       </div>

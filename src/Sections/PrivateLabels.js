@@ -37,7 +37,7 @@ function PrivateLabels() {
           Private Labels
         </h1>
 
-        <div className="bg-[#6F6D39] bg-opacity-50 rounded-6xl shadow-2xl mx-auto mb-24 px-4 sm:px-28 py-8">
+        <div className="bg-[#6F6D39] bg-opacity-80 rounded-6xl shadow-2xl mx-auto mb-24 px-4 sm:px-28 py-8">
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8">
             {labelGroups.map(({ id, title, mainImage }, idx) => (
               <motion.div

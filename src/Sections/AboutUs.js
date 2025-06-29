@@ -1,7 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import one from "../assets/Banners/story1.jpeg";
 import two from "../assets/Banners/story2.jpeg";
-import three from "../assets/Banners/About us - 3rd picture - Turmeric.jpg";
+import three from "../assets/Banners/Turmeric - About Us.jpg";
 
 function Story() {
   const leftColumnRef = useRef(null);
@@ -45,6 +45,11 @@ function Story() {
             >
               About Us
             </h1>
+            <h2 className="text-white text-4xl md:text-6xl"
+                style={{ fontFamily: "Aldhabi, cursive"}}
+            >
+            SPICY FOOD
+            </h2>
             <p
               className="text-white mt-6"
               style={{
