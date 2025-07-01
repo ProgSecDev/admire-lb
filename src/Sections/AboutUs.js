@@ -9,24 +9,27 @@ function Story() {
 
   useEffect(() => {
     const leftColumn = leftColumnRef.current;
-    const images = imageRefs.map(ref => ref.current);
-    if (!leftColumn || images.some(img => !img)) return;
+    const images = imageRefs.map((ref) => ref.current);
+    if (!leftColumn || images.some((img) => !img)) return;
 
-    const observer = new IntersectionObserver(entries => {
-      entries.forEach(entry => {
-        if (entry.isIntersecting) {
-          leftColumn.style.transition = "transform 1s ease-out";
-          leftColumn.style.transform = "translateX(0)";
-          images.forEach(img => {
-            img.style.transition = "transform 1s ease-out";
-            img.style.transform = "translateX(0)";
-          });
-        }
-      });
-    }, { threshold: 0.1 });
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            leftColumn.style.transition = "transform 1s ease-out";
+            leftColumn.style.transform = "translateX(0)";
+            images.forEach((img) => {
+              img.style.transition = "transform 1s ease-out";
+              img.style.transform = "translateX(0)";
+            });
+          }
+        });
+      },
+      { threshold: 0.1 }
+    );
 
     observer.observe(leftColumn);
-    images.forEach(img => observer.observe(img));
+    images.forEach((img) => observer.observe(img));
 
     return () => observer.disconnect();
   }, []);
@@ -45,10 +48,11 @@ function Story() {
             >
               About Us
             </h1>
-            <h2 className="text-white text-4xl md:text-6xl"
-                style={{ fontFamily: "Aldhabi, cursive"}}
+            <h2
+              className="text-white text-4xl md:text-6xl"
+              style={{ fontFamily: "Aldhabi, cursive" }}
             >
-            SPICY FOOD
+              SPICY FOOD
             </h2>
             <p
               className="text-white mt-6"
@@ -57,56 +61,49 @@ function Story() {
                 fontWeight: 100,
               }}
             >
-              Founded in 2000 in the heart of Lebanon, our company has been dedicated to crafting 
-              premium-quality spices that embody the rich flavors and culinary heritage of the region. 
-              With a passion for excellence and a commitment to authenticity, 
-              we have grown to become a trusted name in the world of spices, offering a diverse 
-              range of products that elevate kitchens and dining experiences worldwide. 
-              Our journey began with a simple mission: to bring the essence of nature's finest 
-              ingredients to every table. Over the years, we have perfected the art of sourcing, 
-              blending, and preserving the natural aromas and flavors of spices. <br></br><br></br>
-              From vibrant herbs to exotic spice blends, each product reflects our unwavering dedication 
-              to quality, freshness, and taste. With a focus on sustainability and responsible 
-              sourcing, we partner with local farmers and global suppliers to ensure every spice 
-              meets the highest industry standards. Our modern production facilities and 
-              rigorous quality control processes guarantee that each product maintains its purity 
-              and freshness from farm to table. Beyond our presence in Lebanon, we proudly 
-              export our products to international markets, sharing the rich flavors of Lebanese 
+              Founded in 2000 in the heart of Lebanon, our company has been
+              dedicated to crafting premium-quality spices that embody the rich
+              flavors and culinary heritage of the region. With a passion for
+              excellence and a commitment to authenticity, we have grown to
+              become a trusted name in the world of spices, offering a diverse
+              range of products that elevate kitchens and dining experiences
+              worldwide. Our journey began with a simple mission: to bring the
+              essence of nature's finest ingredients to every table. Over the
+              years, we have perfected the art of sourcing, blending, and
+              preserving the natural aromas and flavors of spices. <br></br>
+              <br></br>
+              From vibrant herbs to exotic spice blends, each product reflects
+              our unwavering dedication to quality, freshness, and taste. With a
+              focus on sustainability and responsible sourcing, we partner with
+              local farmers and global suppliers to ensure every spice meets the
+              highest industry standards. Our modern production facilities and
+              rigorous quality control processes guarantee that each product
+              maintains its purity and freshness from farm to table. Beyond our
+              presence in Lebanon, we proudly export our products to
+              international markets, sharing the rich flavors of Lebanese
               culinary tradition with the world.
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-24">
-  {[two, one, three].map((img, idx) => (
-    <div
-      key={idx}
-      ref={imageRefs[idx]}
-      className={`relative h-96 transform translate-x-full w-full`}
-    >
-      <img src={img} alt="Story" className="w-full h-full object-cover" />
-      <div className="absolute inset-0 bg-black opacity-10"></div>
-    </div>
-  ))}
-</div>
+          <div className="grid grid-cols-1 gap-2 justify-items-center md:flex md:justify-start mt-24">
+            {[two, one, three].map((img, idx) => (
+              <div
+                key={idx}
+                ref={imageRefs[idx]}
+                className="relative w-64 h-96 transform translate-x-full"
+              >
+                <img
+                  src={img}
+                  alt="Story"
+                  className={`w-full h-full object-cover ${
+                    idx === 2 ? "object-[65%_50%]" : ""
+                  }`}
+                />
 
-{/* <div className="grid grid-cols-2 grid-rows-2 gap-4 mt-24">
-  <div ref={imageRefs[0]} className="relative h-96 transform translate-x-full w-full">
-    <img src={two} alt="Story" className="w-full h-full object-cover" />
-    <div className="absolute inset-0 bg-black opacity-10"></div>
-  </div>
-  <div ref={imageRefs[1]} className="relative h-96 transform translate-x-full w-full">
-    <img src={one} alt="Story" className="w-full h-full object-cover" />
-    <div className="absolute inset-0 bg-black opacity-10"></div>
-  </div>
-  <div ref={imageRefs[2]} className="relative h-96 transform translate-x-full w-full col-span-1">
-    <img src={three} alt="Story" className="w-full h-full object-cover" />
-    <div className="absolute inset-0 bg-black opacity-10"></div>
-  </div>
-</div> */}
-
-
-
-
+                <div className="absolute inset-0 bg-black opacity-10"></div>
+              </div>
+            ))}
+          </div>
         </div>
       </div>
     </div>
