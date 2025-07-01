@@ -1,7 +1,7 @@
 import React from "react";
 import logo from "../assets/Logos and Favicons/logo.png";
-import facebookicon from '../assets/Logos and Favicons/facebook.png';
-import instagramicon from '../assets/Logos and Favicons/instagram.png';
+import facebookicon from "../assets/Logos and Favicons/facebook.png";
+import instagramicon from "../assets/Logos and Favicons/instagram.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faMapMarkerAlt,
@@ -28,11 +28,12 @@ function Footer() {
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 w-screen bg-[#C5713A]">
         {/* Logo Column */}
         <div className="flex flex-col items-center justify-center -translate-y-10">
-  <img src={logo} alt="Logo" className="w-80 h-auto" />
-  <div className="text-white text-sm -mt-4 text-center -translate-y-12">
-    © {new Date().getFullYear()} Designed By AdmireLB. All rights reserved.
-  </div>
-</div>
+          <img src={logo} alt="Logo" className="w-80 h-auto" />
+          <div className="text-white text-sm -mt-4 text-center -translate-y-12">
+            © {new Date().getFullYear()} Designed By AdmireLB. All rights
+            reserved.
+          </div>
+        </div>
 
         {/* Form Column */}
         <div className="flex items-center justify-center">

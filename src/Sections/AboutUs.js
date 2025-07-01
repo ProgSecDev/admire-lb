@@ -76,18 +76,37 @@ function Story() {
             </p>
           </div>
 
-          <div className="grid grid-cols-1 gap-2 justify-items-center md:flex md:justify-start mt-24">
-            {[two, one, three].map((img, idx) => (
-              <div
-                key={idx}
-                ref={imageRefs[idx]}
-                className="relative w-64 h-96 transform translate-x-full"
-              >
-                <img src={img} alt="Story" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-black opacity-10"></div>
-              </div>
-            ))}
-          </div>
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mt-24">
+  {[two, one, three].map((img, idx) => (
+    <div
+      key={idx}
+      ref={imageRefs[idx]}
+      className={`relative h-96 transform translate-x-full w-full`}
+    >
+      <img src={img} alt="Story" className="w-full h-full object-cover" />
+      <div className="absolute inset-0 bg-black opacity-10"></div>
+    </div>
+  ))}
+</div>
+
+{/* <div className="grid grid-cols-2 grid-rows-2 gap-4 mt-24">
+  <div ref={imageRefs[0]} className="relative h-96 transform translate-x-full w-full">
+    <img src={two} alt="Story" className="w-full h-full object-cover" />
+    <div className="absolute inset-0 bg-black opacity-10"></div>
+  </div>
+  <div ref={imageRefs[1]} className="relative h-96 transform translate-x-full w-full">
+    <img src={one} alt="Story" className="w-full h-full object-cover" />
+    <div className="absolute inset-0 bg-black opacity-10"></div>
+  </div>
+  <div ref={imageRefs[2]} className="relative h-96 transform translate-x-full w-full col-span-1">
+    <img src={three} alt="Story" className="w-full h-full object-cover" />
+    <div className="absolute inset-0 bg-black opacity-10"></div>
+  </div>
+</div> */}
+
+
+
+
         </div>
       </div>
     </div>
