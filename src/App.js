@@ -1,51 +1,53 @@
-import React from "react";
+// src/App.js
 import {
   BrowserRouter as Router,
-  Route,
   Routes,
+  Route,
   useLocation,
 } from "react-router-dom";
-import { Element, scroller } from "react-scroll";
 
 import Nav from "./Components/Nav";
-import "./App.css";
-import Home from "./Sections/Home";
-import Product from "./Sections/Product";
-import Story from "./Sections/AboutUs";
 import Footer from "./Sections/Footer";
-import Recipes from "./Screens/Recipes";
-import SpicyPage from "./Sections/SpicyPage";
+
+import Home from "./Pages/Home";
+import AboutUs from "./Pages/AboutUs";
+import Brands from "./Pages/Brands";
+import Portfolio from "./Pages/Portfolio";
+import Services from "./Pages/Services";
+import Careers from "./Pages/Careers";
+import Photography from "./Pages/Photography";
+import Recipes from "./Pages/Recipes";
 
 const AppContent = () => {
   const location = useLocation();
 
-  // Function to handle scrolling with a custom duration
-  const scrollTo = (name) => {
-    scroller.scrollTo(name, {
-      duration: 800,
-      delay: 0,
-      smooth: "easeInOutQuad",
-    });
-  };
+  const hideNavFooterOn = ["/some-special-page"];
+  const shouldHideNavFooter = hideNavFooterOn.includes(location.pathname);
 
   return (
     <>
-      {/* Conditionally render Nav */}
-      {location.pathname !== "/recipes" && <Nav />}
+      {!shouldHideNavFooter && <Nav />}
 
-      {/* Routes */}
       <Routes>
-        <Route path="/" element={<SpicyPage />} />
-        <Route path="/spicy" element={<SpicyPage />} />
+        <Route path="/" element={<Home />} />
+        <Route path="/home" element={<Home />} />
+        <Route path="/about-us" element={<AboutUs />} />
+        <Route path="/brands" element={<Brands />} />
+        <Route path="/portfolio" element={<Portfolio />} />
+        <Route path="/services" element={<Services />} />
+        <Route path="/careers" element={<Careers />} />
+        <Route path="/photography" element={<Photography />} />
         <Route path="/recipes" element={<Recipes />} />
       </Routes>
+
+      {!shouldHideNavFooter && <Footer />}
     </>
   );
 };
 
 const App = () => {
   return (
-    <Router basename="/spicy-food">
+    <Router basename="/admire-lb">
       <AppContent />
     </Router>
   );

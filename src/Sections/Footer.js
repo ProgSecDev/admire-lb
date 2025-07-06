@@ -22,7 +22,7 @@ function Footer() {
             style={{ fontFamily: "Bookman Old Style, serif" }}
           >
             Get in Touch
-          </h1>
+          </h1>,
         </div>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-3 gap-3 w-screen bg-[#C5713A]">

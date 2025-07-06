@@ -1,160 +1,100 @@
 import React, { useState, useEffect } from "react";
-import { scroller } from "react-scroll";
-import { Link, useNavigate, useLocation } from "react-router-dom";
-import logo from "../assets/Logos and Favicons/logo.png";
+import { Link, useLocation } from "react-router-dom";
+import logo from "../assets/Logos and Favicons/admire-logo-1.png";
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-  const [navbarBg, setNavbarBg] = useState("#C5713A");
-  const [textColor, setTextColor] = useState("text-white");
-  const [textFont, setTextFont] = useState("text-3xl");
-  const [logoSize, setLogoSize] = useState("h-40");
-  const [isScreenMinimized, setIsScreenMinimized] = useState(false);
-
-  const navigate = useNavigate();
   const location = useLocation();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
 
-  const changeNavbarBg = () => {
-    if (window.scrollY >= 50) {
-      setNavbarBg("rgba(197, 113, 58, 0.5)");
-      setTextColor("text-white");
-      setTextFont("text-1xl");
-      setLogoSize("h-32");
-    } else {
-      setNavbarBg("#C5713A");
-      setTextColor("text-white");
-      setTextFont("text-2xl");
-      setLogoSize("h-40");
-    }
-  };
-
-  const handleResize = () => setIsScreenMinimized(window.innerWidth <= 768);
-
-  useEffect(() => {
-    window.addEventListener("scroll", changeNavbarBg);
-    window.addEventListener("resize", handleResize);
-    handleResize();
-
-    return () => {
-      window.removeEventListener("scroll", changeNavbarBg);
-      window.removeEventListener("resize", handleResize);
-    };
-  }, []);
-
-  const scrollToSection = (section) => {
-    scroller.scrollTo(section, {
-      duration: 1000,
-      delay: 0,
-      smooth: "easeInOutQuart",
-    });
-    setIsMenuOpen(false);
-  };
-
-  const handlePrivateLabelClick = () => {
-  if (location.pathname === "/" || location.pathname === "/spicy") {
-    scrollToSection("labels");
-  } else {
-    navigate("/");
-    setTimeout(() => {
-      scrollToSection("labels");
-    }, 300);
-  }
-};
-
   return (
-    <nav
-      className={`navbar p-4 ${textColor} fixed top-0 w-full z-30 transition-colors duration-500 ease-in-out`}
-      style={{ backgroundColor: navbarBg }}
-    >
-      <div
-        className="container mx-auto flex flex-col lg:flex-row justify-between items-center relative"
-        style={{ fontFamily: "Bookman Old Style, serif", fontWeight: 100 }}
-      >
-        <div className="lg:hidden">
-          <button
-            className="text-white focus:outline-none"
-            onClick={toggleMenu}
-          >
-            <svg
-              className="h-6 w-6"
-              fill="none"
-              stroke="currentColor"
-              viewBox="0 0 24 24"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth="2"
-                d="M4 6h16M4 12h16m-7 6h7"
-              ></path>
-            </svg>
-          </button>
-        </div>
-
-        <div
-          className={`lg:flex lg:space-x-8 lg:mt-0 mt-4 flex flex-col lg:flex-row items-center ${textFont} ${
-            isMenuOpen ? "block" : "hidden"
-          } lg:block lg:justify-center w-full nav-text`}
-        >
-          <div
-            className="px-4 py-2 hover:text-orange-200 cursor-pointer"
-            onClick={() => scrollToSection("home")}
-          >
-            Home
-          </div>
-          <div
-            className="px-4 py-2 hover:text-orange-200 cursor-pointer"
-            onClick={() => scrollToSection("story")}
-          >
-            About us
-          </div>
-
-          <div className="relative group px-4 py-2 cursor-pointer">
-            <div
-              className="hover:text-orange-200 whitespace-nowrap"
-              onClick={() => scrollToSection("product")}
-            >
-              Products
-            </div>
-            <div className="absolute hidden group-hover:block mt-2 bg-[#6F6D39] text-white shadow-md rounded-md whitespace-nowrap">
-              {/*<div className="px-4 py-2 hover:bg-[#C5713A] cursor-pointer" onClick={() => scrollToSection("grill")}>Grill Master</div>*/}
-              {/*<div className="px-4 py-2 hover:bg-[#C5713A] cursor-pointer" onClick={() => scrollToSection("spicy")}>Spicy Food</div>*/}
-            </div>
-          </div>
-        </div>
-
-        {!isScreenMinimized && (
-          <div className="absolute left-1/2 transform -translate-x-1/2 mx-1">
+    <nav className="fixed top-0 w-full z-50 bg-white border-b border-gray-100">
+      <div className="container mx-auto px-6 py-5 flex justify-between items-center">
+        <div className="flex items-center">
+          <Link to="/">
             <img
               src={logo}
               alt="Logo"
-              className={`nav-logo ${logoSize} transition duration-300 ease-in-out hidden`}
+              className="h-16 sm:h-20 object-contain cursor-pointer"
             />
-          </div>
-        )}
+          </Link>
+        </div>
 
-        <div
-          className={`lg:flex lg:space-x-8 lg:mt-0 mt-4 flex flex-col lg:flex-row items-center ${textFont} ${
-            isMenuOpen ? "block" : "hidden"
-          } lg:block lg:justify-center w-full nav-text`}
-        >
-          <div
-            className="px-4 py-2 hover:text-orange-200 cursor-pointer"
-            onClick={handlePrivateLabelClick}
-          >
-            Private Labels
-          </div>
-          <div
-            className="px-4 py-2 hover:text-orange-200 cursor-pointer"
-            onClick={() => scrollToSection("footer")}
-          >
-            Contact Us
-          </div>
+        <div className="flex items-center space-x-6">
+          {/* <button className="px-5 py-3 border border-pink-500 text-pink-600 rounded-full text-base hover:bg-pink-50">
+            Get In Touch
+          </button>
+          <button className="px-5 py-3 bg-pink-600 text-white rounded-full text-base hover:bg-pink-700">
+            Request A Quote
+          </button> */}
+          <button className="text-black text-3xl transition-transform duration-300" onClick={toggleMenu}>
+            {isMenuOpen ? (
+              <span className="rotate-animation inline-block">&times;</span>
+            ) : (
+              <span>&#9776;</span>
+            )}
+          </button>
         </div>
       </div>
+
+      {isMenuOpen && (
+        <div className="absolute right-6 mt-4 bg-transparent p-2 z-40">
+          <div className="flex flex-col items-end space-y-3 text-pink-700 font-semibold animate-fade-in-right">
+            <Link to="/home" className="border border-pink-500 rounded-full px-5 py-3 text-base bg-pink-100 hover:bg-pink-200" onClick={() => setIsMenuOpen(false)}>
+              Home
+            </Link>
+            <Link to="/about-us" className="border border-pink-500 rounded-full px-5 py-3 text-base bg-pink-100 hover:bg-pink-200" onClick={() => setIsMenuOpen(false)}>
+              About Us
+            </Link>
+            <Link to="/brands" className="border border-pink-500 rounded-full px-5 py-3 text-base bg-pink-100 hover:bg-pink-200" onClick={() => setIsMenuOpen(false)}>
+              Brands Who Trust Us
+            </Link>
+            <Link to="/portfolio" className="border border-pink-500 rounded-full px-5 py-3 text-base bg-pink-100 hover:bg-pink-100" onClick={() => setIsMenuOpen(false)}>
+              Portfolio
+            </Link>
+            <Link to="/services" className="border border-pink-500 rounded-full px-5 py-3 text-base bg-pink-100 hover:bg-pink-100" onClick={() => setIsMenuOpen(false)}>
+              Services
+            </Link>
+            <Link to="/careers" className="border border-pink-500 rounded-full px-5 py-3 text-base bg-pink-100 hover:bg-pink-100" onClick={() => setIsMenuOpen(false)}>
+              Careers
+            </Link>
+            <Link to="/photography" className="border border-pink-500 rounded-full px-5 py-3 text-base bg-pink-100 hover:bg-pink-100" onClick={() => setIsMenuOpen(false)}>
+              Photography
+            </Link>
+          </div>
+        </div>
+      )}
+
+      <style jsx>{`
+        @keyframes fade-in-right {
+          0% {
+            opacity: 0;
+            transform: translateX(20px);
+          }
+          100% {
+            opacity: 1;
+            transform: translateX(0);
+          }
+        }
+        .animate-fade-in-right {
+          animation: fade-in-right 0.3s ease-out forwards;
+        }
+
+        @keyframes rotateIn {
+          0% {
+            transform: rotate(0deg);
+            opacity: 0;
+          }
+          100% {
+            transform: rotate(180deg);
+            opacity: 1;
+          }
+        }
+        .rotate-animation {
+          animation: rotateIn 0.4s ease forwards;
+        }
+      `}</style>
     </nav>
   );
 }

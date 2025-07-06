@@ -1,24 +1,24 @@
 {
-  "short_name": "SpicyApp",
-  "name": "Spicy Food Label Showcase",
+  "short_name": "AdmireLBWeb",
+  "name": "AdmireLB Advertising Agency Website",
   "icons": [
     {
-      "src": "/spicy-food/favicon.ico",
+      "src": "/admire-lb/favicon.ico",
       "sizes": "64x64 32x32 24x24 16x16",
       "type": "image/x-icon"
     },
     {
-      "src": "/spicy-food/logo192.png",
+      "src": "/admire-lb/logo192.png",
       "type": "image/png",
       "sizes": "192x192"
     },
     {
-      "src": "/spicy-food/logo512.png",
+      "src": "/admire-lb/logo512.png",
       "type": "image/png",
       "sizes": "512x512"
     }
   ],
-  "start_url": "/spicy-food/",
+  "start_url": "/admire-lb/",
   "display": "standalone",
   "theme_color": "#C5713A",
   "background_color": "#ffffff"
