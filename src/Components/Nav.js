@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
-import logo from "../assets/Logos and Favicons/admire-logo-1.png";
+import logo from "../assets/Logos-and-Favicons/admire-logo-1.png";
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
