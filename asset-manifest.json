@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/admire-lb/static/css/main.a6fa02e8.css",
+    "main.js": "/admire-lb/static/js/main.6797862c.js",
+    "static/js/453.06409130.chunk.js": "/admire-lb/static/js/453.06409130.chunk.js",
+    "static/media/Aldhabi.ttf": "/admire-lb/static/media/Aldhabi.28f9841a4f2619850400.ttf",
+    "static/media/Home-Banner.jpg": "/admire-lb/static/media/Home-Banner.25b5330f31272f3200ad.jpg",
+    "static/media/SilverForteGrunge.ttf": "/admire-lb/static/media/SilverForteGrunge.c7bfd8bbdbc87420ae74.ttf",
+    "static/media/logo.png": "/admire-lb/static/media/logo.41516c75c96dab51a932.png",
+    "static/media/home-background.jpg": "/admire-lb/static/media/home-background.7ca647f0fdbdc7e73a0f.jpg",
+    "static/media/instagram.png": "/admire-lb/static/media/instagram.2c372c5df3905655a49d.png",
+    "static/media/facebook.png": "/admire-lb/static/media/facebook.0848d3fe0d1ce2e852b3.png",
+    "static/media/admire-logo-1.png": "/admire-lb/static/media/admire-logo-1.373831024bb9b5192232.png",
+    "index.html": "/admire-lb/index.html",
+    "main.a6fa02e8.css.map": "/admire-lb/static/css/main.a6fa02e8.css.map",
+    "main.6797862c.js.map": "/admire-lb/static/js/main.6797862c.js.map",
+    "453.06409130.chunk.js.map": "/admire-lb/static/js/453.06409130.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.a6fa02e8.css",
+    "static/js/main.6797862c.js"
+  ]
+}
