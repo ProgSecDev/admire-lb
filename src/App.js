@@ -16,7 +16,6 @@ import Portfolio from "./Pages/Portfolio";
 import Services from "./Pages/Services";
 import Careers from "./Pages/Careers";
 import Photography from "./Pages/Photography";
-import Recipes from "./Pages/Recipes";
 
 const AppContent = () => {
   const location = useLocation();
@@ -37,7 +36,6 @@ const AppContent = () => {
         <Route path="/services" element={<Services />} />
         <Route path="/careers" element={<Careers />} />
         <Route path="/photography" element={<Photography />} />
-        <Route path="/recipes" element={<Recipes />} />
       </Routes>
 
       {!shouldHideNavFooter && <Footer />}
