@@ -1,9 +1,9 @@
-import ServicesComingSoon from '../Sections/ServicesComingSoon'
+import ServicesSection from '../Sections/ServicesSection'
 
 function Services() {
   return (
     <>
-      <ServicesComingSoon />
+      <ServicesSection />
     </>
   );
 }
