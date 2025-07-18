@@ -17,7 +17,12 @@ function PortfolioGrid() {
   return (
     <section className="relative z-20 bg-white py-16 px-4 text-center bg-fixed bg-center bg-cover min-h-[500px]"
              style={{ backgroundImage: `url(${backgroundImage})` }}>
-      <h1 className="text-4xl font-bold mb-4">OUR SERVICES</h1>
+      <h1 
+      className="text-3xl font-bold tracking-widest mb-3"
+        style={{ fontFamily: "Azonix" }}
+        >
+        OUR SERVICES
+        </h1>
       <p className="text-gray-700 mb-12 max-w-xl mx-auto">
         <span className="text-pink-600 font-bold">We provide</span> concept-driven creative identities that are led by intelligent understanding of the task at hand.
       </p>

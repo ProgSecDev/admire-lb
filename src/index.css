@@ -11,6 +11,13 @@
     font-style: normal;
 }
 
+@font-face {
+  font-family: 'Azonix';
+  src: url('./font/Azonix.otf') format('opentype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 @import url('https://fonts.googleapis.com/css2?family=Allura&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Calibri&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Bookman+Old+Style&display=swap');

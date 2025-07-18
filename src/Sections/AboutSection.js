@@ -8,16 +8,17 @@ const AboutUs = () => {
     >
       <div className="absolute inset-0 bg-black/10"></div>
 
-      <div className="relative z-10 w-full p-6 mt-20 md:p-16 max-w-5xl ml-40 text-black">
+      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-16 pt-24 pb-12 max-w-6xl mx-auto text-black">
         <h1
-          className="text-center mb-8 tracking-widest drop-shadow-lg"
-          style={{ fontFamily: "Azonix", fontSize: "36px", fontWeight: "bold" }}
+          className="text-center mb-8 mt-8 tracking-widest drop-shadow-lg text-2xl sm:text-3xl md:text-4xl font-bold"
+          style={{ fontFamily: "Azonix" }}
         >
           ABOUT US
         </h1>
+
         <div
-          className="space-y-5 text-black"
-          style={{ fontFamily: "Raleway", fontSize: "18px" }}
+          className="space-y-5 text-black text-sm sm:text-base md:text-lg"
+          style={{ fontFamily: "Raleway" }}
         >
           <p>
             A multinational advertising agency based in Lebanon with offices
@@ -72,7 +73,7 @@ const AboutUs = () => {
 
           <div className="pt-6 space-y-5">
             <div>
-              <h2 className="text-pink-700 font-bold uppercase tracking-wide">
+              <h2 className="text-pink-700 font-bold uppercase tracking-wide text-base md:text-lg">
                 Our Mission
               </h2>
               <p>
@@ -80,12 +81,12 @@ const AboutUs = () => {
                 from special people just like you! We are dedicated to authentic
                 brand stories and use journalistic methods to create the largest
                 possible value for both your budget and your audience. <br />
-                We work hard to create inspiredand effective work for your
+                We work hard to create inspired and effective work for your
                 brand.
               </p>
             </div>
             <div>
-              <h2 className="text-pink-700 font-bold uppercase tracking-wide">
+              <h2 className="text-pink-700 font-bold uppercase tracking-wide text-base md:text-lg">
                 Our Vision
               </h2>
               <p>
@@ -95,7 +96,7 @@ const AboutUs = () => {
               </p>
             </div>
             <div>
-              <h2 className="text-pink-700 font-bold uppercase tracking-wide">
+              <h2 className="text-pink-700 font-bold uppercase tracking-wide text-base md:text-lg">
                 Our Values
               </h2>
               <p>

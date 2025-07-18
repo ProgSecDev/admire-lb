@@ -10,6 +10,7 @@ module.exports = {
         calibri: ["Calibri", "sans-serif"],
         silverForteGrungeGrunge: ["SilverForteGrungeGrunge", "sans-serif"],
         grunge: ["Grunge", "cursive"],
+        azonix: ['Azonix', 'sans-serif']
       },
       backgroundImage: {
         "hero-pattern": "url('./assets/home.jpeg')",

@@ -46,13 +46,11 @@ const services = [
     link: "/services/modeling",
   },
   {
-    icon: printing,
-    link: "/services/printing",
+    icon: printing
   },
   {
-    icon: productphotography,
-    link: "/services/productphotography",
-  },
+    icon: productphotography
+  }
 ];
 
 export default function ServicesSection() {
@@ -61,7 +59,9 @@ export default function ServicesSection() {
       className="w-full py-20 px-6 mt-40 md:px-16 bg-white/70 text-center bg-fixed bg-center bg-cover relative min-h-[500px] "
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
-      <h1 className="text-4xl font-bold text-center mb-12 text-white">
+      <h1 
+      className="text-3xl font-bold tracking-widest mb-8 text-white"
+        style={{ fontFamily: "Azonix" }}>
         OUR SERVICES
       </h1>
 
