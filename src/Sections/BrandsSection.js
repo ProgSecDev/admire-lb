@@ -14,7 +14,7 @@ import bobcat from "../assets/Brands/Bobcat.jpg";
 import cactus from "../assets/Brands/Cactus.jpg";
 import caritas from "../assets/Brands/Caritas.jpg";
 import carry from "../assets/Brands/Carry.jpg";
-import ciaspora from "../assets/Brands/Ciaspora.jpg";
+import diaspora from "../assets/Brands/Diaspora.jpg";
 import clinimed from "../assets/Brands/Clinimed.jpg";
 import coop from "../assets/Brands/Coop.jpg";
 import cottonandcolors from "../assets/Brands/Cotton-and-Colors.jpg";
@@ -72,10 +72,17 @@ import vertetblanc from "../assets/Brands/Vert-Et-Blanc.jpg";
 import yara from "../assets/Brands/Yara.jpg";
 import zein from "../assets/Brands/Zein.jpg";
 import zelere from "../assets/Brands/Zelere.jpg";
-import backgroundImage from "../assets/Home/home-background.jpg";
 
 const Brands = () => {
   const brandLogos = [
+    qatar,
+    ksa,
+    netherlandsembassy,
+    lebaneseuni,
+    pakelo,
+    diaspora,
+    caritas,
+    isuzu,
     alwatad,
     aoun,
     apcc,
@@ -90,9 +97,7 @@ const Brands = () => {
     bluelemon,
     bobcat,
     cactus,
-    caritas,
     carry,
-    ciaspora,
     clinimed,
     coop,
     cottonandcolors,
@@ -109,27 +114,21 @@ const Brands = () => {
     hardees,
     houseofolives,
     iconglobal,
-    isuzu,
     janalubnan,
     jdeide,
     kands,
     kfc,
     khoury,
     krc,
-    ksa,
-    lebaneseuni,
     legrain,
     makhazen,
     maram,
     margarita,
     metra,
     mzresidency,
-    netherlandsembassy,
-    pakelo,
     paraff,
     pizzahut,
     psaltis,
-    qatar,
     reisswolf,
     rentaride,
     rmck,
@@ -153,10 +152,7 @@ const Brands = () => {
   ];
 
   return (
-    <section
-      className="w-full py-20 px-6 mt-40 md:px-16 bg-white/70 text-center bg-fixed bg-center bg-cover relative min-h-[500px] "
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
+    <section className="w-full py-20 px-6 mt-28 md:px-16 bg-gray-400/70 text-center bg-fixed bg-center bg-cover relative min-h-[500px]">
       <h1
         className="text-3xl font-bold tracking-widest mb-3"
         style={{ fontFamily: "Azonix" }}
@@ -165,25 +161,25 @@ const Brands = () => {
       </h1>
       <p className="text-lg mb-12" style={{ fontFamily: "Raleway" }}>
         Take a look below at a few of the companies that we have the
-        <span className="text-pink-500 font-semibold">
-          {" "}
-          privilege to partner{" "}
-        </span>
+        <span className="text-pink-500 font-semibold"> privilege </span> to{" "}
+        <span className="text-pink-500 font-semibold">partner </span>
         with.
       </p>
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-7 gap-6 place-items-center">
+      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 place-items-center">
         {brandLogos.map((logo, idx) => (
           <div
-            key={idx}
-            className="bg-white rounded-xl shadow-md p-2 flex items-center justify-center w-40 h-40 md:w-48 md:h-48"
-          >
-            <img
-              src={logo}
-              alt={`brand-${idx}`}
-              className="object-contain max-h-full max-w-full transition-transform duration-300 ease-in-out transform hover:scale-[1.2]"
-            />
-          </div>
+  key={idx}
+  className="flex items-center justify-center w-28 h-28 md:w-44 md:h-44 
+             bg-white rounded-2xl border border-gray-300 
+             shadow-[0_5px_10px_rgba(1,0,0,1)] ring-4 ring-gray-200"
+>
+  <img
+    src={logo}
+    alt={`brand-${idx}`}
+    className="object-contain max-h-[70%] max-w-[70%] transition-transform duration-300 ease-in-out hover:scale-110 shadow-[0_5px_10px_rgba(0,0,0,1)]"
+  />
+</div>
         ))}
       </div>
     </section>

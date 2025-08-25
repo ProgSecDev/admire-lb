@@ -1,4 +1,4 @@
-import backgroundImage from "../assets/Home/home-background.jpg";
+import backgroundImage from "../assets/Home/main-page-01.jpg";
 
 const values = [
   {
@@ -41,21 +41,21 @@ const values = [
 
 const CoreValuesGrid = () => {
   return (
-    <div className="py-5 px-4 bg-fixed bg-center bg-cover relative min-h-[500px]" style={{ backgroundImage: `url(${backgroundImage})` }}>
-      <div className="absolute inset-0 bg-white opacity-10"></div>
+    <div className="-mt-20 px-4 bg-fixed bg-center bg-cover relative min-h-[500px]" style={{ backgroundImage: `url(${backgroundImage})` }}>
+      <div className="absolute inset-0 bg-black/40"></div>
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         {values.map((item, index) => (
           <div key={index} className="flex items-start space-x-4">
-            <div className="relative flex items-center justify-center w-8 h-8">
-              <div className="w-8 h-8 rounded-full border-2 border-pink-600 flex items-center justify-center">
-                <div className="w-6 h-6 rounded-full bg-pink-600 text-white text-sm font-bold flex items-center justify-center">
+            <div className="relative flex items-center justify-center w-12 h-12">
+              <div className="w-10 h-10 rounded-full border-2 border-white flex items-center justify-center">
+                <div className="w-8 h-8 rounded-full bg-pink-600 text-white text-sm font-bold flex items-center justify-center">
                   {item.number}
                 </div>
               </div>
             </div>
             <div>
-              <h3 className="text-pink-600 text-xl font-bold mb-1">{item.title}</h3>
-              <p className="text-gray-800 text-sm leading-relaxed">{item.desc}</p>
+              <h3 className="text-white text-xl font-bold mb-1">{item.title}</h3>
+              <p className="text-white text-sm leading-relaxed">{item.desc}</p>
             </div>
           </div>
         ))}
