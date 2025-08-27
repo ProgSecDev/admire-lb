@@ -1,10 +1,10 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/Logos-and-Favicons/admire-logo-1.png";
-import fbicon from "../assets/Flags-and-Icons/fb-01.svg";
-import instaicon from "../assets/Flags-and-Icons/insta-01.svg";
-import tiktokicon from "../assets/Flags-and-Icons/tiktok-01.svg";
-import linkedinicon from "../assets/Flags-and-Icons/LINKED-IN-01.svg";
+// import fbicon from "../assets/Flags-and-Icons/fb-01.svg";
+// import instaicon from "../assets/Flags-and-Icons/insta-01.svg";
+// import tiktokicon from "../assets/Flags-and-Icons/tiktok-01.svg";
+// import linkedinicon from "../assets/Flags-and-Icons/LINKED-IN-01.svg";
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -64,12 +64,28 @@ function Nav() {
     { to: "/photography", label: "Photography" },
   ];
 
-  const socials = [
-    { href: "https://www.instagram.com/yourhandle", src: instaicon, label: "Instagram" },
-    { href: "https://www.facebook.com/yourpage", src: fbicon, label: "Facebook" },
-    { href: "https://www.tiktok.com/@yourhandle", src: tiktokicon, label: "TikTok" },
-    { href: "https://www.linkedin.com/company/yourcompany", src: linkedinicon, label: "LinkedIn" },
-  ];
+  // const socials = [
+  //   {
+  //     href: "https://www.instagram.com/yourhandle",
+  //     src: instaicon,
+  //     label: "Instagram",
+  //   },
+  //   {
+  //     href: "https://www.facebook.com/yourpage",
+  //     src: fbicon,
+  //     label: "Facebook",
+  //   },
+  //   {
+  //     href: "https://www.tiktok.com/@yourhandle",
+  //     src: tiktokicon,
+  //     label: "TikTok",
+  //   },
+  //   {
+  //     href: "https://www.linkedin.com/company/yourcompany",
+  //     src: linkedinicon,
+  //     label: "LinkedIn",
+  //   },
+  // ];
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
@@ -91,33 +107,30 @@ function Nav() {
             </Link>
           </div>
 
-          {/* center: social icons (render images as-is) */}
-{/* center: social icons (render images centered in fixed squares) */}
-<div className="hidden md:flex justify-center">
-  <ul className="flex items-center gap-6">
-    {socials.map(({ href, src, label }, idx) => (
-      <li key={`${label}-${idx}`} className="list-none">
-        <a
-          href={href}
-          target="_blank"
-          rel="noopener noreferrer"
-          aria-label={label}
-          title={label}
-          className="inline-flex h-20 w-20 items-center justify-center"
-        >
-          <img
-            src={src}
-            alt=""
-            className="max-h-full max-w-full object-contain select-none"
-            draggable={false}
-          />
-        </a>
-      </li>
-    ))}
-  </ul>
-</div>
-
-
+          {/* center: social icons (render images centered in fixed squares) */}
+          {/* <div className="hidden md:flex justify-center">
+            <ul className="flex items-center gap-6">
+              {socials.map(({ href, src, label }, idx) => (
+                <li key={`${label}-${idx}`} className="list-none">
+                  <a
+                    href={href}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    aria-label={label}
+                    title={label}
+                    className="inline-flex h-20 w-20 items-center justify-center"
+                  >
+                    <img
+                      src={src}
+                      alt=""
+                      className="max-h-full max-w-full object-contain select-none"
+                      draggable={false}
+                    />
+                  </a>
+                </li>
+              ))}
+            </ul>
+          </div> */}
 
           {/* right: circular hamburger */}
           <div className="flex items-center justify-end">

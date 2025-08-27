@@ -1,3 +1,6 @@
+// import backgroundImage from "../assets/Brands/bc-01.jpg";
+import brandCardBg from "../assets/Brands/boxes-01.png";
+
 import alwatad from "../assets/Brands/Al-Watad.jpg";
 import aoun from "../assets/Brands/Aoun.jpg";
 import apcc from "../assets/Brands/APCC.jpg";
@@ -75,112 +78,51 @@ import zelere from "../assets/Brands/Zelere.jpg";
 
 const Brands = () => {
   const brandLogos = [
-    qatar,
-    ksa,
-    netherlandsembassy,
-    lebaneseuni,
-    pakelo,
-    diaspora,
-    caritas,
-    isuzu,
-    alwatad,
-    aoun,
-    apcc,
-    areekahdesign,
-    arlyco,
-    artandstyle,
-    aujan,
-    axvaya,
-    beefclub,
-    benego,
-    bethaleph,
-    bluelemon,
-    bobcat,
-    cactus,
-    carry,
-    clinimed,
-    coop,
-    cottonandcolors,
-    cysense,
-    dc,
-    desegno,
-    dominospizza,
-    ecbc,
-    ema,
-    f,
-    foodys,
-    freshway,
-    gaia,
-    hardees,
-    houseofolives,
-    iconglobal,
-    janalubnan,
-    jdeide,
-    kands,
-    kfc,
-    khoury,
-    krc,
-    legrain,
-    makhazen,
-    maram,
-    margarita,
-    metra,
-    mzresidency,
-    paraff,
-    pizzahut,
-    psaltis,
-    reisswolf,
-    rentaride,
-    rmck,
-    rons,
-    royalhillsresidency,
-    rtmmotors,
-    samizar,
-    semeli,
-    servmed,
-    servwell,
-    softy,
-    stamina,
-    thewellbeingassociation,
-    tne,
-    tonysfood,
-    unesco,
-    vertetblanc,
-    yara,
-    zein,
-    zelere,
+    qatar, ksa, netherlandsembassy, lebaneseuni, pakelo, diaspora, caritas,
+    isuzu, alwatad, aoun, apcc, areekahdesign, arlyco, artandstyle, aujan,
+    axvaya, beefclub, benego, bethaleph, bluelemon, bobcat, cactus, carry,
+    clinimed, coop, cottonandcolors, cysense, dc, desegno, dominospizza, ecbc,
+    ema, f, foodys, freshway, gaia, hardees, houseofolives, iconglobal,
+    janalubnan, jdeide, kands, kfc, khoury, krc, legrain, makhazen, maram,
+    margarita, metra, mzresidency, paraff, pizzahut, psaltis, reisswolf,
+    rentaride, rmck, rons, royalhillsresidency, rtmmotors, samizar, semeli,
+    servmed, servwell, softy, stamina, thewellbeingassociation, tne, tonysfood,
+    unesco, vertetblanc, yara, zein, zelere,
   ];
 
   return (
-    <section className="w-full py-20 px-6 mt-28 md:px-16 bg-gray-400/70 text-center bg-fixed bg-center bg-cover relative min-h-[500px]">
-      <h1
-        className="text-3xl font-bold tracking-widest mb-3"
-        style={{ fontFamily: "Azonix" }}
-      >
-        BRANDS THAT TRUST US
-      </h1>
-      <p className="text-lg mb-12" style={{ fontFamily: "Raleway" }}>
-        Take a look below at a few of the companies that we have the
-        <span className="text-pink-500 font-semibold"> privilege </span> to{" "}
-        <span className="text-pink-500 font-semibold">partner </span>
-        with.
-      </p>
+    <section
+      className="relative w-full mt-28 text-center min-h-screen bg-fixed bg-center bg-cover px-6 md:px-16 py-20"
+      // style={{ backgroundImage: `url(${backgroundImage})` }}
+    >
+      <div className="absolute inset-0 bg-black/10" aria-hidden />
 
-      <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-8 place-items-center">
-        {brandLogos.map((logo, idx) => (
-          <div
-  key={idx}
-  className="flex items-center justify-center w-28 h-28 md:w-44 md:h-44 
-             bg-white rounded-2xl border border-gray-300 
-             shadow-[0_5px_10px_rgba(1,0,0,1)] ring-4 ring-gray-200"
->
-  <img
-    src={logo}
-    alt={`brand-${idx}`}
-    className="object-contain max-h-[70%] max-w-[70%] transition-transform duration-300 ease-in-out hover:scale-110 shadow-[0_5px_10px_rgba(0,0,0,1)]"
-  />
-</div>
-        ))}
+      <div className="relative z-10">
+        <h1 className="text-3xl font-bold tracking-widest mb-3" style={{ fontFamily: "Azonix" }}>
+          BRANDS THAT TRUST US
+        </h1>
+        <p className="text-lg mb-12" style={{ fontFamily: "Raleway" }}>
+          Take a look below at a few of the companies that we have the
+          <span className="text-pink-500 font-semibold"> privilege </span> to{" "}
+          <span className="text-pink-500 font-semibold">partner </span>
+          with.
+        </p>
+
+        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 md:-gap-x-20 md:-gap-y-20 place-items-center lg:ml-96 lg:mr-96">
+          {brandLogos.map((logo, idx) => (
+            <div
+              key={idx}
+              className="relative w-44 h-32 md:w-48 md:h-40 bg-center bg-no-repeat bg-contain"
+              style={{ backgroundImage: `url(${brandCardBg})` }}
+            >
+              <img
+                src={logo}
+                alt={`brand-${idx}`}
+                className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 object-contain max-h-[70%] max-w-[70%] transition-transform duration-300 ease-in-out hover:scale-110"
+              />
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
