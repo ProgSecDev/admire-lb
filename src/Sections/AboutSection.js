@@ -1,118 +1,160 @@
-import bgImage from "../assets/About-Us/about-bg4.jpg";
+import React from "react";
+import bgImage from "../assets/About-Us/bc-joelle.jpg";
+import dashImage from "../assets/About-Us/line-01.svg";
+import planeImage from "../assets/About-Us/flight-01.svg";
 
-const AboutUs = () => {
+export default function AboutSection() {
   return (
     <section
-      className="w-full min-h-screen bg-cover bg-no-repeat bg-center relative"
-      style={{ backgroundImage: `url(${bgImage})` }}
+      className="relative w-full lg:h-[1100px] bg-neutral-500 overflow-hidden ring-1 ring-white/40"
+      aria-label="About Admire agency"
     >
-      <div className="absolute inset-0 bg-black/10"></div>
+      {/* Background image (entire image, no crop) */}
+      <img
+        src={bgImage}
+        alt="Portrait background"
+        className="absolute inset-0 w-full h-full object-contain object-right pointer-events-none select-none"
+        aria-hidden
+      />
 
-      <div className="relative z-10 w-full px-4 sm:px-6 lg:px-16 pt-24 pb-12 max-w-6xl mx-auto text-black">
-        <h1
-          className="text-center mb-8 mt-8 tracking-widest drop-shadow-lg text-2xl sm:text-3xl md:text-4xl font-bold"
-          style={{ fontFamily: "Azonix" }}
-        >
-          ABOUT US
-        </h1>
+      {/* Subtle left-to-right dark gradient for legibility (does not crop) */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            "linear-gradient(180deg, rgba(0,0,0,.15) 50%, rgba(255,255,255,1) 100%, rgba(0,0,0,.15) 60%, rgba(0,0,0,0) 45%)",
+        }}
+        aria-hidden
+      />
 
-        <div
-          className="space-y-5 text-black text-sm sm:text-base md:text-lg"
-          style={{ fontFamily: "Raleway" }}
-        >
-          <p>
-            A multinational advertising agency based in Lebanon with offices
-            across Cyprus Saudi Arabia, Dubai, and Qatar. We pride ourselves on
-            delivering exceptional digital marketing and graphic design
-            solutions to our clients, who are some of the most esteemed brands
-            in the industry.
-          </p>
-          <p>
-            <span className="text-pink-600 font-semibold">Admire</span> has been
-            providing top-notch digital marketing and graphic design solutions
-            for over 14 years. During that time, we have developed a reputation
-            for excellence, reliability, and professionalism. Our extensive
-            experience has given us the knowledge and expertise needed to
-            deliver outstanding results to our clients. We have built lasting
-            relationships with many of our clients, and we are proud to have
-            been a part of their growth and success over the years. At Admire,
-            we are committed to continuing to deliver the best possible service
-            to our clients for many years to come.
-          </p>
-          <p>
-            At <span className="text-pink-600 font-semibold">Admire</span>, our
-            goal is to help businesses maximize their potential through creative
-            and innovative digital marketing strategies. We believe that every
-            business deserves a unique and tailored approach to its digital
-            marketing, and we work tirelessly to ensure that our clients’ needs
-            are met with the utmost care and attention to detail.
-          </p>
-          <p>
-            Our team of experts is composed of highly skilled and experienced
-            professionals in the fields of digital marketing and graphic design.
-            We understand that every business is different, and we take the time
-            to understand our clients’ individual needs and objectives. Whether
-            you are looking for a comprehensive digital marketing strategy or a
-            stunning graphic design solution, we are here to help you achieve
-            your goals.
-          </p>
-          <p>
-            At <span className="text-pink-600 font-semibold">Admire</span>, we
-            believe that our success is directly linked to our clients’ success.
-            That is why we are dedicated to providing the highest level of
-            customer service and support. We are committed to exceeding our
-            clients’ expectations and delivering the best possible results.
-          </p>
-          <p>
-            We are proud of our reputation as a leading digital marketing and
-            graphic design company in the region. Our clients trust us to
-            deliver exceptional work, and we are committed to uphold that trust.
-            If you are looking for a reliable partner to help you grow your
-            business, look no further than Admire.
-          </p>
+      {/* Grid overlay: edge lines + 25/50/75% + thicker center */}
+      <div className="pointer-events-none absolute inset-0" aria-hidden>
+        {/* Edge lines */}
+        <div className="absolute top-0 left-0 w-full h-px bg-white/70" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-white/70" />
+        <div className="absolute top-0 left-0 h-full w-px bg-white/70" />
+        <div className="absolute top-0 right-0 h-full w-px bg-white/70" />
+        {/* Quarter guides */}
+        <div className="absolute top-1/4 left-0 w-full h-px bg-white/50" />
+        <div className="absolute top-1/2 left-0 w-full h-px bg-white/50" />
+        <div className="absolute top-3/4 left-0 w-full h-px bg-white/50" />
+        <div className="absolute top-0 left-1/4 h-full w-px bg-white/50" />
+        <div className="absolute top-0 left-1/2 h-full w-px bg-white/50" />
+        <div className="absolute top-0 left-3/4 h-full w-px bg-white/50" />
+        {/* Center crosshair (thicker) */}
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full h-[2px] bg-white/20" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-[2px] bg-white/20" />
+      </div>
 
-          <div className="pt-6 space-y-5">
-            <div>
-              <h2 className="text-pink-700 font-bold uppercase tracking-wide text-base md:text-lg">
-                Our Mission
-              </h2>
+      {/* Content area */}
+      <div className="relative z-10 mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-16 pt-20 pb-10 md:pt-24">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+          {/* Left column (copy) */}
+          <div className="lg:col-span-6 xl:col-span-5">
+            <h1
+              className="mb-8 md:mb-8 tracking-[0.3em] text-black drop-shadow text-3xl sm:text-4xl md:text-5xl font-bold"
+              style={{ fontFamily: "Azonix, sans-serif" }}
+            >
+              ABOUT US
+            </h1>
+
+            <div
+              className="space-y-4 md:space-y-5 text-white/95 text-[13px] sm:text-sm md:text-[15px] leading-relaxed"
+              style={{ fontFamily: "Raleway, ui-sans-serif, system-ui" }}
+            >
               <p>
-                We empower great ideas and believe that innovative content comes
-                from special people just like you! We are dedicated to authentic
-                brand stories and use journalistic methods to create the largest
-                possible value for both your budget and your audience. <br />
-                We work hard to create inspired and effective work for your
-                brand.
+                Admire is a multinational advertising agency headquartered in Lebanon, with
+                offices across Cyprus, Saudi Arabia, Dubai and Qatar. For more than 14 years,
+                we have specialized in delivering high-quality digital marketing and graphic
+                design solutions to some of the most prestigious brands in the region.
+                Throughout our journey, we have built a solid reputation for excellence,
+                professionalism, and reliability. Our extensive experience allows us to craft
+                innovative, creative and customized strategies that help businesses maximize
+                their potential and achieve sustainable growth.
+              </p>
+              <p>
+                Our team of skilled professionals works closely with clients to understand their
+                unique goals and challenges, ensuring every solution is tailored to their needs.
+                Whether it's comprehensive digital marketing campaigns or impactful graphic
+                design, we focus on delivering results that matter. At Admire, we believe our
+                success is tied to the success of our clients. That is why we are committed to
+                exceeding expectations, offering exceptional customer service, and maintaining
+                long-lasting partnerships. With a strong track record and trusted relationships,
+                we continue to position ourselves as a leading agency in the region, dedicated
+                to shaping brands and driving growth.
               </p>
             </div>
-            <div>
-              <h2 className="text-pink-700 font-bold uppercase tracking-wide text-base md:text-lg">
-                Our Vision
-              </h2>
-              <p>
-                To provide innovative and effective integrated brand marketing
-                and public relations solutions that helps our clients grow their
-                businesses and realize their marketing goals.
-              </p>
-            </div>
-            <div>
-              <h2 className="text-pink-700 font-bold uppercase tracking-wide text-base md:text-lg">
-                Our Values
-              </h2>
-              <p>
-                Our people enjoy a personal stake in your continued success and
-                take pride in what we do. We are here to serve our clients. Our
-                commitment to our customers is deeply ingrained in our corporate
-                culture and we go above and beyond every day to prove it. We
-                produce clever work, but we always keep the objective of each
-                campaign at the top of our mind.
-              </p>
+          </div>
+
+          {/* Spacer so text doesn't collide with portrait */}
+          {/* <div className="hidden lg:block lg:col-span-1" /> */}
+
+          {/* Bottom trio (Vision, Mission, Values) */}
+          <div className="lg:col-span-7 mt-10 lg:mt-auto">
+            <div className="grid md:grid-cols-3 gap-6">
+              
+              <div className="lg:translate-y-48 lg:translate-x-16 p-0 font-azonix">
+                <h3 className="text-pink-600 font-extrabold tracking-wide uppercase text-base md:text-lg">
+                  Vision
+                </h3>
+                <p className="font-raleway font-bold text-black text-[13px] sm:text-sm mt-1">
+                  To provide innovative and effective integrated brand marketing and public
+                  relations solutions that help clients grow their businesses and realize their
+                  marketing goals.
+                </p>
+              </div>
+
+              
+              <div className="lg:translate-y-96 lg:-translate-x-[500px] p-0 font-azonix">
+                <h3 className="text-pink-600 font-extrabold tracking-wide uppercase text-base md:text-lg">
+                  Mission
+                </h3>
+                <p className="font-raleway font-bold text-black text-[13px] sm:text-sm mt-1">
+                  We empower great ideas and believe that innovative content comes from special
+                  people just like you. We craft authentic brand stories to create the largest
+                  possible value for both your budget and your audience.
+                </p>
+              </div>
+
+              
+              <div className="lg:translate-y-96 p-0 font-azonix">
+                <h3 className="text-pink-600 font-extrabold tracking-wide uppercase text-base md:text-lg">
+                  Values
+                </h3>
+                <p className="font-raleway font-bold text-black text-[13px] sm:text-sm mt-1">
+                  Our people enjoy a personal stake in your success and take pride in what we do.
+                  We serve our clients, go above and beyond, and keep each campaign’s objective
+                  at the top of mind.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
+
+      {/* Owner ribbon */}
+      <div className="hidden md:flex items-center gap-3 absolute right-4 sm:right-10 lg:right-16 top-[55%] z-20 select-none">
+        <div className="bg-pink-600 px-2 py-3 shadow-xl pr-28">
+          <div className="text-white/90 text-xs tracking-widest uppercase">Owner:</div>
+          <div className="font-azonix text-white text-lg sm:text-xl font-extrabold tracking-wider">Joelle Raich</div>
+        </div>
+      </div>
+
+      {/* Decorative dashed line image */}
+      <img
+        src={dashImage}
+        alt="Decorative dashed path"
+        className="pointer-events-none absolute bottom-32 left-[45%] -translate-x-1/3 w-[50%] max-w-none h-auto z-10 select-none rotate-2"
+        aria-hidden
+      />
+
+      {/* Pink plane/rocket image */}
+      <img
+        src={planeImage}
+        alt="Pink paper plane"
+        className="pointer-events-none absolute bottom-[260px] right-[19.2%] lg:w-32 md:w-16 sm:w-16 h-auto rotate-[8deg] z-10 select-none"
+        aria-hidden
+      />
     </section>
   );
-};
-
-export default AboutUs;
+}
