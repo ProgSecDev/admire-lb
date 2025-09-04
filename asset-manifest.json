@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/admire-lb/static/css/main.bd97a741.css",
-    "main.js": "/admire-lb/static/js/main.395970de.js",
+    "main.css": "/admire-lb/static/css/main.ebf1b308.css",
+    "main.js": "/admire-lb/static/js/main.d6b6a970.js",
     "static/js/453.6abb9b73.chunk.js": "/admire-lb/static/js/453.6abb9b73.chunk.js",
     "static/media/WhatsApp-Video-2023-09-28-at-13.01.02.mp4": "/admire-lb/static/media/WhatsApp-Video-2023-09-28-at-13.01.02.60b72e1e3ab8c16b54c7.mp4",
     "static/media/Al-Abbseye.mp4": "/admire-lb/static/media/Al-Abbseye.a1a2a0ad93621ce34db1.mp4",
@@ -63,6 +63,7 @@
     "static/media/The-Well-Being-Association.png": "/admire-lb/static/media/The-Well-Being-Association.f3f006b58bbef37abfbc.png",
     "static/media/10-1.jpg": "/admire-lb/static/media/10-1.1dbfabee8c656a573fda.jpg",
     "static/media/Corp-Catalogue-20-1.jpg": "/admire-lb/static/media/Corp-Catalogue-20-1.704ed9cc9fc2a8949a1b.jpg",
+    "static/media/career-outline-02.jpg": "/admire-lb/static/media/career-outline-02.cd0f63259e760372ec50.jpg",
     "static/media/12.jpg": "/admire-lb/static/media/12.270a45cf496e36f1c890.jpg",
     "static/media/8-2.jpg": "/admire-lb/static/media/8-2.02ca50c66b6506f123e8.jpg",
     "static/media/MISSING-ONES-28-scaled.jpg": "/admire-lb/static/media/MISSING-ONES-28-scaled.a699d7ff136f0b94acb5.jpg",
@@ -163,7 +164,6 @@
     "static/media/Private-Label-3.jpg": "/admire-lb/static/media/Private-Label-3.8c48399319d77a032c1e.jpg",
     "static/media/Branding-9-1.jpg": "/admire-lb/static/media/Branding-9-1.0284f5f3934e187d0fb0.jpg",
     "static/media/Trucks-MU-02.jpg": "/admire-lb/static/media/Trucks-MU-02.a88e9370c09e8c57c8a6.jpg",
-    "static/media/careers.jpg": "/admire-lb/static/media/careers.ae458652487469b53d01.jpg",
     "static/media/Corp-Identity-4.jpg": "/admire-lb/static/media/Corp-Identity-4.edc7c4e79a625fc80d23.jpg",
     "static/media/Private-Label-19.jpg": "/admire-lb/static/media/Private-Label-19.aa70529d4e54247e8c3b.jpg",
     "static/media/Web-design-4.jpg": "/admire-lb/static/media/Web-design-4.b0e462f6ff3554237eb4.jpg",
@@ -200,7 +200,6 @@
     "static/media/web-design.jpg": "/admire-lb/static/media/web-design.affffa487131d012fd9b.jpg",
     "static/media/Corp-Identity-5-1.jpg": "/admire-lb/static/media/Corp-Identity-5-1.9fd36322457597396053.jpg",
     "static/media/Corp-Identity-14-1.jpg": "/admire-lb/static/media/Corp-Identity-14-1.78181912030555c907a7.jpg",
-    "static/media/home-background.jpg": "/admire-lb/static/media/home-background.7ca647f0fdbdc7e73a0f.jpg",
     "static/media/twin-tower-LANDSCAPE-3-01.jpg": "/admire-lb/static/media/twin-tower-LANDSCAPE-3-01.91c0457f7a0e4f83209f.jpg",
     "static/media/Corp-Identity-12.jpg": "/admire-lb/static/media/Corp-Identity-12.ef2109160372bafdb202.jpg",
     "static/media/Corp-Identity-10-1.jpg": "/admire-lb/static/media/Corp-Identity-10-1.fb24cdc402343c17a90a.jpg",
@@ -318,12 +317,12 @@
     "static/media/flame-01.svg": "/admire-lb/static/media/flame-01.33d904b9b2638ba704b58d70b9795f5b.svg",
     "static/media/line-01.svg": "/admire-lb/static/media/line-01.ea552b722d40d265c9cdb30db2a390e7.svg",
     "index.html": "/admire-lb/index.html",
-    "main.bd97a741.css.map": "/admire-lb/static/css/main.bd97a741.css.map",
-    "main.395970de.js.map": "/admire-lb/static/js/main.395970de.js.map",
+    "main.ebf1b308.css.map": "/admire-lb/static/css/main.ebf1b308.css.map",
+    "main.d6b6a970.js.map": "/admire-lb/static/js/main.d6b6a970.js.map",
     "453.6abb9b73.chunk.js.map": "/admire-lb/static/js/453.6abb9b73.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bd97a741.css",
-    "static/js/main.395970de.js"
+    "static/css/main.ebf1b308.css",
+    "static/js/main.d6b6a970.js"
   ]
 }
