@@ -1,4 +1,4 @@
-import backgroundImage from "../assets/Home/main-page-01.jpg";
+import backgroundImage from "../assets/Home/main-03.jpg";
 import brainImg from "../assets/Flags-and-Icons/brain-01.svg";
 import flameImg from "../assets/Flags-and-Icons/flame-01.svg";
 import checkImg from "../assets/Flags-and-Icons/tick-01.svg";
@@ -24,7 +24,7 @@ function Story() {
 
   return (
     <div
-      className="py-52 px-4 bg-fixed bg-center bg-cover relative min-h-[500px]"
+      className="py-52 px-4 bg-fixed bg-center bg-contain relative min-h-[500px]"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="absolute inset-0 bg-black/40"></div>

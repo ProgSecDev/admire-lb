@@ -1,6 +1,6 @@
 // src/components/Stats.jsx
 import { useEffect, useRef, useState } from "react";
-import backgroundImage from "../assets/Home/main-page-01.jpg";
+import backgroundImage from "../assets/Home/main-03.jpg";
 
 // NOTE: numbers are the targets (e.g., 125000 -> 125,000)
 const stats = [
@@ -56,7 +56,7 @@ export default function StatsHighlight() {
   return (
     <section
       ref={sectionRef}
-      className="relative bg-fixed bg-center bg-cover"
+      className="relative bg-fixed bg-center bg-contain"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="absolute inset-0 bg-white/60" />

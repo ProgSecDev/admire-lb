@@ -32,7 +32,7 @@ const services = [
 function Banner() {
   return (  
     <div
-      className="-mb-20 relative w-full lg:h-[500px] sm:h-[400px] bg-cover bg-center flex items-center justify-center"
+      className="-mb-20 relative w-full lg:h-[500px] sm:h-[400px] bg-contain bg-no-repeat bg-black bg-center flex items-center justify-center"
       style={{ backgroundImage: `url(${bannerImage})` }}
     >
     </div>

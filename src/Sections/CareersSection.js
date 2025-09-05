@@ -1,5 +1,5 @@
 // src/sections/CareersSection.js
-import backgroundImage from "../assets/Careers/career-outline-02.jpg";
+import backgroundImage from "../assets/Careers/career-outline-04.jpg";
 import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
 
@@ -17,7 +17,7 @@ export default function Careers() {
           JOIN OUR
         </h1>
         <h1
-          className="text-5xl lg:ml-96 text-center lg:text-8xl sm:text-6xl font-bold tracking-widest mb-10"
+          className="text-pink-600 text-5xl lg:ml-96 text-center lg:text-8xl sm:text-6xl font-bold tracking-widest mb-10"
           style={{ fontFamily: "Azonix" }}
         >
           FAMILY
@@ -25,7 +25,7 @@ export default function Careers() {
 
         <div className="grid grid-cols-1 md:grid-cols-1 gap-8 items-start mt-[380px]">
           <div className="w-full flex items-center justify-center">
-            <form className="w-full max-w-5xl p-8 rounded-lg bg-white/50 backdrop-blur-md shadow-lg">
+            <form className="w-full max-w-4xl p-8 rounded-lg bg-white/50 backdrop-blur-md shadow-lg">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <div>
                   <label className="block mb-1 text-left text-lg">Your name</label>
@@ -64,7 +64,7 @@ export default function Careers() {
 
           {/* Contact Info Boxes */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-16">
-            <div className="bg-white/50 rounded-2xl shadow-[4px_4px_8px_rgba(0,0,0,0.4)] p-8 flex flex-col items-center justify-center text-center">
+            <div className="max-w-2xl bg-white/50 rounded-2xl shadow-[4px_4px_8px_rgba(0,0,0,0.4)] p-8 flex flex-col items-center justify-center text-center">
               <p className="mb-4 font-bold font-calibri text-xl">Stay Connected</p>
               <div className="flex gap-6">
                 <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" className="bg-pink-600 text-white rounded-full p-3 text-2xl flex items-center justify-center">

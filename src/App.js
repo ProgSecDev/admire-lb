@@ -6,6 +6,8 @@ import {
   useLocation,
 } from "react-router-dom";
 
+import ScrollToTop from "./Components/scrollToTop";
+
 import Nav from "./Components/Nav";
 import Footer from "./Sections/Footer";
 
@@ -71,6 +73,7 @@ const AppContent = () => {
 const App = () => {
   return (
     <Router basename="/admire-lb">
+    <ScrollToTop />
       <AppContent />
     </Router>
   );

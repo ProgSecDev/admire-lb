@@ -1,4 +1,4 @@
-import backgroundImage from "../assets/Home/main-page-01.jpg";
+import backgroundImage from "../assets/Home/main-03.jpg";
 
 const values = [
   {
@@ -41,7 +41,7 @@ const values = [
 
 const CoreValuesGrid = () => {
   return (
-    <div className="-mt-20 px-4 bg-fixed bg-center bg-cover relative min-h-[500px]" style={{ backgroundImage: `url(${backgroundImage})` }}>
+    <div className="-mt-20 px-4 bg-fixed bg-center bg-contain relative min-h-[500px]" style={{ backgroundImage: `url(${backgroundImage})` }}>
       <div className="absolute inset-0 bg-black/40"></div>
       <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 gap-12">
         {values.map((item, index) => (
