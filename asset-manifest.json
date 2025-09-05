@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/admire-lb/static/css/main.ebf1b308.css",
-    "main.js": "/admire-lb/static/js/main.d6b6a970.js",
+    "main.css": "/admire-lb/static/css/main.5d3eec40.css",
+    "main.js": "/admire-lb/static/js/main.b7965cdf.js",
     "static/js/453.6abb9b73.chunk.js": "/admire-lb/static/js/453.6abb9b73.chunk.js",
     "static/media/WhatsApp-Video-2023-09-28-at-13.01.02.mp4": "/admire-lb/static/media/WhatsApp-Video-2023-09-28-at-13.01.02.60b72e1e3ab8c16b54c7.mp4",
     "static/media/Al-Abbseye.mp4": "/admire-lb/static/media/Al-Abbseye.a1a2a0ad93621ce34db1.mp4",
@@ -37,7 +37,6 @@
     "static/media/4-4.jpg": "/admire-lb/static/media/4-4.93ebcdf39bd9c582ce8d.jpg",
     "static/media/6-scaled.jpg": "/admire-lb/static/media/6-scaled.97cde2da71cd65fa121b.jpg",
     "static/media/Home-Banner.jpg": "/admire-lb/static/media/Home-Banner.d1b5669c53929facf1c5.jpg",
-    "static/media/main-page-01.jpg": "/admire-lb/static/media/main-page-01.576d3b081b77a78accfe.jpg",
     "static/media/balkis-apple.mp4": "/admire-lb/static/media/balkis-apple.69417c9cb9eb2e0bc9e1.mp4",
     "static/media/1-3.jpg": "/admire-lb/static/media/1-3.237d782ad0371618a759.jpg",
     "static/media/8-scaled.jpg": "/admire-lb/static/media/8-scaled.8f03e00f18a13d58ac33.jpg",
@@ -63,7 +62,6 @@
     "static/media/The-Well-Being-Association.png": "/admire-lb/static/media/The-Well-Being-Association.f3f006b58bbef37abfbc.png",
     "static/media/10-1.jpg": "/admire-lb/static/media/10-1.1dbfabee8c656a573fda.jpg",
     "static/media/Corp-Catalogue-20-1.jpg": "/admire-lb/static/media/Corp-Catalogue-20-1.704ed9cc9fc2a8949a1b.jpg",
-    "static/media/career-outline-02.jpg": "/admire-lb/static/media/career-outline-02.cd0f63259e760372ec50.jpg",
     "static/media/12.jpg": "/admire-lb/static/media/12.270a45cf496e36f1c890.jpg",
     "static/media/8-2.jpg": "/admire-lb/static/media/8-2.02ca50c66b6506f123e8.jpg",
     "static/media/MISSING-ONES-28-scaled.jpg": "/admire-lb/static/media/MISSING-ONES-28-scaled.a699d7ff136f0b94acb5.jpg",
@@ -137,6 +135,7 @@
     "static/media/MISSING-ONES-34-scaled.jpg": "/admire-lb/static/media/MISSING-ONES-34-scaled.d0627cb84ed0c78f29a7.jpg",
     "static/media/Corp-Catalogue-6.jpg": "/admire-lb/static/media/Corp-Catalogue-6.f88865e14b3ce241662b.jpg",
     "static/media/Logos-05.jpg": "/admire-lb/static/media/Logos-05.9779e09f677f2f29e0fd.jpg",
+    "static/media/main-03.jpg": "/admire-lb/static/media/main-03.706e182d49133fd722e9.jpg",
     "static/media/Private-Label-8.jpg": "/admire-lb/static/media/Private-Label-8.c31522e1daf726c30958.jpg",
     "static/media/Corp-Catalogue-22-1.jpg": "/admire-lb/static/media/Corp-Catalogue-22-1.2d6d2b602a5fd2de6b9d.jpg",
     "static/media/Logos-06.jpg": "/admire-lb/static/media/Logos-06.ad0640e8785f9ffb8732.jpg",
@@ -184,6 +183,7 @@
     "static/media/Web-design-5-1.jpg": "/admire-lb/static/media/Web-design-5-1.53dfdd540347811ffddb.jpg",
     "static/media/Private-Label-24.jpg": "/admire-lb/static/media/Private-Label-24.fad14ee56ba20f524b3b.jpg",
     "static/media/Private-Label-13.jpg": "/admire-lb/static/media/Private-Label-13.aeabeae5a7e82e6573fb.jpg",
+    "static/media/career-outline-04.jpg": "/admire-lb/static/media/career-outline-04.effc9597faa555d698ec.jpg",
     "static/media/2-2.jpg": "/admire-lb/static/media/2-2.596f05f25a997d1907c8.jpg",
     "static/media/Private-Label-25.jpg": "/admire-lb/static/media/Private-Label-25.05425b07a614ffccc12a.jpg",
     "static/media/Corp-Identity-17-1.jpg": "/admire-lb/static/media/Corp-Identity-17-1.d424df725212426f7418.jpg",
@@ -317,12 +317,12 @@
     "static/media/flame-01.svg": "/admire-lb/static/media/flame-01.33d904b9b2638ba704b58d70b9795f5b.svg",
     "static/media/line-01.svg": "/admire-lb/static/media/line-01.ea552b722d40d265c9cdb30db2a390e7.svg",
     "index.html": "/admire-lb/index.html",
-    "main.ebf1b308.css.map": "/admire-lb/static/css/main.ebf1b308.css.map",
-    "main.d6b6a970.js.map": "/admire-lb/static/js/main.d6b6a970.js.map",
+    "main.5d3eec40.css.map": "/admire-lb/static/css/main.5d3eec40.css.map",
+    "main.b7965cdf.js.map": "/admire-lb/static/js/main.b7965cdf.js.map",
     "453.6abb9b73.chunk.js.map": "/admire-lb/static/js/453.6abb9b73.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.ebf1b308.css",
-    "static/js/main.d6b6a970.js"
+    "static/css/main.5d3eec40.css",
+    "static/js/main.b7965cdf.js"
   ]
 }
