@@ -43,7 +43,20 @@ function ServiceCard({ icon, lines }) {
   const labelText = Array.isArray(lines) ? lines.join(" ") : String(lines);
 
   return (
-    <div className="w-[200px] bg-gray-200 rounded-[26px] sm:rounded-[28px] px-6 sm:px-7 py-10 min-h-[220px] sm:min-h-[350px] shadow-[0_10px_24px_rgba(0,0,0,0.25)] flex flex-col items-center justify-center gap-3 text-center">
+    <div
+      className="
+        w-[200px] 
+        bg-gray-200 
+        rounded-[26px] sm:rounded-[28px] 
+        px-6 sm:px-7 
+        py-10 
+        min-h-[220px] sm:min-h-[350px] 
+        shadow-[4px_6px_12px_rgba(255,255,255,0.25)] 
+        hover:shadow-[8px_10px_20px_rgba(255,255,255,0.5)]
+        transition-shadow duration-300 ease-linear
+        flex flex-col items-center justify-center gap-3 text-center
+      "
+    >
       <img
         src={icon}
         alt={labelText}
@@ -63,6 +76,8 @@ function ServiceCard({ icon, lines }) {
     </div>
   );
 }
+
+
 
 export default function ServicesSection() {
   return (

@@ -1,3 +1,4 @@
+import { motion } from "framer-motion";
 // import backgroundImage from "../assets/Brands/bc-01.jpg";
 import brandCardBg from "../assets/Brands/boxes-01.png";
 
@@ -93,7 +94,6 @@ const Brands = () => {
   return (
     <section
       className="relative w-full mt-28 text-center min-h-screen bg-fixed bg-center bg-cover px-6 md:px-16 py-20"
-      // style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="absolute inset-0 bg-black/10" aria-hidden />
 
@@ -110,17 +110,21 @@ const Brands = () => {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-4 md:-gap-x-20 md:-gap-y-20 place-items-center lg:ml-96 lg:mr-96">
           {brandLogos.map((logo, idx) => (
-            <div
+            <motion.div
               key={idx}
               className="relative w-44 h-32 md:w-48 md:h-40 bg-center bg-no-repeat bg-contain"
               style={{ backgroundImage: `url(${brandCardBg})` }}
+              initial={{ scale: 0.5, opacity: 0 }}
+              whileInView={{ scale: 1, opacity: 1 }}
+              transition={{ type: "spring", stiffness: 300, damping: 20, duration: 0.1, delay: idx * 0.01 }}
+              viewport={{ once: true, amount: 0.2 }}
             >
               <img
                 src={logo}
                 alt={`brand-${idx}`}
                 className="absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2 object-contain max-h-[70%] max-w-[70%] transition-transform duration-300 ease-in-out hover:scale-110"
               />
-            </div>
+            </motion.div>
           ))}
         </div>
       </div>
