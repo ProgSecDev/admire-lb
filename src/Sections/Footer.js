@@ -12,12 +12,12 @@ const Footer = () => {
       <div className="absolute top-8 left-0 right-0 h-20 bg-gradient-to-b from-white via-white/70 to-transparent pointer-events-none" />
 
       {/* Main background */}
-      <div className="relative bg-gradient-to-b from-gray-300 via-gray-500 to-black px-6 py-20">
+      <div className="relative bg-gradient-to-b from-gray-300 via-gray-500 to-black px-6 py-2">
         <div className="max-w-7xl mx-auto flex flex-col md:flex-row justify-between items-start md:items-center gap-10">
           
           {/* Left: Logo + Info */}
           <div className="flex-1 text-left">
-            <img src={logo} alt="Admire Logo" className="w-56 mb-6 -mt-20" />
+            <img src={logo} alt="Admire Logo" className="w-56 mb-2" />
 
             <div className="-space-y-6">
               <div className="flex items-center gap-3">

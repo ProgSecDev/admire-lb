@@ -26,7 +26,7 @@ const BottomFooter = () => {
   ];
 
   return (
-    <div className="bg-black text-white py-2 px-6">
+    <div className="bg-black text-white px-6">
       <div className="max-w-7xl mx-auto">
         {/* Row: Socials (left) + Flags (center) */}
         <div className="flex items-center justify-between">
