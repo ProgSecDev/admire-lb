@@ -55,29 +55,32 @@ export default function StatsHighlight() {
 
   return (
     <section
-      ref={sectionRef}
-      className="relative bg-fixed bg-center bg-contain"
-      style={{ backgroundImage: `url(${backgroundImage})` }}
-    >
-      <div className="absolute inset-0 bg-white/60" />
+  ref={sectionRef}
+  className="relative bg-fixed bg-center bg-contain"
+  style={{ backgroundImage: `url(${backgroundImage})` }}
+>
+  <div className="absolute inset-0 bg-white/60" />
 
-      <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16 lg:py-20">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-16">
-          {stats.map((s, i) => (
-            <div key={i} className="text-left">
-              <div className="flex items-baseline gap-3 sm:gap-4">
-                <span className="text-pink-600 font-extrabold leading-none text-5xl sm:text-6xl lg:text-7xl">+</span>
-                <span className="text-black font-extrabold leading-none text-5xl sm:text-6xl lg:text-7xl">
-                  <CountUp end={s.number} duration={2} shouldStart={startCount} formatter={formatNumber} />
-                </span>
-              </div>
-              <p className="mt-3 pl-20 text-black text-sm sm:text-base max-w-xs">
-                {s.desc}
-              </p>
-            </div>
-          ))}
+  {/* 👇 Blur overlay at bottom to blend into footer */}
+  <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-gray-300 via-gray-300/50 to-transparent backdrop-blur-md pointer-events-none z-20" />
+
+  <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 py-12 md:py-16 lg:py-20">
+    {/* Stats grid */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-8 lg:gap-16">
+      {stats.map((s, i) => (
+        <div key={i} className="text-left">
+          <div className="flex items-baseline gap-3 sm:gap-4">
+            <span className="text-pink-600 font-extrabold leading-none text-5xl sm:text-6xl lg:text-7xl">+</span>
+            <span className="text-black font-extrabold leading-none text-5xl sm:text-6xl lg:text-7xl">
+              <CountUp end={s.number} duration={2} shouldStart={startCount} formatter={formatNumber} />
+            </span>
+          </div>
+          <p className="mt-3 pl-20 text-black text-sm sm:text-base max-w-xs">{s.desc}</p>
         </div>
-      </div>
-    </section>
+      ))}
+    </div>
+  </div>
+</section>
+
   );
 }

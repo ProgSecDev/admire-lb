@@ -13,6 +13,9 @@ module.exports = {
         azonix: ['Azonix', 'sans-serif'],
         raleway: ['Raleway', 'sans-serif']
       },
+      screens: {
+        '3xl': '1800px', // applies only for very large screens (24"+)
+      },
       backgroundImage: {
         "hero-pattern": "url('./assets/home.jpeg')",
         "footer-texture": "url('/img/footer-texture.png')",

@@ -29,7 +29,7 @@ function Nav() {
   };
 
   useEffect(() => {
-    if (isMenuOpen) closeMenu();
+    closeMenu();
   }, [location.pathname]);
 
   useEffect(() => {
@@ -58,8 +58,8 @@ function Nav() {
     { to: "/home", label: "Home" },
     { to: "/about-us", label: "About Us" },
     { to: "/brands", label: "Brands Who Trust Us" },
-    { to: "/portfolio", label: "Portfolio" },
     { to: "/services", label: "Services" },
+    { to: "/portfolio", label: "Portfolio" },
     { to: "/careers", label: "Careers" },
     { to: "/photography", label: "Photography" },
   ];
@@ -135,13 +135,14 @@ function Nav() {
           {/* right: circular hamburger */}
           <div className="flex items-center justify-end">
             <button
-              ref={triggerRef}
-              type="button"
-              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-              aria-expanded={isMenuOpen}
-              onClick={toggleMenu}
-              className="lg:mr-40 h-12 w-12 sm:h-12 sm:w-12 rounded-full bg-pink-600 text-white grid place-items-center shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500/60 active:scale-[0.98] transition"
-            >
+  ref={triggerRef}
+  type="button"
+  aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+  aria-expanded={isMenuOpen}
+  onClick={toggleMenu}
+  className="lg:mr-40 xl:mr-10 h-12 w-12 sm:h-12 sm:w-12 rounded-full bg-pink-600 text-white grid place-items-center shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500/60 active:scale-[0.98] transition"
+>
+
               <span
                 className={`block text-2xl leading-none transition-transform duration-200 ${
                   isMenuOpen ? "rotate-90" : "rotate-0"
@@ -169,7 +170,7 @@ function Nav() {
                   key={to}
                   to={to}
                   onClick={closeMenu}
-                  className="w-56 h-12 flex items-center justify-center rounded-full border border-pink-500 bg-pink-50 hover:bg-pink-100 text-pink-700 text-base text-center transition"
+                  className="lg:mr-40 xl:mr-2 w-48 h-12 flex items-center justify-center rounded-full border border-pink-500 bg-pink-50 hover:bg-pink-100 text-pink-700 text-base text-center transition"
                 >
                   {label}
                 </Link>

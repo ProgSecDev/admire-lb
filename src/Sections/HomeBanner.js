@@ -1,7 +1,6 @@
-// src/components/HomeBanner.js
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { motion } from "framer-motion";
-import banner from "../assets/Home/Home-Banner.jpg";
+import banner from "../assets/Home/banner.jpg";
 import card1 from "../assets/Home/pic1.jpg";
 import card2 from "../assets/Home/pic2.jpg";
 import card3 from "../assets/Home/pic3.jpg";
@@ -34,15 +33,15 @@ function HomeBanner() {
     >
       {/* background image */}
       <div
-        className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat h-[120vh]"
+        className="absolute inset-0 z-0 xl:bg-contain md:bg-cover sm:bg-cover bg-center bg-no-repeat h-[100vh]"
         style={{ backgroundImage: `url(${banner})` }}
       />
 
       {/* overlay */}
-      <div className="absolute inset-0 bg-black opacity-20 z-10" />
+      <div className="absolute  bg-black opacity-10 z-10" />
 
       {/* foreground copy */}
-      <div className="relative z-20 text-white text-left px-6 max-w-4xl -mt-20 lg:ml-40">
+      <div className="relative z-20 text-white text-left px-6 max-w-4xl -mt-20">
         <h1 className="text-3xl sm:text-4xl font-bold leading-snug mb-4">
           <span className="block">WHERE WE</span>
           <span className="block">

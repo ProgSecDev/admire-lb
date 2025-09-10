@@ -10,6 +10,7 @@ import ScrollToTop from "./Components/scrollToTop";
 
 import Nav from "./Components/Nav";
 import Footer from "./Sections/Footer";
+import BottomFooter from "./Sections/bottomFooter";
 
 import Home from "./Pages/Home";
 import AboutUs from "./Pages/AboutUs";
@@ -30,7 +31,6 @@ import Modeling from "./Pages/Modeling";
 import Printing from "./Pages/Printing";
 import ProductPhotography from "./Pages/ProductPhotography";
 import Animation from "./Pages/Animation";
-
 
 const AppContent = () => {
   const location = useLocation();
@@ -62,10 +62,14 @@ const AppContent = () => {
         <Route path="/services/printing" element={<Printing />} />
         <Route path="/services/productphotography" element={<ProductPhotography />} />
         <Route path="/services/animation" element={<Animation />} />
-
       </Routes>
 
-      {!shouldHideNavFooter && <Footer />}
+      {!shouldHideNavFooter && (
+        <>
+          <Footer />
+          <BottomFooter />
+        </>
+      )}
     </>
   );
 };
@@ -73,7 +77,7 @@ const AppContent = () => {
 const App = () => {
   return (
     <Router basename="/admire-lb">
-    <ScrollToTop />
+      <ScrollToTop />
       <AppContent />
     </Router>
   );

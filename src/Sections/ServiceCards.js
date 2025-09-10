@@ -28,11 +28,11 @@ function Story() {
 
   return (
     <div
-      className="py-52 px-4 bg-fixed bg-center bg-contain relative min-h-[500px]"
+      className="py-52 px-4 bg-fixed bg-center bg-contain relative min-h-[500px] 2xl:-mt-20"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       <div className="absolute inset-0 bg-black/40"></div>
-      <div className="relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 overflow-hidden">
+      <div className="2xl:mt-20 relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 overflow-hidden">
         {cards.map((card, idx) => (
           <motion.div
             key={idx}
