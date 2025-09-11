@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/admire-lb/static/css/main.9fa3257f.css",
-    "main.js": "/admire-lb/static/js/main.35301d4f.js",
+    "main.css": "/admire-lb/static/css/main.c3666028.css",
+    "main.js": "/admire-lb/static/js/main.98817aba.js",
     "static/js/453.6abb9b73.chunk.js": "/admire-lb/static/js/453.6abb9b73.chunk.js",
     "static/media/WhatsApp-Video-2023-09-28-at-13.01.02.mp4": "/admire-lb/static/media/WhatsApp-Video-2023-09-28-at-13.01.02.60b72e1e3ab8c16b54c7.mp4",
     "static/media/Al-Abbseye.mp4": "/admire-lb/static/media/Al-Abbseye.a1a2a0ad93621ce34db1.mp4",
@@ -317,12 +317,12 @@
     "static/media/flame-01.svg": "/admire-lb/static/media/flame-01.33d904b9b2638ba704b58d70b9795f5b.svg",
     "static/media/line-01.svg": "/admire-lb/static/media/line-01.ea552b722d40d265c9cdb30db2a390e7.svg",
     "index.html": "/admire-lb/index.html",
-    "main.9fa3257f.css.map": "/admire-lb/static/css/main.9fa3257f.css.map",
-    "main.35301d4f.js.map": "/admire-lb/static/js/main.35301d4f.js.map",
+    "main.c3666028.css.map": "/admire-lb/static/css/main.c3666028.css.map",
+    "main.98817aba.js.map": "/admire-lb/static/js/main.98817aba.js.map",
     "453.6abb9b73.chunk.js.map": "/admire-lb/static/js/453.6abb9b73.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.9fa3257f.css",
-    "static/js/main.35301d4f.js"
+    "static/css/main.c3666028.css",
+    "static/js/main.98817aba.js"
   ]
 }
