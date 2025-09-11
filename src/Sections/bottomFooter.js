@@ -46,7 +46,7 @@ const BottomFooter = () => {
           </div>
 
           {/* Flags - centered with equal spacing */}
-          <div className="flex justify-center space-x-1 flex-1 mr-20">
+          <div className="flex justify-center space-x-1 flex-1 mr-20 md:-mb-2">
             {flags.map((f, idx) => (
               <div key={idx} className="flex flex-col items-center">
                 <img

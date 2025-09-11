@@ -71,7 +71,7 @@ export default function StatsHighlight() {
         <div key={i} className="text-left">
           <div className="flex items-baseline gap-3 sm:gap-4">
             <span className="text-pink-600 font-extrabold leading-none text-5xl sm:text-6xl lg:text-7xl">+</span>
-            <span className="text-black font-extrabold leading-none text-5xl sm:text-6xl lg:text-7xl">
+            <span className="text-black font-extrabold leading-none text-5xl sm:text-6xl lg:text-7xl md:text-4xl">
               <CountUp end={s.number} duration={2} shouldStart={startCount} formatter={formatNumber} />
             </span>
           </div>

@@ -1,5 +1,4 @@
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import { motion } from "framer-motion";
 import banner from "../assets/Home/banner.jpg";
 import card1 from "../assets/Home/pic1.jpg";
 import card2 from "../assets/Home/pic2.jpg";
@@ -9,22 +8,6 @@ import card5 from "../assets/Home/pic5.jpg";
 
 function HomeBanner() {
   const cards = [card1, card2, card3, card4, card5];
-
-  // desktop floats
-  const floatUp = {
-    y: [0, -20, 0],
-    transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
-  };
-  const floatDown = {
-    y: [0, 20, 0],
-    transition: { duration: 3, repeat: Infinity, ease: "easeInOut" },
-  };
-
-  // mobile: row 2 unified float
-  const floatTogether = {
-    y: [0, -15, 0],
-    transition: { duration: 3.5, repeat: Infinity, ease: "easeInOut" },
-  };
 
   return (
     <section
@@ -38,7 +21,7 @@ function HomeBanner() {
       />
 
       {/* overlay */}
-      <div className="absolute  bg-black opacity-10 z-10" />
+      <div className="absolute inset-0 bg-black opacity-10 z-10" />
 
       {/* foreground copy */}
       <div className="relative z-20 text-white text-left px-6 max-w-4xl -mt-20">
@@ -60,20 +43,15 @@ function HomeBanner() {
 
       {/* bottom card strip */}
       <div className="translate-y-10 absolute left-1/2 -translate-x-1/2 bottom-[-100px] sm:bottom-[-64px] md:bottom-[-72px] z-30 w-full px-4">
-
-        
-        {/* Desktop: floating row */}
+        {/* Desktop row */}
         <div className="hidden md:flex items-end justify-center gap-4">
           {cards.map((src, i) => (
-            <motion.div
+            <div
               key={i}
               className={`rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-white ${
-                i % 2 === 0
-                  ? "-translate-y-3 md:-translate-y-5"
-                  : "translate-y-3 md:translate-y-5"
+                i % 2 === 0 ? "-translate-y-4" : "translate-y-4"
               }`}
-              style={{ width: "clamp(88px, 13vw, 192px)" }}
-              animate={i % 2 === 0 ? floatUp : floatDown}
+              style={{ width: "clamp(88px, 15vw, 192px)" }}
             >
               <div className="aspect-[3/5]">
                 <img
@@ -83,63 +61,59 @@ function HomeBanner() {
                   draggable={false}
                 />
               </div>
-            </motion.div>
+            </div>
           ))}
         </div>
 
-        {/* Mobile layout: grid 3 on top, 2 aligned below */}
-<div className="grid grid-cols-3 gap-2 place-items-center md:hidden">
-  {/* Top row: 3 cards with alternating float */}
-  {cards.slice(0, 3).map((src, i) => (
-    <motion.div
-      key={i}
-      className="rounded-xl overflow-hidden shadow-lg ring-1 ring-white/10 bg-white"
-      style={{ width: "clamp(80px, 28vw, 140px)" }}   // bigger on mobile
-      animate={i % 2 === 0 ? floatUp : floatDown}
-    >
-      <div className="aspect-[3/5]">
-        <img
-          src={src}
-          alt={`highlight ${i + 1}`}
-          className="w-full h-full object-cover"
-          draggable={false}
-        />
-      </div>
-    </motion.div>
-  ))}
+        {/* Mobile layout */}
+        <div className="grid grid-cols-3 gap-2 place-items-center md:hidden">
+          {cards.slice(0, 3).map((src, i) => (
+            <div
+              key={i}
+              className={`rounded-xl overflow-hidden shadow-lg ring-1 ring-white/10 bg-white ${
+                i % 2 === 0 ? "-translate-y-3" : "translate-y-3"
+              }`}
+              style={{ width: "clamp(80px, 28vw, 120px)" }}
+            >
+              <div className="aspect-[3/5]">
+                <img
+                  src={src}
+                  alt={`highlight ${i + 1}`}
+                  className="w-full h-full object-cover"
+                  draggable={false}
+                />
+              </div>
+            </div>
+          ))}
 
-  {/* Bottom row: card4 below card1, card5 below card3 (float together) */}
-  <motion.div
-    className="rounded-xl overflow-hidden shadow-lg ring-1 ring-white/10 bg-white col-start-1 row-start-2"
-    style={{ width: "clamp(80px, 28vw, 140px)" }}   // same adjustment
-    animate={floatTogether}
-  >
-    <div className="aspect-[3/5]">
-      <img
-        src={cards[3]}
-        alt="highlight 4"
-        className="w-full h-full object-cover"
-        draggable={false}
-      />
-    </div>
-  </motion.div>
+          <div
+            className="rounded-xl overflow-hidden shadow-lg ring-1 ring-white/10 bg-white col-start-1 row-start-2 -translate-y-3"
+            style={{ width: "clamp(80px, 28vw, 140px)" }}
+          >
+            <div className="aspect-[3/5]">
+              <img
+                src={cards[3]}
+                alt="highlight 4"
+                className="w-full h-full object-cover"
+                draggable={false}
+              />
+            </div>
+          </div>
 
-  <motion.div
-    className="rounded-xl overflow-hidden shadow-lg ring-1 ring-white/10 bg-white col-start-3 row-start-2"
-    style={{ width: "clamp(80px, 28vw, 140px)" }}   // same adjustment
-    animate={floatTogether}
-  >
-    <div className="aspect-[3/5]">
-      <img
-        src={cards[4]}
-        alt="highlight 5"
-        className="w-full h-full object-cover"
-        draggable={false}
-      />
-    </div>
-  </motion.div>
-</div>
-
+          <div
+            className="rounded-xl overflow-hidden shadow-lg ring-1 ring-white/10 bg-white col-start-3 row-start-2 translate-y-3"
+            style={{ width: "clamp(80px, 28vw, 140px)" }}
+          >
+            <div className="aspect-[3/5]">
+              <img
+                src={cards[4]}
+                alt="highlight 5"
+                className="w-full h-full object-cover"
+                draggable={false}
+              />
+            </div>
+          </div>
+        </div>
       </div>
     </section>
   );

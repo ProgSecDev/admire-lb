@@ -29,8 +29,10 @@ const TextType = ({
   const [isDeleting, setIsDeleting] = useState(false);
   const [currentTextIndex, setCurrentTextIndex] = useState(0);
   const [isVisible, setIsVisible] = useState(!startOnVisible);
+  const [isCursorVisible, setIsCursorVisible] = useState(true);
   const cursorRef = useRef(null);
   const containerRef = useRef(null);
+  const idleTimeoutRef = useRef(null);
 
   const textArray = useMemo(() => (Array.isArray(text) ? text : [text]), [text]);
 
@@ -64,7 +66,7 @@ const TextType = ({
   }, [startOnVisible]);
 
   useEffect(() => {
-    if (showCursor && cursorRef.current) {
+    if (showCursor && cursorRef.current && isCursorVisible) {
       gsap.set(cursorRef.current, { opacity: 1 });
       gsap.to(cursorRef.current, {
         opacity: 0,
@@ -73,8 +75,11 @@ const TextType = ({
         yoyo: true,
         ease: 'power2.inOut'
       });
+    } else if (cursorRef.current) {
+      gsap.killTweensOf(cursorRef.current);
+      gsap.set(cursorRef.current, { opacity: 0 });
     }
-  }, [showCursor, cursorBlinkDuration]);
+  }, [showCursor, cursorBlinkDuration, isCursorVisible]);
 
   useEffect(() => {
     if (!isVisible) return;
@@ -110,6 +115,10 @@ const TextType = ({
             () => {
               setDisplayedText(prev => prev + processedText[currentCharIndex]);
               setCurrentCharIndex(prev => prev + 1);
+              setIsCursorVisible(true); // show cursor while typing
+
+              clearTimeout(idleTimeoutRef.current);
+              idleTimeoutRef.current = setTimeout(() => setIsCursorVisible(false), 500);
             },
             variableSpeed ? getRandomSpeed() : typingSpeed
           );
@@ -117,6 +126,12 @@ const TextType = ({
           timeout = setTimeout(() => {
             setIsDeleting(true);
           }, pauseDuration);
+
+          // hide cursor when word finished
+          setIsCursorVisible(false);
+        } else {
+          // final case: one text only
+          setIsCursorVisible(false);
         }
       }
     };
@@ -159,7 +174,7 @@ const TextType = ({
     <span className="inline" style={{ color: getCurrentTextColor() }}>
       {displayedText}
     </span>,
-    showCursor && (
+    showCursor && isCursorVisible && (
       <span
         ref={cursorRef}
         className={`ml-1 inline-block opacity-100 ${shouldHideCursor ? 'hidden' : ''} ${cursorClassName}`}

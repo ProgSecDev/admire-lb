@@ -10,11 +10,17 @@ module.exports = {
         calibri: ["Calibri", "sans-serif"],
         silverForteGrungeGrunge: ["SilverForteGrungeGrunge", "sans-serif"],
         grunge: ["Grunge", "cursive"],
-        azonix: ['Azonix', 'sans-serif'],
-        raleway: ['Raleway', 'sans-serif']
+        azonix: ["Azonix", "sans-serif"],
+        raleway: ["Raleway", "sans-serif"],
       },
       screens: {
-        '3xl': '1800px', // applies only for very large screens (24"+)
+        sm: "640px",
+        md: "768px", // tablets and up
+        lg: "1024px", // desktops and up
+        xl: "1280px",
+        "2xl": "1536px",
+        "3xl": "1800px", // applies only for very large screens (24"+)
+        tablet: { max: "1023px", min: "768px" },
       },
       backgroundImage: {
         "hero-pattern": "url('./assets/home.jpeg')",

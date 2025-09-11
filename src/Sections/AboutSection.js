@@ -46,7 +46,7 @@ export default function AboutSection() {
 
       {/* Content area */}
       <div className="relative z-10 mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-16 pt-20 pb-10 md:pt-24">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8">
+        <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-6">
           {/* Left column (copy) */}
           <div className="lg:col-span-6 xl:col-span-5">
             <h1
@@ -100,8 +100,8 @@ export default function AboutSection() {
 
           <div className="lg:col-span-7 mt-10 lg:mt-auto">
             <div className="grid md:grid-cols-3 gap-6">
-              <motion.div
-                className="lg:translate-y-48 lg:translate-x-16 p-0 font-azonix"
+              <motion.div 
+              className="md:translate-y-48 md:translate-x-[300px] 2xl:translate-y-48 2xl:translate-x-96 p-0 font-azonix"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -117,8 +117,8 @@ export default function AboutSection() {
                 </p>
               </motion.div>
 
-              <motion.div
-                className="lg:translate-y-96 lg:-translate-x-[500px] p-0 font-azonix"
+              <motion.div 
+              className="md:translate-y-[420px] md:-translate-x-[300px] 2xl:translate-y-[420px] 2xl:-translate-x-[400px] p-0 font-azonix"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -136,7 +136,7 @@ export default function AboutSection() {
               </motion.div>
 
               <motion.div
-                className="lg:translate-y-96 p-0 font-azonix"
+                className="md:translate-y-[420px] 2xl:translate-y-[420px] p-0 font-azonix"
                 initial={{ opacity: 0 }}
                 whileInView={{ opacity: 1 }}
                 transition={{ duration: 1 }}
@@ -177,16 +177,17 @@ export default function AboutSection() {
       <img
         src={dashImage}
         alt="Decorative dashed path"
-        className="pointer-events-none absolute bottom-32 left-[45%] -translate-x-1/3 w-[50%] max-w-none h-auto z-10 select-none rotate-2"
+        className="hidden sm:block pointer-events-none absolute bottom-32 left-[45%] -translate-x-1/3 w-[50%] max-w-none h-auto z-10 select-none rotate-2"
         aria-hidden
       />
 
       <img
         src={planeImage}
         alt="Pink paper plane"
-        className="pointer-events-none absolute bottom-[260px] right-[19.2%] lg:w-32 md:w-16 sm:w-16 h-auto rotate-[8deg] z-10 select-none"
+        className="hidden sm:block pointer-events-none absolute 2xl:bottom-[260px] md:bottom-[210px] 2xl:right-[19.2%] md:right-[17%] lg:w-32 md:w-16 sm:w-16 h-auto rotate-[8deg] z-10 select-none"
         aria-hidden
       />
+      <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-gray-300 via-gray-300/50 to-transparent backdrop-blur-md pointer-events-none z-20" />
     </section>
   );
 }
