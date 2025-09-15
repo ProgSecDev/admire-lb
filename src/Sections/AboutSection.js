@@ -1,56 +1,57 @@
 import { motion } from "framer-motion";
-import bgImage from "../assets/About-Us/bc-joelle.jpg";
-import dashImage from "../assets/About-Us/line-01.svg";
-import planeImage from "../assets/About-Us/flight-01.svg";
+import bgImage from "../assets/About-Us/new-joelle.png";
 import TextType from "../Components/TextType/TextType";
+import Mission from "../assets/About-Us/mission-01.svg";
+import Vision from "../assets/About-Us/vision-01.svg";
+import Values from "../assets/About-Us/value-01.svg";
 
 export default function AboutSection() {
   return (
     <section
-      className="relative w-full lg:h-[1100px] bg-neutral-500 overflow-hidden ring-1 ring-white/40"
+      className="relative w-full lg:h-[1500px] bg-neutral-500 overflow-hidden ring-1 ring-white/40"
       aria-label="About Admire agency"
     >
-      {/* Background image (entire image, no crop) */}
+      {/* Background */}
       <img
         src={bgImage}
         alt="Portrait background"
-        className="absolute inset-0 w-full h-full object-contain object-right pointer-events-none select-none"
+        className="absolute inset-0 z-10 3xl:w-[600px] 3xl:h-[1250px] 3xl:translate-x-[900px] 3xl:translate-y-0 2xl:w-[800px] 2xl:h-[1200px] 2xl:translate-x-[450px] object-contain object-right pointer-events-none select-none"
         aria-hidden
       />
 
-      {/* Subtle left-to-right dark gradient for legibility (does not crop) */}
+      {/* Gradient overlay */}
       <div
         className="absolute inset-0"
         style={{
           background:
-            "linear-gradient(180deg, rgba(0,0,0,.15) 50%, rgba(255,255,255,1) 100%, rgba(0,0,0,.15) 60%, rgba(0,0,0,0) 45%)",
+            "linear-gradient(180deg, rgba(0,0,0,.15) 70%, rgba(255,255,255,1) 100%, rgba(0,0,0,.15) 60%, rgba(0,0,0,0) 45%)",
         }}
         aria-hidden
       />
 
-      {/* Grid overlay: edge lines + 25/50/75% + thicker center */}
-      <div className="pointer-events-none absolute inset-0" aria-hidden>
-        <div className="absolute top-0 left-0 w-full h-px bg-white/70" />
-        <div className="absolute bottom-0 left-0 w-full h-px bg-white/70" />
-        <div className="absolute top-0 left-0 h-full w-px bg-white/70" />
-        <div className="absolute top-0 right-0 h-full w-px bg-white/70" />
-        <div className="absolute top-1/4 left-0 w-full h-px bg-white/50" />
-        <div className="absolute top-1/2 left-0 w-full h-px bg-white/50" />
-        <div className="absolute top-3/4 left-0 w-full h-px bg-white/50" />
-        <div className="absolute top-0 left-1/4 h-full w-px bg-white/50" />
-        <div className="absolute top-0 left-1/2 h-full w-px bg-white/50" />
-        <div className="absolute top-0 left-3/4 h-full w-px bg-white/50" />
-        <div className="absolute top-1/2 left-0 -translate-y-1/2 w-full h-[2px] bg-white/20" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 h-full w-[2px] bg-white/20" />
-      </div>
+      {/* Grid overlay */}
+      {/* <div className="pointer-events-none absolute inset-0" aria-hidden>
+        <div className="absolute top-0 left-0 w-full h-px bg-white/40" />
+        <div className="absolute bottom-0 left-0 w-full h-px bg-white/40" />
+        <div className="absolute top-0 left-0 h-full w-px bg-white/40" />
+        <div className="absolute top-0 right-0 h-full w-px bg-white/40" />
+        <div className="absolute top-1/4 left-0 w-full h-px bg-white/40" />
+        <div className="absolute top-1/2 left-0 w-full h-px bg-white/40" />
+        <div className="absolute top-3/4 left-0 w-full h-px bg-white/40" />
+        <div className="absolute top-0 left-1/4 h-full w-px bg-white/40" />
+        <div className="absolute top-0 left-1/2 h-full w-px bg-white/40" />
+        <div className="absolute top-0 left-3/4 h-full w-px bg-white/40" />
+        <div className="absolute top-1/2 left-0 -translate-y-1/2 bg-white/40" />
+        <div className="absolute top-0 left-1/2 -translate-x-1/2 bg-white/40" />
+      </div> */}
 
-      {/* Content area */}
+      {/* Content */}
       <div className="relative z-10 mt-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 xl:px-16 pt-20 pb-10 md:pt-24">
         <div className="grid md:grid-cols-3 lg:grid-cols-3 gap-6">
-          {/* Left column (copy) */}
+          {/* Left column */}
           <div className="lg:col-span-6 xl:col-span-5">
             <h1
-              className="mb-8 md:mb-8 tracking-[0.3em] drop-shadow text-3xl sm:text-4xl md:text-5xl font-bold"
+              className="3xl:ml-10 2xl:ml-10 mb-8 md:mb-8 tracking-[0.3em] drop-shadow text-3xl sm:text-4xl md:text-5xl font-light"
               style={{ fontFamily: "Azonix, sans-serif" }}
             >
               <TextType
@@ -63,7 +64,7 @@ export default function AboutSection() {
             </h1>
 
             <motion.div
-              className="space-y-4 md:space-y-5 text-white/95 text-[13px] sm:text-sm md:text-[15px] leading-relaxed"
+              className="max-w-prose mx-auto space-y-4 3xl:ml-10 2xl:ml-10 md:ml-40 text-white/95 text-[13px] sm:text-sm md:text-[15px] leading-relaxed"
               style={{ fontFamily: "Raleway, ui-sans-serif, system-ui" }}
               initial={{ opacity: 0, x: -100 }}
               whileInView={{ opacity: 1, x: 0 }}
@@ -71,102 +72,131 @@ export default function AboutSection() {
               viewport={{ once: true, amount: 0.3 }}
             >
               <p>
-                Admire is a multinational advertising agency headquartered in
-                Lebanon, with offices across Cyprus, Saudi Arabia, Dubai and
-                Qatar. For more than 14 years, we have specialized in delivering
-                high-quality digital marketing and graphic design solutions to
-                some of the most prestigious brands in the region. Throughout
-                our journey, we have built a solid reputation for excellence,
-                professionalism, and reliability. Our extensive experience
-                allows us to craft innovative, creative and customized
-                strategies that help businesses maximize their potential and
-                achieve sustainable growth.
+                <b>
+                  Established in 2012, Admire began with a clear vision: to
+                  craft impactful brand experiences through thoughtful design
+                  and strategic marketing.
+                  <br />
+                  What started as boutique agency has grown organically into a
+                  multinational presence, expanding every two years to now
+                  operate across Lebanon, Cyprus, Saudi Arabia, the UAE, and
+                  Qatar.
+                </b>
               </p>
               <p>
-                Our team of skilled professionals works closely with clients to
-                understand their unique goals and challenges, ensuring every
-                solution is tailored to their needs. Whether it's comprehensive
-                digital marketing campaigns or impactful graphic design, we
-                focus on delivering results that matter. At Admire, we believe
-                our success is tied to the success of our clients. That is why
-                we are committed to exceeding expectations, offering exceptional
-                customer service, and maintaining long-lasting partnerships.
-                With a strong track record and trusted relationships, we
-                continue to position ourselves as a leading agency in the
-                region, dedicated to shaping brands and driving growth.
+                <b>
+                  Our journey reflects our dedication to quality, creativity,
+                  and building long-term partnerships with clients who value
+                  excellence. Over the <br/>years, Admire has positioned itself as a
+                  partner of choice for high-end brands, offering services that
+                  include premium branding,<br/> digital marketing, private label,
+                  and 3D interior modeling <br/> &mdash; with a specialized focus on the
+                  EMEA market. <br />
+                  After more than a decade of experience, Admire has<br/> become a
+                  recognized leader in private label solutions &mdash;<br/> not limited to
+                  one sector, but spanning across industries.
+                  <br />
+                  From concept creation to branding, packaging, and<br/> marketing,
+                  we provide businesses with complete<br/> brand-building expertise,
+                  making us the trusted partner<br/> for companies aiming to launch,
+                  grow, and elevate their<br/> own labels.
+                </b>
+              </p>
+              <p>
+                <b>
+                  We don't just design brands &mdash; we build identities,<br/> shape
+                  experiences, and help businesses<br/> communicate with clarity and
+                  confidence in<br/> competitive markets.
+                </b>
+              </p>
+              <p>
+                <b>
+                  As a woman-founded company, we take pride in our<br/> values of
+                  leadership, resilience, and innovation &mdash;<br/> values that continue
+                  to shape our story and the<br/> stories we tell to our clients.
+                </b>
               </p>
             </motion.div>
           </div>
+          </div>
 
-          <div className="lg:col-span-7 mt-10 lg:mt-auto">
-            <div className="grid md:grid-cols-3 gap-6">
-              <motion.div 
-              className="md:translate-y-48 md:translate-x-[300px] 2xl:translate-y-48 2xl:translate-x-96 p-0 font-azonix"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                <h3 className="text-pink-600 font-extrabold tracking-wide uppercase text-base md:text-lg">
-                  Vision
-                </h3>
-                <p className="font-raleway font-bold text-black text-[13px] sm:text-sm mt-1">
-                  To provide innovative and effective integrated brand marketing
-                  and public relations solutions that help clients grow their
-                  businesses and realize their marketing goals.
-                </p>
-              </motion.div>
+          {/* Center overlay background with Mission / Vision / Values */}
+      <div className="relative z-20 flex justify-center items-center mt-20">
+        <div className="bg-gray-200/80 3xl:w-[1090px] 3xl:translate-x-1 3xl:translate-y-10 2xl:w-[1030px] 2xl:-translate-x-6 2xl:translate-y-10 md:w-3/4 lg:w-2/3 py-12 px-6 md:px-12">
+          <div className="grid md:grid-cols-3 gap-8 text-center">
+            {/* Mission */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              <img src={Mission} alt="Mission" className="mx-auto w-36 h-36" />
+              <h3 className="text-black font-azonix text-lg uppercase tracking-wide">
+                Mission
+              </h3>
+              <p className="text-left font-raleway text-black text-sm leading-relaxed">
+                We empower great ideas and believe that innovative content comes
+                from special people just like you! We are dedicated to authentic 
+                brand stories and use journalistic methods to create the largest 
+                possible value for both your budget and your audience.<br />
+                We work hard to create inspired and effective work for your brand.
+              </p>
+            </motion.div>
 
-              <motion.div 
-              className="md:translate-y-[420px] md:-translate-x-[300px] 2xl:translate-y-[420px] 2xl:-translate-x-[400px] p-0 font-azonix"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                <h3 className="text-pink-600 font-extrabold tracking-wide uppercase text-base md:text-lg">
-                  Mission
-                </h3>
-                <p className="font-raleway font-bold text-black text-[13px] sm:text-sm mt-1">
-                  We empower great ideas and believe that innovative content
-                  comes from special people just like you. We craft authentic
-                  brand stories to create the largest possible value for both
-                  your budget and your audience.
-                </p>
-              </motion.div>
+            {/* Vision */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.2 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              <img src={Vision} alt="Vision" className="mx-auto w-36 h-36" />
+              <h3 className="text-black font-azonix text-lg uppercase tracking-wide">
+                Vision
+              </h3>
+              <p className="text-left font-raleway text-black text-sm leading-relaxed">
+                To provide innovative and effective integrated brand marketing
+                and public relations solutions that help clients grow their
+                businesses and realize their marketing goals.
+              </p>
+            </motion.div>
 
-              <motion.div
-                className="md:translate-y-[420px] 2xl:translate-y-[420px] p-0 font-azonix"
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                transition={{ duration: 1 }}
-                viewport={{ once: true, amount: 0.3 }}
-              >
-                <h3 className="text-pink-600 font-extrabold tracking-wide uppercase text-base md:text-lg">
-                  Values
-                </h3>
-                <p className="font-raleway font-bold text-black text-[13px] sm:text-sm mt-1">
-                  Our people enjoy a personal stake in your success and take
-                  pride in what we do. We serve our clients, go above and
-                  beyond, and keep each campaign’s objective at the top of mind.
-                </p>
-              </motion.div>
-            </div>
+            {/* Values */}
+            <motion.div
+              initial={{ opacity: 0, y: 40 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: 0.4 }}
+              viewport={{ once: true }}
+              className="space-y-4"
+            >
+              <img src={Values} alt="Values" className="mx-auto w-36 h-36" />
+              <h3 className="text-black font-azonix text-lg uppercase tracking-wide">
+                Values
+              </h3>
+              <p className="text-left font-raleway text-black text-sm leading-relaxed">
+                Our people enjoy a personal stake in your continued success and take pride
+                in what we do. We are here to serve our clients. Our commitment to our 
+                customers is deeply ingrained in our corporate culture and we go above and beyond 
+                every day to prove it. We produce clever work, but we always keep the objective 
+                of each compaign at the top of our mind.
+              </p>
+            </motion.div>
           </div>
         </div>
+      </div>
       </div>
 
       {/* Owner ribbon */}
       <motion.div
-        className="hidden md:flex items-center gap-3 absolute right-4 sm:right-10 lg:right-16 top-[55%] z-20 select-none"
-        initial={{ opacity: 0, x: 100 }}
-        whileInView={{ opacity: 1, x: 0 }}
-        transition={{ duration: 1 }}
-        viewport={{ once: true, amount: 0.3 }}
+        className="mt-8 flex items-center gap-3"
+        
       >
-        <div className="bg-pink-600 px-2 py-3 shadow-xl pr-28">
-          <div className="text-white/90 text-xs tracking-widest uppercase">
-            Owner:
+        <div className="relative z-0 bg-pink-600 px-4 py-3 shadow-xl 3xl:translate-x-[412px] 3xl:-translate-y-[582px] 3xl:w-[540px] 2xl:w-[450px] 2xl:translate-x-[221px] 2xl:-translate-y-[605px] text-center">
+          <div className="text-white/90 text-lg tracking-widest uppercase">
+            Founder / CEO
           </div>
           <div className="font-azonix text-white text-lg sm:text-xl font-extrabold tracking-wider">
             Joelle Raiche
@@ -174,19 +204,6 @@ export default function AboutSection() {
         </div>
       </motion.div>
 
-      <img
-        src={dashImage}
-        alt="Decorative dashed path"
-        className="hidden sm:block pointer-events-none absolute bottom-32 left-[45%] -translate-x-1/3 w-[50%] max-w-none h-auto z-10 select-none rotate-2"
-        aria-hidden
-      />
-
-      <img
-        src={planeImage}
-        alt="Pink paper plane"
-        className="hidden sm:block pointer-events-none absolute 2xl:bottom-[260px] md:bottom-[210px] 2xl:right-[19.2%] md:right-[17%] lg:w-32 md:w-16 sm:w-16 h-auto rotate-[8deg] z-10 select-none"
-        aria-hidden
-      />
       <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-gray-300 via-gray-300/50 to-transparent backdrop-blur-md pointer-events-none z-20" />
     </section>
   );

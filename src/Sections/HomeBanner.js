@@ -16,7 +16,7 @@ function HomeBanner() {
     >
       {/* background image */}
       <div
-        className="absolute inset-0 z-0 xl:bg-contain md:bg-cover sm:bg-cover bg-center bg-no-repeat h-[100vh]"
+        className="absolute inset-0 z-0 xl:bg-cover md:bg-cover sm:bg-cover bg-center bg-no-repeat h-[100vh]"
         style={{ backgroundImage: `url(${banner})` }}
       />
 
