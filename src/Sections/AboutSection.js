@@ -15,7 +15,7 @@ export default function AboutSection() {
       <img
         src={bgImage}
         alt="Portrait background"
-        className="absolute inset-0 z-10 3xl:w-[600px] 3xl:h-[1250px] 3xl:translate-x-[900px] 3xl:translate-y-0 2xl:w-[800px] 2xl:h-[1200px] 2xl:translate-x-[450px] object-contain object-right pointer-events-none select-none"
+        className="absolute inset-0 z-10 3xl:w-[600px] 3xl:h-[1250px] 3xl:translate-x-[900px] 3xl:translate-y-0 2xl:w-[800px] 2xl:h-[1200px] 2xl:translate-x-[450px] sm2:w-[600px] sm2:h-[900px] sm2:translate-y-32 sm2:opacity-60 object-contain object-right pointer-events-none select-none"
         aria-hidden
       />
 
@@ -87,114 +87,127 @@ export default function AboutSection() {
                 <b>
                   Our journey reflects our dedication to quality, creativity,
                   and building long-term partnerships with clients who value
-                  excellence. Over the <br/>years, Admire has positioned itself as a
-                  partner of choice for high-end brands, offering services that
-                  include premium branding,<br/> digital marketing, private label,
-                  and 3D interior modeling <br/> &mdash; with a specialized focus on the
-                  EMEA market. <br />
-                  After more than a decade of experience, Admire has<br/> become a
-                  recognized leader in private label solutions &mdash;<br/> not limited to
-                  one sector, but spanning across industries.
+                  excellence. Over the <br />
+                  years, Admire has positioned itself as a partner of choice for
+                  high-end brands, offering services that include premium
+                  branding,
+                  <br /> digital marketing, private label, and 3D interior
+                  modeling <br /> &mdash; with a specialized focus on the EMEA
+                  market. <br />
+                  After more than a decade of experience, Admire has
+                  <br /> become a recognized leader in private label solutions
+                  &mdash;
+                  <br /> not limited to one sector, but spanning across
+                  industries.
                   <br />
-                  From concept creation to branding, packaging, and<br/> marketing,
-                  we provide businesses with complete<br/> brand-building expertise,
-                  making us the trusted partner<br/> for companies aiming to launch,
-                  grow, and elevate their<br/> own labels.
+                  From concept creation to branding, packaging, and
+                  <br /> marketing, we provide businesses with complete
+                  <br /> brand-building expertise, making us the trusted partner
+                  <br /> for companies aiming to launch, grow, and elevate their
+                  <br /> own labels.
                 </b>
               </p>
               <p>
                 <b>
-                  We don't just design brands &mdash; we build identities,<br/> shape
-                  experiences, and help businesses<br/> communicate with clarity and
-                  confidence in<br/> competitive markets.
+                  We don't just design brands &mdash; we build identities,
+                  <br /> shape experiences, and help businesses
+                  <br /> communicate with clarity and confidence in
+                  <br /> competitive markets.
                 </b>
               </p>
               <p>
                 <b>
-                  As a woman-founded company, we take pride in our<br/> values of
-                  leadership, resilience, and innovation &mdash;<br/> values that continue
-                  to shape our story and the<br/> stories we tell to our clients.
+                  As a woman-founded company, we take pride in our
+                  <br /> values of leadership, resilience, and innovation
+                  &mdash;
+                  <br /> values that continue to shape our story and the
+                  <br /> stories we tell to our clients.
                 </b>
-              </p>
-            </motion.div>
-          </div>
-          </div>
-
-          {/* Center overlay background with Mission / Vision / Values */}
-      <div className="relative z-20 flex justify-center items-center mt-20">
-        <div className="bg-gray-200/80 3xl:w-[1090px] 3xl:translate-x-1 3xl:translate-y-10 2xl:w-[1030px] 2xl:-translate-x-6 2xl:translate-y-10 md:w-3/4 lg:w-2/3 py-12 px-6 md:px-12">
-          <div className="grid md:grid-cols-3 gap-8 text-center">
-            {/* Mission */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8 }}
-              viewport={{ once: true }}
-              className="space-y-4"
-            >
-              <img src={Mission} alt="Mission" className="mx-auto w-36 h-36" />
-              <h3 className="text-black font-azonix text-lg uppercase tracking-wide">
-                Mission
-              </h3>
-              <p className="text-left font-raleway text-black text-sm leading-relaxed">
-                We empower great ideas and believe that innovative content comes
-                from special people just like you! We are dedicated to authentic 
-                brand stories and use journalistic methods to create the largest 
-                possible value for both your budget and your audience.<br />
-                We work hard to create inspired and effective work for your brand.
-              </p>
-            </motion.div>
-
-            {/* Vision */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.2 }}
-              viewport={{ once: true }}
-              className="space-y-4"
-            >
-              <img src={Vision} alt="Vision" className="mx-auto w-36 h-36" />
-              <h3 className="text-black font-azonix text-lg uppercase tracking-wide">
-                Vision
-              </h3>
-              <p className="text-left font-raleway text-black text-sm leading-relaxed">
-                To provide innovative and effective integrated brand marketing
-                and public relations solutions that help clients grow their
-                businesses and realize their marketing goals.
-              </p>
-            </motion.div>
-
-            {/* Values */}
-            <motion.div
-              initial={{ opacity: 0, y: 40 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: 0.4 }}
-              viewport={{ once: true }}
-              className="space-y-4"
-            >
-              <img src={Values} alt="Values" className="mx-auto w-36 h-36" />
-              <h3 className="text-black font-azonix text-lg uppercase tracking-wide">
-                Values
-              </h3>
-              <p className="text-left font-raleway text-black text-sm leading-relaxed">
-                Our people enjoy a personal stake in your continued success and take pride
-                in what we do. We are here to serve our clients. Our commitment to our 
-                customers is deeply ingrained in our corporate culture and we go above and beyond 
-                every day to prove it. We produce clever work, but we always keep the objective 
-                of each compaign at the top of our mind.
               </p>
             </motion.div>
           </div>
         </div>
-      </div>
+
+        {/* Center overlay background with Mission / Vision / Values */}
+        <div className="relative z-20 flex justify-center items-center mt-20">
+          <div className="bg-gray-200/80 3xl:w-[1090px] 3xl:translate-x-1 3xl:translate-y-10 2xl:w-[1030px] 2xl:-translate-x-6 2xl:translate-y-10 md:w-3/4 lg:w-2/3 py-12 px-6 md:px-12">
+            <div className="grid md:grid-cols-3 gap-8 text-center">
+              {/* Mission */}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8 }}
+                viewport={{ once: true }}
+                className="space-y-4"
+              >
+                <img
+                  src={Mission}
+                  alt="Mission"
+                  className="mx-auto w-36 h-36"
+                />
+                <h3 className="text-black font-azonix text-lg uppercase tracking-wide">
+                  Mission
+                </h3>
+                <p className="text-left font-raleway text-black text-sm leading-relaxed">
+                  We empower great ideas and believe that innovative content
+                  comes from special people just like you! We are dedicated to
+                  authentic brand stories and use journalistic methods to create
+                  the largest possible value for both your budget and your
+                  audience.
+                  <br />
+                  We work hard to create inspired and effective work for your
+                  brand.
+                </p>
+              </motion.div>
+
+              {/* Vision */}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.2 }}
+                viewport={{ once: true }}
+                className="space-y-4"
+              >
+                <img src={Vision} alt="Vision" className="mx-auto w-36 h-36" />
+                <h3 className="text-black font-azonix text-lg uppercase tracking-wide">
+                  Vision
+                </h3>
+                <p className="text-left font-raleway text-black text-sm leading-relaxed">
+                  To provide innovative and effective integrated brand marketing
+                  and public relations solutions that help clients grow their
+                  businesses and realize their marketing goals.
+                </p>
+              </motion.div>
+
+              {/* Values */}
+              <motion.div
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.8, delay: 0.4 }}
+                viewport={{ once: true }}
+                className="space-y-4"
+              >
+                <img src={Values} alt="Values" className="mx-auto w-36 h-36" />
+                <h3 className="text-black font-azonix text-lg uppercase tracking-wide">
+                  Values
+                </h3>
+                <p className="text-left font-raleway text-black text-sm leading-relaxed">
+                  Our people enjoy a personal stake in your continued success
+                  and take pride in what we do. We are here to serve our
+                  clients. Our commitment to our customers is deeply ingrained
+                  in our corporate culture and we go above and beyond every day
+                  to prove it. We produce clever work, but we always keep the
+                  objective of each compaign at the top of our mind.
+                </p>
+              </motion.div>
+            </div>
+          </div>
+        </div>
       </div>
 
       {/* Owner ribbon */}
-      <motion.div
-        className="mt-8 flex items-center gap-3"
-        
-      >
-        <div className="relative z-0 bg-pink-600 px-4 py-3 shadow-xl 3xl:translate-x-[412px] 3xl:-translate-y-[582px] 3xl:w-[540px] 2xl:w-[450px] 2xl:translate-x-[221px] 2xl:-translate-y-[605px] text-center">
+      <motion.div className="mt-8 flex items-center gap-3">
+        <div className="relative z-0 bg-pink-600 px-4 py-3 shadow-xl 3xl:translate-x-[412px] 3xl:-translate-y-[582px] 3xl:w-[540px] 2xl:w-[450px] 2xl:translate-x-[221px] 2xl:-translate-y-[605px] sm2:-translate-y-[1310px] sm2:translate-x-4 sm2:z-20 text-center">
           <div className="text-white/90 text-lg tracking-widest uppercase">
             Founder / CEO
           </div>

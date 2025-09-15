@@ -14,7 +14,7 @@ module.exports = {
         raleway: ["Raleway", "sans-serif"],
       },
       screens: {
-        toosm:"320px",
+        sm2:{ max: "639px" },
         sm: "640px",
         md: "768px", // tablets and up
         lg: "1024px", // desktops and up
