@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg id="Layer_1" data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 276.39 251.39">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: #e40e87;
+      }
+    </style>
+  </defs>
+  <rect class="cls-1" x="175.08" y="41.08" width="6.53" height="24.5" transform="translate(83.19 -106.66) rotate(42.61)"/>
+  <rect class="cls-1" x="154.75" y="28.33" width="6.53" height="24.5" transform="translate(11.34 -30.86) rotate(11.57)"/>
+  <rect class="cls-1" x="130.5" y="24.58" width="6.53" height="24.5"/>
+  <rect class="cls-1" x="105.06" y="28.33" width="6.53" height="24.5" transform="translate(-4.81 64.71) rotate(-32.57)"/>
+  <rect class="cls-1" x="85.1" y="41.08" width="6.53" height="24.5" transform="translate(-11.83 78.11) rotate(-45)"/>
+  <path d="m185.52,74.75h-109.02l-38.51,42.42,95.77,95.52,95.77-95.52-44.01-42.42Zm3.26,10.41l27,26.33h-45.01l18-26.33Zm-7.44-4.94l-19,30.1-19-30.1h38.01Zm-28,31.27h-45.01l27-26.33,18,26.33Zm-29.82-31.27l-19,30.1-19-30.1h38.01Zm-46.01,4.94l18,26.33h-45.01l27-26.33Zm-27,35.01h50.51l22.5,76.92L50.5,120.17Zm54.01,0h53.51l-24.25,76.92-29.25-76.92Zm36.6,76.92l22.5-76.92h50.51l-73.01,76.92Z"/>
+</svg>

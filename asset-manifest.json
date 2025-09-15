@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/admire-lb/static/css/main.c3666028.css",
-    "main.js": "/admire-lb/static/js/main.98817aba.js",
+    "main.css": "/admire-lb/static/css/main.21ad92d1.css",
+    "main.js": "/admire-lb/static/js/main.7518fea7.js",
     "static/js/453.6abb9b73.chunk.js": "/admire-lb/static/js/453.6abb9b73.chunk.js",
     "static/media/WhatsApp-Video-2023-09-28-at-13.01.02.mp4": "/admire-lb/static/media/WhatsApp-Video-2023-09-28-at-13.01.02.60b72e1e3ab8c16b54c7.mp4",
     "static/media/Al-Abbseye.mp4": "/admire-lb/static/media/Al-Abbseye.a1a2a0ad93621ce34db1.mp4",
@@ -52,6 +52,7 @@
     "static/media/corporate-identity.jpg": "/admire-lb/static/media/corporate-identity.af5d57399bf3445619f7.jpg",
     "static/media/Branding-9-scaled-2.jpg": "/admire-lb/static/media/Branding-9-scaled-2.906f080de5f98f469668.jpg",
     "static/media/3-2.jpg": "/admire-lb/static/media/3-2.de14ecad263c31cd4b91.jpg",
+    "static/media/new-joelle.png": "/admire-lb/static/media/new-joelle.81230ccd8d3e5a01732a.png",
     "static/media/Aldhabi.ttf": "/admire-lb/static/media/Aldhabi.28f9841a4f2619850400.ttf",
     "static/media/qatar-01.png": "/admire-lb/static/media/qatar-01.ad9da6d016e722c30b2f.png",
     "static/media/3-4.jpg": "/admire-lb/static/media/3-4.058fd40c8014d819a251.jpg",
@@ -195,7 +196,6 @@
     "static/media/Corp-Identity-2-1.jpg": "/admire-lb/static/media/Corp-Identity-2-1.6bd68dabe2f7cdcac350.jpg",
     "static/media/pic4.jpg": "/admire-lb/static/media/pic4.580b99c2ae69738a6957.jpg",
     "static/media/Social-Media-12-1.jpg": "/admire-lb/static/media/Social-Media-12-1.69e78ed576ac3cc59a37.jpg",
-    "static/media/bc-joelle.jpg": "/admire-lb/static/media/bc-joelle.24369fe79de359f0b224.jpg",
     "static/media/Private-Label-5.jpg": "/admire-lb/static/media/Private-Label-5.e59b5e7b9ca14388a85d.jpg",
     "static/media/web-design.jpg": "/admire-lb/static/media/web-design.affffa487131d012fd9b.jpg",
     "static/media/Corp-Identity-5-1.jpg": "/admire-lb/static/media/Corp-Identity-5-1.9fd36322457597396053.jpg",
@@ -228,7 +228,6 @@
     "static/media/Icon-Global-LTD.jpg": "/admire-lb/static/media/Icon-Global-LTD.d34f728fb59edf5fd73e.jpg",
     "static/media/Yara.jpg": "/admire-lb/static/media/Yara.73077f8bd8035442a08d.jpg",
     "static/media/Cotton-and-Colors.jpg": "/admire-lb/static/media/Cotton-and-Colors.40eddb747c38c1c78668.jpg",
-    "static/media/flight-01.svg": "/admire-lb/static/media/flight-01.57fbbcd2f5afdc5685a2e77ce397fe36.svg",
     "static/media/House-of-Olives.jpg": "/admire-lb/static/media/House-of-Olives.ef611f06e5a30d64b511.jpg",
     "static/media/Art-and-Style.jpg": "/admire-lb/static/media/Art-and-Style.560a090b96bf7f190889.jpg",
     "static/media/Pizza-Hut.jpg": "/admire-lb/static/media/Pizza-Hut.bbbd45ca43cae8df1766.jpg",
@@ -314,15 +313,17 @@
     "static/media/artwork.jpg": "/admire-lb/static/media/artwork.631c1be726f21516ba0e.jpg",
     "static/media/aetwork-01.svg": "/admire-lb/static/media/aetwork-01.622ab0d5832509c1b7f28f9c3c66bc79.svg",
     "static/media/brain-01.svg": "/admire-lb/static/media/brain-01.cc7a7c04f40ff5a82b06fcecc327eb14.svg",
+    "static/media/vision-01.svg": "/admire-lb/static/media/vision-01.4af9c7e7f9f7967257934326a9d9764c.svg",
     "static/media/flame-01.svg": "/admire-lb/static/media/flame-01.33d904b9b2638ba704b58d70b9795f5b.svg",
-    "static/media/line-01.svg": "/admire-lb/static/media/line-01.ea552b722d40d265c9cdb30db2a390e7.svg",
+    "static/media/mission-01.svg": "/admire-lb/static/media/mission-01.7dfbb4e8b883fed23b3de1904b3dd048.svg",
+    "static/media/value-01.svg": "/admire-lb/static/media/value-01.8a7bbb1e74d250e029ccc9b23e06d2ce.svg",
     "index.html": "/admire-lb/index.html",
-    "main.c3666028.css.map": "/admire-lb/static/css/main.c3666028.css.map",
-    "main.98817aba.js.map": "/admire-lb/static/js/main.98817aba.js.map",
+    "main.21ad92d1.css.map": "/admire-lb/static/css/main.21ad92d1.css.map",
+    "main.7518fea7.js.map": "/admire-lb/static/js/main.7518fea7.js.map",
     "453.6abb9b73.chunk.js.map": "/admire-lb/static/js/453.6abb9b73.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.c3666028.css",
-    "static/js/main.98817aba.js"
+    "static/css/main.21ad92d1.css",
+    "static/js/main.7518fea7.js"
   ]
 }
