@@ -1,3 +1,4 @@
+// src/components/HomeBanner.js
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import banner from "../assets/Home/banner.jpg";
 import card1 from "../assets/Home/pic1.jpg";
@@ -25,7 +26,7 @@ function HomeBanner() {
 
       {/* foreground copy */}
       <div className="relative z-20 text-white text-left px-6 max-w-4xl -mt-20">
-        <h1 className="font-azonix text-3xl 4xl:text-7xl sm:text-4xl font-bold leading-snug mb-4">
+        <h1 className="font-azonix text-3xl 4xl:text-7xl 4xl:ml-20 sm:text-4xl font-bold leading-snug mb-4">
           <span className="block">WHERE WE</span>
           <span className="block">
             TURN ORDINARY
@@ -35,23 +36,22 @@ function HomeBanner() {
           </span>
         </h1>
         <div className="flex gap-4">
-          <button className="4xl:px-12 4xl:py-6 px-6 py-3 bg-pink-600 text-white rounded-full hover:bg-pink-700">
+          <button className="4xl:px-20 4xl:py-10 4xl:text-5xl 4xl:ml-60 4xl:mt-20 px-6 py-3 bg-pink-600 text-white rounded-full hover:bg-pink-700">
             Get In Touch
           </button>
         </div>
       </div>
 
       {/* bottom card strip */}
-      <div className="translate-y-10 absolute left-1/2 -translate-x-1/2 bottom-[-100px] sm:bottom-[-64px] md:bottom-[-72px] z-30 w-full px-4">
+      <div className="4xl:p-10 translate-y-10 absolute left-1/2 -translate-x-1/2 bottom-[-100px] sm:bottom-[-64px] md:bottom-[-72px] z-30 w-full px-4">
         {/* Desktop row */}
-        <div className="hidden md:flex items-end justify-center gap-4">
+        <div className="hidden md:flex items-end justify-center gap-4 4xl:gap-24">
           {cards.map((src, i) => (
             <div
               key={i}
               className={`rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-white ${
                 i % 2 === 0 ? "-translate-y-4" : "translate-y-4"
-              }`}
-              style={{ width: "clamp(88px, 15vw, 192px)" }}
+              } w-[clamp(88px,15vw,192px)] 4xl:w-[260px]`}
             >
               <div className="aspect-[3/5]">
                 <img
@@ -72,8 +72,7 @@ function HomeBanner() {
               key={i}
               className={`rounded-xl overflow-hidden shadow-lg ring-1 ring-white/10 bg-white ${
                 i % 2 === 0 ? "-translate-y-3" : "translate-y-3"
-              }`}
-              style={{ width: "clamp(80px, 28vw, 120px)" }}
+              } w-[clamp(80px,28vw,120px)] 4xl:w-[180px]`}
             >
               <div className="aspect-[3/5]">
                 <img
@@ -87,8 +86,7 @@ function HomeBanner() {
           ))}
 
           <div
-            className="rounded-xl overflow-hidden shadow-lg ring-1 ring-white/10 bg-white col-start-1 row-start-2 -translate-y-3"
-            style={{ width: "clamp(80px, 28vw, 140px)" }}
+            className="rounded-xl overflow-hidden shadow-lg ring-1 ring-white/10 bg-white col-start-1 row-start-2 -translate-y-3 w-[clamp(80px,28vw,140px)] 4xl:w-[200px]"
           >
             <div className="aspect-[3/5]">
               <img
@@ -101,8 +99,7 @@ function HomeBanner() {
           </div>
 
           <div
-            className="rounded-xl overflow-hidden shadow-lg ring-1 ring-white/10 bg-white col-start-3 row-start-2 translate-y-3"
-            style={{ width: "clamp(80px, 28vw, 140px)" }}
+            className="rounded-xl overflow-hidden shadow-lg ring-1 ring-white/10 bg-white col-start-3 row-start-2 translate-y-3 w-[clamp(80px,28vw,140px)] 4xl:w-[200px]"
           >
             <div className="aspect-[3/5]">
               <img

@@ -1,10 +1,9 @@
+// src/Sections/Nav.js
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/Logos-and-Favicons/admire-logo-1.png";
-// import fbicon from "../assets/Flags-and-Icons/fb-01.svg";
-// import instaicon from "../assets/Flags-and-Icons/insta-01.svg";
-// import tiktokicon from "../assets/Flags-and-Icons/tiktok-01.svg";
-// import linkedinicon from "../assets/Flags-and-Icons/LINKED-IN-01.svg";
+import { FaInstagram, FaFacebookF, FaLinkedinIn } from "react-icons/fa";
+import { FaTiktok } from "react-icons/fa6";
 
 function Nav() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,15 +17,11 @@ function Nav() {
     setMenuVisible(true);
     setIsMenuOpen(true);
   };
-
   const closeMenu = () => {
     setIsMenuOpen(false);
     setTimeout(() => setMenuVisible(false), 250);
   };
-
-  const toggleMenu = () => {
-    (isMenuOpen ? closeMenu : openMenu)();
-  };
+  const toggleMenu = () => (isMenuOpen ? closeMenu() : openMenu());
 
   useEffect(() => {
     closeMenu();
@@ -64,28 +59,13 @@ function Nav() {
     { to: "/photography", label: "Photography" },
   ];
 
-  // const socials = [
-  //   {
-  //     href: "https://www.instagram.com/yourhandle",
-  //     src: instaicon,
-  //     label: "Instagram",
-  //   },
-  //   {
-  //     href: "https://www.facebook.com/yourpage",
-  //     src: fbicon,
-  //     label: "Facebook",
-  //   },
-  //   {
-  //     href: "https://www.tiktok.com/@yourhandle",
-  //     src: tiktokicon,
-  //     label: "TikTok",
-  //   },
-  //   {
-  //     href: "https://www.linkedin.com/company/yourcompany",
-  //     src: linkedinicon,
-  //     label: "LinkedIn",
-  //   },
-  // ];
+  // same look & feel as BottomFooter
+  const socials = [
+    { icon: <FaInstagram size={18} />, url: "#", label: "Instagram" },
+    { icon: <FaFacebookF size={18} />, url: "#", label: "Facebook" },
+    { icon: <FaTiktok size={18} />, url: "#", label: "TikTok" },
+    { icon: <FaLinkedinIn size={18} />, url: "#", label: "LinkedIn" },
+  ];
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
@@ -107,42 +87,36 @@ function Nav() {
             </Link>
           </div>
 
-          {/* center: social icons (render images centered in fixed squares) */}
-          {/* <div className="hidden md:flex justify-center">
-            <ul className="flex items-center gap-6">
-              {socials.map(({ href, src, label }, idx) => (
-                <li key={`${label}-${idx}`} className="list-none">
+          {/* center: social media icons (same as BottomFooter) */}
+          <div className="hidden md:flex items-center justify-center">
+            <ul className="flex items-center gap-3">
+              {socials.map((s, i) => (
+                <li key={i} className="list-none">
                   <a
-                    href={href}
+                    href={s.url}
                     target="_blank"
                     rel="noopener noreferrer"
-                    aria-label={label}
-                    title={label}
-                    className="inline-flex h-20 w-20 items-center justify-center"
+                    aria-label={s.label}
+                    title={s.label}
+                    className="bg-pink-600 hover:bg-pink-700 rounded-full p-3 flex items-center justify-center text-white shadow-md transition"
                   >
-                    <img
-                      src={src}
-                      alt=""
-                      className="max-h-full max-w-full object-contain select-none"
-                      draggable={false}
-                    />
+                    {s.icon}
                   </a>
                 </li>
               ))}
             </ul>
-          </div> */}
+          </div>
 
           {/* right: circular hamburger */}
           <div className="flex items-center justify-end">
             <button
-  ref={triggerRef}
-  type="button"
-  aria-label={isMenuOpen ? "Close menu" : "Open menu"}
-  aria-expanded={isMenuOpen}
-  onClick={toggleMenu}
-  className="lg:mr-40 xl:mr-10 h-12 w-12 sm:h-12 sm:w-12 rounded-full bg-pink-600 text-white grid place-items-center shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500/60 active:scale-[0.98] transition"
->
-
+              ref={triggerRef}
+              type="button"
+              aria-label={isMenuOpen ? "Close menu" : "Open menu"}
+              aria-expanded={isMenuOpen}
+              onClick={toggleMenu}
+              className="lg:mr-40 xl:mr-10 h-12 w-12 sm:h-12 sm:w-12 rounded-full bg-pink-600 text-white grid place-items-center shadow-md focus:outline-none focus-visible:ring-2 focus-visible:ring-pink-500/60 active:scale-[0.98] transition"
+            >
               <span
                 className={`block text-2xl leading-none transition-transform duration-200 ${
                   isMenuOpen ? "rotate-90" : "rotate-0"
