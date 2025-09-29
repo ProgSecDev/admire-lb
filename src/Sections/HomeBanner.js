@@ -36,7 +36,7 @@ function HomeBanner() {
           </span>
         </h1>
         <div className="flex gap-4">
-          <button className="4xl:px-20 4xl:py-10 4xl:text-5xl 4xl:ml-60 4xl:mt-20 px-6 py-3 bg-pink-600 text-white rounded-full hover:bg-pink-700">
+          <button className="4xl:px-20 4xl:py-10 4xl:text-4xl 4xl:ml-20 4xl:mt-14 px-6 py-3 bg-pink-600 text-white rounded-full hover:bg-pink-700">
             Get In Touch
           </button>
         </div>

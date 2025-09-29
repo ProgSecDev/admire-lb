@@ -9,8 +9,8 @@ import {
 import ScrollToTop from "./Components/scrollToTop";
 
 import Nav from "./Components/Nav";
-import Footer from "./Sections/Footer";
-import BottomFooter from "./Sections/bottomFooter";
+// import Footer from "./Sections/Footer";
+// import BottomFooter from "./Sections/bottomFooter";
 
 import Home from "./Pages/Home";
 import AboutUs from "./Pages/AboutUs";
@@ -66,8 +66,8 @@ const AppContent = () => {
 
       {!shouldHideNavFooter && (
         <>
-          <Footer />
-          <BottomFooter />
+          {/* <Footer /> */}
+          {/* <BottomFooter /> */}
         </>
       )}
     </>

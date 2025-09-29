@@ -12,7 +12,7 @@ import animation from "../assets/Services/animation-01.svg";
 import appDevelopment from "../assets/Services/app-01.svg";
 import outdoorAdvert from "../assets/Services/outdoor-advertising-01.svg";
 import productphotography from "../assets/Services/photography-01.svg";
-import bannerImage from "../assets/Services/services-banner.jpg";
+import bannerImage from "../assets/Services/services-banner-b.png";
 
 const services = [
   { icon: corporateidentity, lines: ["CORPORATE", "IDENTITY"], link: "/services/corporate-identity" },
@@ -46,7 +46,7 @@ function ServiceCard({ icon, lines }) {
     <div
       className="
         w-[200px] 
-        bg-gray-200 
+        bg-gray-300 
         rounded-[26px] sm:rounded-[28px] 
         px-6 sm:px-7 
         py-10 
@@ -60,7 +60,7 @@ function ServiceCard({ icon, lines }) {
       <img
         src={icon}
         alt={labelText}
-        className="w-28 h-28 sm:w-48 sm:h-48 object-contain select-none"
+        className="w-28 h-28 2xl:w-52 2xl:h-52 sm:w-48 sm:h-48 object-cover select-none"
         draggable={false}
       />
       <div className="leading-tight">

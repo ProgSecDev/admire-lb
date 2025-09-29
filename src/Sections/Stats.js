@@ -59,10 +59,17 @@ export default function StatsHighlight() {
   className="relative bg-fixed bg-center bg-contain"
   style={{ backgroundImage: `url(${backgroundImage})` }}
 >
-  <div className="absolute inset-0 bg-white/60" />
+  {/* overlay with side gaps */}
+      <div
+        className="
+          pointer-events-none absolute inset-y-0
+          left-2 right-2 sm:left-6 sm:right-6 lg:left-12 lg:right-12
+          bg-white/60
+        "
+      />
 
   {/* 👇 Blur overlay at bottom to blend into footer */}
-  <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-gray-300 via-gray-300/50 to-transparent backdrop-blur-md pointer-events-none z-20" />
+  {/* <div className="absolute bottom-0 left-0 right-0 h-12 bg-gradient-to-t from-gray-300 via-gray-300/50 to-transparent backdrop-blur-md pointer-events-none z-20" /> */}
 
   <div className="relative z-10 max-w-7xl mx-auto px-6 md:px-10 py-16 md:py-16 lg:py-20">
     {/* Stats grid */}

@@ -59,7 +59,6 @@ function Nav() {
     { to: "/photography", label: "Photography" },
   ];
 
-  // same look & feel as BottomFooter
   const socials = [
     { icon: <FaInstagram size={18} />, url: "#", label: "Instagram" },
     { icon: <FaFacebookF size={18} />, url: "#", label: "Facebook" },
@@ -81,15 +80,18 @@ function Nav() {
               <img
                 src={logo}
                 alt="Admire Advertising Agency logo"
-                className="h-12 sm:h-16 sm:ml-40 lg:ml-16 md:ml-0 object-contain select-none"
+                className="h-12 sm:h-16 sm:ml-40 lg:ml-16 4xl:h-24 4xl:ml-24 md:ml-0 object-contain select-none"
                 draggable={false}
               />
             </Link>
           </div>
 
-          {/* center: social media icons (same as BottomFooter) */}
-          <div className="hidden md:flex items-center justify-center">
-            <ul className="flex items-center gap-3">
+          {/* center: empty for spacing */}
+          <div></div>
+
+          {/* right: socials + hamburger */}
+          <div className="flex items-center justify-end gap-20">
+            <ul className="hidden md:flex items-center gap-4">
               {socials.map((s, i) => (
                 <li key={i} className="list-none">
                   <a
@@ -105,10 +107,6 @@ function Nav() {
                 </li>
               ))}
             </ul>
-          </div>
-
-          {/* right: circular hamburger */}
-          <div className="flex items-center justify-end">
             <button
               ref={triggerRef}
               type="button"

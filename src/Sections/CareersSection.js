@@ -2,6 +2,8 @@
 import backgroundImage from "../assets/Careers/career-outline-04.jpg";
 import { FaInstagram, FaFacebookF, FaTiktok } from "react-icons/fa";
 import { MdEmail } from "react-icons/md";
+import locationIcon from "../assets/Flags-and-Icons/location-01.svg";
+import phoneIcon from "../assets/Flags-and-Icons/phone-01.svg";
 
 export default function Careers() {
   return (
@@ -23,7 +25,7 @@ export default function Careers() {
           FAMILY
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-1 gap-8 items-start mt-[380px]">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-8 items-start 2xl:mt-[400px] 3xl:mt-[650px] 4xl:mt-[900px]">
           <div className="w-full flex items-center justify-center">
             <form className="w-full max-w-4xl p-8 rounded-lg bg-white/50 backdrop-blur-md shadow-lg">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -91,6 +93,53 @@ export default function Careers() {
             </div>
           </div>
         </div>
+
+        <footer className="relative w-full text-black">
+          <div className="relative z-10 mx-auto max-w-7xl 4xl:-ml-16 4xl:-mb-28 2xl:-mb-20 2xl:-ml-20 mt-20">
+            <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8">
+              {/* left column */}
+              <div className="flex flex-col items-center 3xl:-ml-48 3xl:-mt-10 4xl:mt-8 4xl:-ml-[550px] md:items-start gap-4">
+                <img
+                  src={require("../assets/Logos-and-Favicons/admire-logo-1.png")}
+                  alt="Logo"
+                  className="h-16 4xl:h-28 w-auto object-contain"
+                />
+
+                <div className="flex items-center 4xl:-mt-2 text-sm 4xl:text-2xl md:text-base text-center md:text-left">
+                  <img
+                    src={locationIcon}
+                    alt="Location"
+                    className="h-12 w-20 4xl:h-20 object-contain"
+                  />
+                  <span>
+                    Antelias - Lebanon St. Nicolas center, 6th floor - Sawma Jaber street
+                  </span>
+                </div>
+
+                <div className="flex items-center -mt-4 4xl:-mt-10 text-sm 4xl:text-2xl md:text-base flex-wrap text-center md:text-left">
+                  <img
+                    src={phoneIcon}
+                    alt="Phone"
+                    className="h-12 w-20 4xl:h-20 object-contain"
+                  />
+                  <span>
+                    LEB +961 4 444107 - +961 70 777013 &nbsp;&nbsp;&nbsp; CYP +357 94 087 777
+                  </span>
+                </div>
+              </div>
+
+              {/* right column: QR */}
+              <div className="flex justify-center 3xl:-mr-40 4xl:-mr-80 md:justify-end">
+                <img
+                  src={require("../assets/Footer/QR-01.png")}
+                  alt="QR code"
+                  className="h-40 w-80 4xl:h-80 object-contain"
+                />
+              </div>
+            </div>
+          </div>
+        </footer>
+
       </div>
     </section>
   );
