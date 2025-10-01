@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/admire-lb/static/css/main.bc8c15eb.css",
-    "main.js": "/admire-lb/static/js/main.392f5744.js",
+    "main.css": "/admire-lb/static/css/main.f62bcf58.css",
+    "main.js": "/admire-lb/static/js/main.bfdb26e4.js",
     "static/js/453.6abb9b73.chunk.js": "/admire-lb/static/js/453.6abb9b73.chunk.js",
     "static/media/WhatsApp-Video-2023-09-28-at-13.01.02.mp4": "/admire-lb/static/media/WhatsApp-Video-2023-09-28-at-13.01.02.60b72e1e3ab8c16b54c7.mp4",
     "static/media/Al-Abbseye.mp4": "/admire-lb/static/media/Al-Abbseye.a1a2a0ad93621ce34db1.mp4",
@@ -222,12 +222,12 @@
     "static/media/Corp-Identity-3-1.jpg": "/admire-lb/static/media/Corp-Identity-3-1.507692e51b516921ed8a.jpg",
     "static/media/Corp-Identity-16.jpg": "/admire-lb/static/media/Corp-Identity-16.c7921f181c09352f2a63.jpg",
     "static/media/boxes-01.png": "/admire-lb/static/media/boxes-01.fe042e7cac1dfd250589.png",
-    "static/media/QR-01.png": "/admire-lb/static/media/QR-01.d1a6ec01f847809e8036.png",
     "static/media/Lebanese-University.jpg": "/admire-lb/static/media/Lebanese-University.d794f31ee39f987a2eef.jpg",
     "static/media/Axvaya.jpg": "/admire-lb/static/media/Axvaya.a8880cdfa9d8123aeb88.jpg",
     "static/media/Maram.jpg": "/admire-lb/static/media/Maram.86d3cc2c70d2da941769.jpg",
     "static/media/Areekah-Design.jpg": "/admire-lb/static/media/Areekah-Design.bb93cb29a7a21baee7c1.jpg",
     "static/media/Beed-Club.jpg": "/admire-lb/static/media/Beed-Club.c87014521d4630f09478.jpg",
+    "static/media/qr-new.png": "/admire-lb/static/media/qr-new.e10d3dbce4d881dfe575.png",
     "static/media/Al-Watad.jpg": "/admire-lb/static/media/Al-Watad.33fdc69a1c9871ae236f.jpg",
     "static/media/Aujan.jpg": "/admire-lb/static/media/Aujan.619cc228a15789342fa0.jpg",
     "static/media/MZ Residence.jpg": "/admire-lb/static/media/MZ Residence.0cdf18cce311f8aaf99e.jpg",
@@ -312,12 +312,12 @@
     "static/media/mission-01.svg": "/admire-lb/static/media/mission-01.7dfbb4e8b883fed23b3de1904b3dd048.svg",
     "static/media/value-01.svg": "/admire-lb/static/media/value-01.8a7bbb1e74d250e029ccc9b23e06d2ce.svg",
     "index.html": "/admire-lb/index.html",
-    "main.bc8c15eb.css.map": "/admire-lb/static/css/main.bc8c15eb.css.map",
-    "main.392f5744.js.map": "/admire-lb/static/js/main.392f5744.js.map",
+    "main.f62bcf58.css.map": "/admire-lb/static/css/main.f62bcf58.css.map",
+    "main.bfdb26e4.js.map": "/admire-lb/static/js/main.bfdb26e4.js.map",
     "453.6abb9b73.chunk.js.map": "/admire-lb/static/js/453.6abb9b73.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bc8c15eb.css",
-    "static/js/main.392f5744.js"
+    "static/css/main.f62bcf58.css",
+    "static/js/main.bfdb26e4.js"
   ]
 }
