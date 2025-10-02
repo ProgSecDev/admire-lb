@@ -3,12 +3,61 @@ import { motion } from "framer-motion";
 import backgroundImage from "../assets/Home/main-03.jpg";
 
 const values = [
-  { number: "1", title: "INNOVATION", desc: "We consistently generate novel concepts to ensure the presentation of your business is characterized by innovation and originality.", animation: { hidden: { opacity: 0, x: -80 }, visible: { opacity: 1, x: 0 } } },
-  { number: "2", title: "CREATIVITY", desc: "We bring conceptual visions to life, showcasing the exceptional features of your brand.", animation: { hidden: { opacity: 0, x: 80 }, visible: { opacity: 1, x: 0 } } },
-  { number: "3", title: "DEDICATION", desc: "We are committed to meeting our clients' needs with unwavering enthusiasm and dedicated to ensuring their success.", animation: { hidden: { opacity: 0, x: -80 }, visible: { opacity: 1, x: 0 } } },
-  { number: "4", title: "HARD WORK", desc: "Hard work and dedication have made us one of the most successful web design companies.", animation: { hidden: { opacity: 0, x: 80 }, visible: { opacity: 1, x: 0 } } },
-  { number: "5", title: "SUPPORT", desc: "We are committed to delivering reliable support and ensuring you receive the necessary technical assistance without any compromise.", animation: { hidden: { opacity: 0, x: -80 }, visible: { opacity: 1, x: 0 } } },
-  { number: "6", title: "TECHNOLOGY", desc: "We are committed to staying informed about the latest technological trends, enabling us to provide cutting-edge online experiences.", animation: { hidden: { opacity: 0, x: 80 }, visible: { opacity: 1, x: 0 } } },
+  { 
+    number: "1", 
+    title: "INNOVATION", 
+    desc: (
+      <>
+      We consistently generate novel concepts to ensure the <br /> presentation of your business is characterized by <br/> innovation and originality.
+      </>
+      ),
+      animation: { hidden: { opacity: 0, x: -80 }, visible: { opacity: 1, x: 0 } },
+    },
+  { 
+    number: "2", 
+    title: "CREATIVITY", 
+    desc: (
+      <> 
+    We bring conceptual visions to life, showcasing the <br /> exceptional features of your brand.
+  </>
+  ), 
+    animation: { hidden: { opacity: 0, x: 80 }, visible: { opacity: 1, x: 0 } } },
+  { 
+    number: "3", 
+    title: "DEDICATION", 
+    desc: (
+      <>
+      We are committed to meeting our clients' needs with <br /> unwavering enthusiasm and dedicated to ensuring <br /> their success.
+      </>
+      ), 
+      animation: { hidden: { opacity: 0, x: -80 }, visible: { opacity: 1, x: 0 } } },
+  { 
+    number: "4", 
+    title: "HARD WORK", 
+    desc: (
+      <>
+      Hard work and dedication have made us one of the most <br /> successful web design companies.
+      </>
+      ), 
+      animation: { hidden: { opacity: 0, x: 80 }, visible: { opacity: 1, x: 0 } } },
+  { 
+    number: "5", 
+    title: "SUPPORT", 
+    desc: (
+      <>
+      We are committed to delivering reliable support and <br /> ensuring you receive the necessary technical assistance <br /> without any compromise.
+      </>
+      ), 
+      animation: { hidden: { opacity: 0, x: -80 }, visible: { opacity: 1, x: 0 } } },
+  { 
+    number: "6", 
+    title: "TECHNOLOGY", 
+    desc: (
+      <>
+      We are committed to staying informed about the latest <br /> technological trends, enabling us to provide cutting-edge <br /> online experiences. 
+      </>
+      ), 
+      animation: { hidden: { opacity: 0, x: 80 }, visible: { opacity: 1, x: 0 } } },
 ];
 
 const RailRow = ({ item, delay, railLeftDot = "left-12", badgeLeft = "left-1", padLeft = "pl-14" }) => (
@@ -31,7 +80,7 @@ const RailRow = ({ item, delay, railLeftDot = "left-12", badgeLeft = "left-1", p
       </span>
     </span>
 
-    <h3 className="text-white text-lg md:text-xl font-bold tracking-wide mb-1">{item.title}</h3>
+    <h3 className="font-azonix text-white text-lg md:text-xl font-bold tracking-wide mb-1">{item.title}</h3>
     <p className="text-white/90 text-xs sm:text-sm leading-relaxed">{item.desc}</p>
   </motion.div>
 );

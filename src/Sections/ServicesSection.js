@@ -30,12 +30,17 @@ const services = [
 ];
 
 function Banner() {
-  return (  
+  return (
     <div
-      className="-mb-20 relative w-full lg:h-[500px] sm:h-[400px] bg-contain bg-no-repeat bg-black bg-center flex items-center justify-center"
+      className="
+        relative 
+        w-full 
+        h-[300px] sm:h-[400px] lg:h-[500px] 
+        bg-cover bg-center bg-no-repeat 
+        flex items-center justify-center 3xl:mt-14 4xl:mt-28
+      "
       style={{ backgroundImage: `url(${bannerImage})` }}
-    >
-    </div>
+    />
   );
 }
 
@@ -45,29 +50,26 @@ function ServiceCard({ icon, lines }) {
   return (
     <div
       className="
-        w-[200px] 
-        bg-gray-300 
-        rounded-[26px] sm:rounded-[28px] 
-        px-6 sm:px-7 
-        py-10 
-        min-h-[220px] sm:min-h-[350px] 
-        shadow-[4px_6px_12px_rgba(255,255,255,0.25)] 
-        hover:shadow-[8px_10px_20px_rgba(255,255,255,0.5)]
+        w-[200px] aspect-square   /* square card */
+        bg-white 
+        rounded-2xl 
+        shadow-md hover:shadow-lg
         transition-shadow duration-300 ease-linear
-        flex flex-col items-center justify-center gap-3 text-center
+        flex flex-col items-center justify-center
+        text-center
       "
     >
       <img
         src={icon}
         alt={labelText}
-        className="w-28 h-28 2xl:w-52 2xl:h-52 sm:w-48 sm:h-48 object-cover select-none"
+        className="w-20 h-20 sm:w-28 sm:h-28 2xl:w-56 2xl:h-40 object-cover select-none mb-3"
         draggable={false}
       />
       <div className="leading-tight">
         {lines.map((line, i) => (
           <div
             key={i}
-            className="text-pink-600 font-extrabold tracking-wide text-xl sm:text-2xl font-calibri"
+            className="text-pink-600 -translate-y-4 font-extrabold tracking-wide text-sm sm:text-base font-azonix"
           >
             {line}
           </div>
@@ -79,12 +81,13 @@ function ServiceCard({ icon, lines }) {
 
 
 
+
 export default function ServicesSection() {
   return (
     <>
       <Banner />
 
-      <section className="relative mt-20 w-full py-14 sm:py-16 md:py-20 px-6 md:px-12 text-center bg-black overflow-hidden">
+      <section className="relative -mt-1 w-full py-14 sm:py-16 md:py-20 px-6 md:px-12 text-center bg-black overflow-hidden">
         {/* Top Blur */}
         <div className="absolute top-0 left-0 w-full h-24 bg-gradient-to-b from-black via-black/70 to-transparent backdrop-blur-sm" />
 
@@ -93,13 +96,12 @@ export default function ServicesSection() {
 
         <div className="relative z-10 max-w-6xl mx-auto">
           <h1
-            className="text-3xl font-bold tracking-widest mb-6 text-white"
-            style={{ fontFamily: "Azonix" }}
+            className="text-3xl font-bold tracking-widest mb-6 text-white font-azonix"
           >
             OUR SERVICES
           </h1>
 
-          <div className="text-white pb-10">
+          <div className="text-white pb-10 font-calibri">
             <p>
               At Admire, we craft innovative strategies and creative solutions to
               help brands stand out and connect with their audience. Our services

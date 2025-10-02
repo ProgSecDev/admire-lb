@@ -85,9 +85,26 @@ export default function AboutSection() {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8 }}
           viewport={{ once: true }}
-          className="absolute z-10 w-[500px] -top-[84px] 2xl:-top-[72px] 4xl:-top-[84px] 4xl:w-[400px] 2xl:w-[300px] right-16 sm:right-12 md:right-20 lg:right-32 xl:right-40 2xl:right-[675px] 3xl:right-[645px] 4xl:right-[1095px] "
+          className="
+          absolute 
+          z-10 
+          w-[500px] 
+          -top-[84px] 
+          2xl:-top-[72px]
+          2xl:w-[300px]
+          2xl:right-[665px]
+          3xl:right-[680px] 
+          4xl:-top-[84px] 
+          4xl:w-[400px]
+          4xl:right-[1095px] 
+          right-16 
+          sm:right-12 
+          md:right-20 
+          lg:right-32 
+          xl:right-40
+          "
         >
-          <div className="bg-pink-600 px-8 py-3 shadow-xl">
+          <div className="bg-pink-600 px-8 py-3 shadow-xl mt-9">
             <div className="font-azonix text-white text-xl 4xl:text-2xl sm:text-xl font-extrabold tracking-wider text-center">
               Joelle Raich
             </div>
@@ -99,7 +116,7 @@ export default function AboutSection() {
 
         {/* Mission / Vision / Values */}
         <div className="w-full py-12 px-6 sm:px-12 md:px-20">
-          <div className="max-w-7xl mx-auto grid md:grid-cols-3 gap-10 text-center">
+          <div className="max-w-7xl 4xl:max-w-[120rem] mx-auto grid md:grid-cols-3 gap-10 3xl:gap-24 4xl:gap-40 text-center">
             {/* Mission */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}
@@ -108,7 +125,7 @@ export default function AboutSection() {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <img src={Mission} alt="Mission" className="mx-auto w-16 h-16 4xl:w-48 4xl:h-48" />
+              <img src={Mission} alt="Mission" className="mx-auto w-16 h-16 2xl:w-28 2xl:h-28 3xl:w-40 3xl:h-40 4xl:w-48 4xl:h-48" />
               <h3 className="text-black font-azonix text-lg 4xl:text-3xl uppercase tracking-wide">
                 Mission
               </h3>
@@ -128,7 +145,7 @@ export default function AboutSection() {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <img src={Vision} alt="Vision" className="mx-auto w-16 h-16 4xl:w-48 4xl:h-48" />
+              <img src={Vision} alt="Vision" className="mx-auto w-16 h-16 2xl:w-28 2xl:h-28 3xl:w-40 3xl:h-40 4xl:w-48 4xl:h-48" />
               <h3 className="text-black font-azonix text-lg 4xl:text-3xl uppercase tracking-wide">
                 Vision
               </h3>
@@ -147,7 +164,7 @@ export default function AboutSection() {
               viewport={{ once: true }}
               className="space-y-4"
             >
-              <img src={Values} alt="Values" className="mx-auto w-16 h-16 4xl:w-48 4xl:h-48" />
+              <img src={Values} alt="Values" className="mx-auto w-16 h-16 2xl:w-28 2xl:h-28 3xl:w-40 3xl:h-40 4xl:w-48 4xl:h-48" />
               <h3 className="text-black font-azonix text-lg 4xl:text-3xl uppercase tracking-wide">
                 Values
               </h3>
@@ -161,8 +178,8 @@ export default function AboutSection() {
           </div>
         </div>
 
-        <footer className="relative w-full text-black">
-          <div className="relative z-10 mx-auto max-w-7xl 4xl:-mb-8">
+        <footer className="relative w-full text-black mt-40">
+          <div className="relative z-10 mx-auto max-w-7xl">
             <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8">
               {/* left column */}
               <div className="flex flex-col items-center 3xl:-ml-48 3xl:-mt-10 4xl:mt-8 4xl:-ml-[550px] md:items-start gap-4">
@@ -172,18 +189,26 @@ export default function AboutSection() {
                   className="h-16 4xl:h-28 w-auto object-contain"
                 />
 
-                <div className="flex items-center 4xl:-mt-2 text-sm 4xl:text-2xl md:text-base text-center md:text-left">
+                <div className="flex items-center 2xl:-ml-8 3xl:-ml-8 4xl:-mt-2 4xl:text-2xl text-sm md:text-base text-center md:text-left">
                   <img
                     src={locationIcon}
                     alt="Location"
                     className="h-12 w-20 4xl:h-20 object-contain"
                   />
-                  <span>
-                    Antelias - Lebanon St. Nicolas center, 6th floor - Sawma Jaber street
-                  </span>
+                  <a
+                    href="https://maps.app.goo.gl/eFyidDwxjG3oq6NE7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline text-black"
+                  >
+                    <span>
+                      Antelias - Lebanon St. Nicolas center, 6th floor - Sawma Jaber street
+                    </span>
+                  </a>
+
                 </div>
 
-                <div className="flex items-center -mt-4 4xl:-mt-10 text-sm 4xl:text-2xl md:text-base flex-wrap text-center md:text-left">
+                <div className="flex items-center -mt-4 2xl:-ml-8 3xl:-ml-8 4xl:-mt-10 4xl:text-2xl text-sm md:text-base flex-wrap text-center md:text-left">
                   <img
                     src={phoneIcon}
                     alt="Phone"
@@ -196,11 +221,11 @@ export default function AboutSection() {
               </div>
 
               {/* right column: QR */}
-              <div className="flex justify-center 3xl:-mr-40 4xl:-mr-80 md:justify-end">
+              <div className="flex justify-center 2xl:-mt-10 3xl:-mr-40 4xl:-mr-80 md:justify-end">
                 <img
-                  src={require("../assets/Footer/QR-01.png")}
+                  src={require("../assets/Footer/qr-new.png")}
                   alt="QR code"
-                  className="h-40 w-80 4xl:h-80 object-contain"
+                  className="h-40 w-80 2xl:h-32 2xl:translate-y-16 4xl:h-48 object-contain"
                 />
               </div>
             </div>

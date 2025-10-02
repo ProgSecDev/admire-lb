@@ -7,9 +7,33 @@ import checkImg from "../assets/Flags-and-Icons/tick1.png";
 
 function Story() {
   const cards = [
-    { icon: brainImg, title: "STRATEGY", desc: "Focus on creating be it a product, a project, or a service." },
-    { icon: flameImg, title: "EXPERTISE", desc: "A creative process of generating, developing, and communicating new ideas." },
-    { icon: checkImg, title: "RESULT", desc: "Develop and refine the concept to get an effective visual communication of an idea or concept." },
+    {
+      icon: brainImg,
+      title: "STRATEGY",
+      desc: (
+        <>
+          Focus on creating be it a product, a project, or a service.
+        </>
+      ),
+    },
+    {
+      icon: flameImg,
+      title: "EXPERTISE",
+      desc: (
+        <>
+          A creative process of generating, developing, and communicating new ideas.
+        </>
+      )
+    },
+    {
+      icon: checkImg,
+      title: "RESULT",
+      desc: (
+        <>
+          Develop and refine the concept to get an effective visual communication of an idea or concept.
+        </>
+      )
+    },
   ];
 
   const cardVariants = {
@@ -31,26 +55,40 @@ function Story() {
         "
       />
 
-      <div className="font-calibri 2xl:mt-20 relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="font-raleway 2xl:mt-20 relative z-10 max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
         {cards.map((card, idx) => (
-          <div key={idx} className={idx === 1 ? "md:translate-y-8" : "md:translate-y-0"}>
+          <div
+            key={idx}
+            className={`${idx === 1 ? "md:translate-y-16" : ""}`}
+          >
             <motion.div
               variants={cardVariants}
               initial="hidden"
               whileInView="visible"
               transition={{ duration: 1, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="relative rounded-3xl p-10 text-center shadow-2xl bg-white/70"
+              className="relative rounded-3xl p-8 text-center shadow-2xl bg-white/70 
+        flex flex-col justify-center items-center aspect-square max-w-[300px] mx-auto"
             >
               <div className="flex justify-center mb-6">
-                <img src={card.icon} alt={`${card.title} icon`} className="w-10 h-10 object-contain" draggable={false} />
+                <img
+                  src={card.icon}
+                  alt={`${card.title} icon`}
+                  className="w-10 h-10 object-contain"
+                  draggable={false}
+                />
               </div>
-              <h3 className="text-pink-600 text-2xl font-bold mb-3 tracking-wide">{card.title}</h3>
-              <p className="text-black text-lg leading-relaxed">{card.desc}</p>
+              <h3 className="font-azonix text-pink-600 text-2xl font-bold mb-3 tracking-wide">
+                {card.title}
+              </h3>
+              <p className="text-black text-lg font-bold leading-relaxed">{card.desc}</p>
             </motion.div>
           </div>
         ))}
+
+
       </div>
+
     </div>
   );
 }

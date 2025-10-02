@@ -1,6 +1,7 @@
 // import PortfolioBanner from "../Sections/PortfolioBanner";
 import PortfolioGrid from '../Sections/PortfolioGrid';
 import BottomFooterPortfolio from "../Sections/bottomFooterPortfolio";
+import WhatsappWidget from "../Components/Whatsapp Widget/WhatsappWidget";
 
 function Portfolio() {
   return (
@@ -8,6 +9,7 @@ function Portfolio() {
       {/* <PortfolioBanner /> */}
       <PortfolioGrid />
       <BottomFooterPortfolio />
+      <WhatsappWidget />
     </>
   );
 }

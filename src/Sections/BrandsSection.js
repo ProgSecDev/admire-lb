@@ -152,7 +152,7 @@ const Brands = () => {
           ))}
         </div>
 
-        <footer className="relative w-full text-black">
+        <footer className="relative w-full text-black mt-40">
           <div className="relative z-10 mx-auto max-w-7xl 2xl:-mb-20 2xl:mt-14">
             <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8">
               {/* left column */}
@@ -163,18 +163,25 @@ const Brands = () => {
                   className="h-16 4xl:h-28 w-auto object-contain"
                 />
 
-                <div className="flex items-center 4xl:-mt-2 text-sm 4xl:text-2xl md:text-base text-center md:text-left">
+                <div className="flex items-center 2xl:-ml-8 3xl:-ml-8 4xl:-mt-2 4xl:text-2xl text-sm md:text-base text-center md:text-left">
                   <img
                     src={locationIcon}
                     alt="Location"
                     className="h-12 w-20 4xl:h-20 object-contain"
                   />
-                  <span>
-                    Antelias - Lebanon St. Nicolas center, 6th floor - Sawma Jaber street
-                  </span>
+                  <a
+                    href="https://maps.app.goo.gl/eFyidDwxjG3oq6NE7"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="hover:underline text-black"
+                  >
+                    <span>
+                      Antelias - Lebanon St. Nicolas center, 6th floor - Sawma Jaber street
+                    </span>
+                  </a>
                 </div>
 
-                <div className="flex items-center -mt-4 4xl:-mt-10 text-sm 4xl:text-2xl md:text-base flex-wrap text-center md:text-left">
+                <div className="flex items-center -mt-4 2xl:-ml-8 3xl:-ml-8 4xl:-mt-10 4xl:text-2xl text-sm md:text-base flex-wrap text-center md:text-left">
                   <img
                     src={phoneIcon}
                     alt="Phone"
@@ -187,11 +194,11 @@ const Brands = () => {
               </div>
 
               {/* right column: QR */}
-              <div className="flex justify-center 3xl:-mr-40 4xl:-mr-80 md:justify-end">
+              <div className="flex justify-center 2xl:-mt-10 3xl:-mr-40 4xl:-mr-80 md:justify-end">
                 <img
-                  src={require("../assets/Footer/QR-01.png")}
+                  src={require("../assets/Footer/qr-new.png")}
                   alt="QR code"
-                  className="h-40 w-80 4xl:h-80 object-contain"
+                  className="h-40 w-80 2xl:h-32 2xl:translate-y-16 4xl:h-48 object-contain"
                 />
               </div>
             </div>

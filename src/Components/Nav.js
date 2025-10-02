@@ -60,10 +60,10 @@ function Nav() {
   ];
 
   const socials = [
-    { icon: <FaInstagram size={18} />, url: "#", label: "Instagram" },
-    { icon: <FaFacebookF size={18} />, url: "#", label: "Facebook" },
+    { icon: <FaInstagram size={18} />, url: "https://www.instagram.com/admire.lb/?hl=en", label: "Instagram" },
+    { icon: <FaFacebookF size={18} />, url: "https://www.facebook.com/admire.agency", label: "Facebook" },
     { icon: <FaTiktok size={18} />, url: "#", label: "TikTok" },
-    { icon: <FaLinkedinIn size={18} />, url: "#", label: "LinkedIn" },
+    { icon: <FaLinkedinIn size={18} />, url: "https://lb.linkedin.com/in/joelle-raich-92119aa8", label: "LinkedIn" },
   ];
 
   return (
@@ -100,7 +100,7 @@ function Nav() {
                     rel="noopener noreferrer"
                     aria-label={s.label}
                     title={s.label}
-                    className="bg-pink-600 hover:bg-pink-700 rounded-full p-3 flex items-center justify-center text-white shadow-md transition"
+                    className="bg-black hover:bg-pink-600 rounded-full p-3 flex items-center justify-center text-white shadow-md transition"
                   >
                     {s.icon}
                   </a>

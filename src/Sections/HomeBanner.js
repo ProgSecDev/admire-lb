@@ -36,9 +36,9 @@ function HomeBanner() {
           </span>
         </h1>
         <div className="flex gap-4">
-          <button className="4xl:px-20 4xl:py-10 4xl:text-4xl 4xl:ml-20 4xl:mt-14 px-6 py-3 bg-pink-600 text-white rounded-full hover:bg-pink-700">
+          {/* <button className="4xl:px-20 4xl:py-10 4xl:text-4xl 4xl:ml-20 4xl:mt-14 px-6 py-3 bg-pink-600 text-white rounded-full hover:bg-pink-700">
             Get In Touch
-          </button>
+          </button> */}
         </div>
       </div>
 
@@ -46,24 +46,26 @@ function HomeBanner() {
       <div className="4xl:p-10 translate-y-10 absolute left-1/2 -translate-x-1/2 bottom-[-100px] sm:bottom-[-64px] md:bottom-[-72px] z-30 w-full px-4">
         {/* Desktop row */}
         <div className="hidden md:flex items-end justify-center gap-4 4xl:gap-24">
-          {cards.map((src, i) => (
-            <div
-              key={i}
-              className={`rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-white ${
-                i % 2 === 0 ? "-translate-y-4" : "translate-y-4"
-              } w-[clamp(88px,15vw,192px)] 4xl:w-[260px]`}
-            >
-              <div className="aspect-[3/5]">
-                <img
-                  src={src}
-                  alt={`highlight ${i + 1}`}
-                  className="w-full h-full object-cover"
-                  draggable={false}
-                />
-              </div>
-            </div>
-          ))}
-        </div>
+  {cards.map((src, i) => (
+    <div
+      key={i}
+      className={`rounded-2xl overflow-hidden shadow-2xl ring-1 ring-white/10 bg-white
+        w-[clamp(88px,15vw,192px)] 4xl:w-[260px]
+        ${i % 2 === 0 ? "-translate-y-4 animate-float" : "translate-y-4 animate-floatReverse"}
+      `}
+    >
+      <div className="aspect-[3/5]">
+        <img
+          src={src}
+          alt={`highlight ${i + 1}`}
+          className="w-full h-full object-cover"
+          draggable={false}
+        />
+      </div>
+    </div>
+  ))}
+</div>
+
 
         {/* Mobile layout */}
         <div className="grid grid-cols-3 gap-2 place-items-center md:hidden">

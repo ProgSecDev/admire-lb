@@ -13,8 +13,22 @@ module.exports = {
         azonix: ["Azonix", "sans-serif"],
         raleway: ["Raleway", "sans-serif"],
       },
+      keyframes: {
+        float: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(-12px)" },
+        },
+        floatReverse: {
+          "0%, 100%": { transform: "translateY(0)" },
+          "50%": { transform: "translateY(12px)" },
+        },
+      },
+      animation: {
+        float: "float 4s ease-in-out infinite",
+        floatReverse: "floatReverse 4s ease-in-out infinite",
+      },
       screens: {
-        sm2:{ max: "639px" },
+        sm2: { max: "639px" },
         sm: "640px",
         md: "768px", // tablets and up
         lg: "1024px", // desktops and up

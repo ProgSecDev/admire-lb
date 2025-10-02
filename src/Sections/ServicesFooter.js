@@ -1,5 +1,5 @@
 import logoImg from "../assets/Logos-and-Favicons/WHITE LOGO-01.png";
-import qrImg from "../assets/Footer/QR-01.png";
+import qrImg from "../assets/Footer/qr-new.png";
 import locationIcon from "../assets/Flags-and-Icons/location-01.svg";
 import phoneIcon from "../assets/Flags-and-Icons/phone-01.svg";
 
@@ -30,11 +30,11 @@ function ServicesFooter() {
         {/* top row */}
         <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8">
           {/* left column: logo + address + phones */}
-          <div className="flex flex-col items-center 3xl:-ml-48 3xl:-mt-20 4xl:mt-8 4xl:-ml-[550px] md:items-start gap-4">
+          <div className="flex flex-col items-center 3xl:-ml-48 3xl:-mt-10 4xl:mt-8 4xl:-ml-[550px] md:items-start gap-4">
             <img
               src={logoImg}
               alt="Logo"
-              className="h-52 4xl:h-80 4xl:-mt-20 w-auto object-contain"
+              className="h-52 3xl:mt-20 4xl:h-80 4xl:-mt-20 w-auto object-contain"
             />
 
             {/* address */}
@@ -44,7 +44,14 @@ function ServicesFooter() {
                 alt="Location"
                 className="h-12 w-20 4xl:h-20 object-contain"
               />
-              <span>{addressLine}</span>
+              <a
+                href="https://maps.app.goo.gl/eFyidDwxjG3oq6NE7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline text-white"
+              >
+                {addressLine}
+              </a>
             </div>
 
             {/* phones */}
@@ -63,11 +70,11 @@ function ServicesFooter() {
           </div>
 
           {/* right column: QR */}
-          <div className="flex justify-center 3xl:-mr-40 4xl:-mr-80 md:justify-end">
+          <div className="flex justify-center 2xl:mt-10 3xl:mt-20 3xl:-mr-40 4xl:-mr-80 md:justify-end">
             <img
               src={qrImg}
               alt="QR code"
-              className="h-40 w-80 4xl:h-80 object-contain"
+              className="h-40 w-80 2xl:h-32 2xl:translate-y-16 4xl:-mt-10 4xl:h-48 object-contain"
             />
           </div>
         </div>
