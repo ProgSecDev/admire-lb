@@ -1,16 +1,13 @@
 // src/App.js
 import {
-  BrowserRouter as Router,
+  HashRouter as Router,  // 👈 use HashRouter instead of BrowserRouter
   Routes,
   Route,
   useLocation,
 } from "react-router-dom";
 
 import ScrollToTop from "./Components/scrollToTop";
-
 import Nav from "./Components/Nav";
-// import Footer from "./Sections/Footer";
-// import BottomFooter from "./Sections/bottomFooter";
 
 import Home from "./Pages/Home";
 import AboutUs from "./Pages/AboutUs";
@@ -63,20 +60,13 @@ const AppContent = () => {
         <Route path="/services/productphotography" element={<ProductPhotography />} />
         <Route path="/services/animation" element={<Animation />} />
       </Routes>
-
-      {!shouldHideNavFooter && (
-        <>
-          {/* <Footer /> */}
-          {/* <BottomFooter /> */}
-        </>
-      )}
     </>
   );
 };
 
 const App = () => {
   return (
-    <Router basename="/admire-lb">
+    <Router basename="/"> {/* 👈 no need for /admire-lb when using HashRouter */}
       <ScrollToTop />
       <AppContent />
     </Router>
