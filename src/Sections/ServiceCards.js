@@ -67,7 +67,7 @@ function Story() {
               whileInView="visible"
               transition={{ duration: 1, ease: "easeOut" }}
               viewport={{ once: true }}
-              className="relative rounded-3xl p-8 text-center shadow-2xl bg-white/70 
+              className="relative rounded-3xl p-8 text-center shadow-2xl bg-white/60 
         flex flex-col justify-center items-center aspect-square max-w-[300px] mx-auto"
             >
               <div className="flex justify-center mb-6">

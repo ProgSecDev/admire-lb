@@ -194,9 +194,9 @@ const Brands = () => {
               </div>
 
               {/* right column: QR */}
-              <div className="flex justify-center 2xl:-mt-10 3xl:-mr-40 4xl:-mr-80 md:justify-end">
+              <div className="flex justify-center 2xl:-mt-10 3xl:-mt-20 4xl:mt-4 3xl:-mr-40 4xl:-mr-80 md:justify-end">
                 <img
-                  src={require("../assets/Footer/qr-new.png")}
+                  src={require("../assets/Footer/final-qr.png")}
                   alt="QR code"
                   className="h-40 w-80 2xl:h-32 2xl:translate-y-16 4xl:h-48 object-contain"
                 />

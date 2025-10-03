@@ -47,7 +47,7 @@ const BottomFooter = () => {
           <img
             src={f.src}
             alt={f.label}
-            className="h-10 md:h-12 2xl:h-12 3xl:h-16 4xl:h-20 w-auto object-contain -mb-4"
+            className="h-10 md:h-12 2xl:h-14 3xl:h-20 4xl:h-24 w-auto object-contain -mb-4"
           />
           <span className="text-[10px] tracking-widest text-white/90 mt-1">
             {f.label}
@@ -57,7 +57,7 @@ const BottomFooter = () => {
     </div>
 
         {/* Copyright */}
-        <div className="mt-4 3xl:text-xs md:text-xs 4xl:text-xs text-gray-300">
+        <div className="mt-4 text-[10px] text-white">
           Copyright © 2025 Admire Advertising, All Rights Reserved.
         </div>
       </div>

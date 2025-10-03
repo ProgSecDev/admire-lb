@@ -96,6 +96,7 @@ export default function Careers() {
             <div className="bg-white/50 rounded-2xl shadow-[4px_4px_8px_rgba(0,0,0,0.4)] p-8 flex flex-col items-center justify-center text-center">
               <MdEmail className="text-pink-600 text-3xl mb-3" />
               <p className="font-calibri text-lg">info@admirelb.com</p>
+              <p className="font-calibri text-lg">joelle@admirelb.com</p>
             </div>
           </div>
         </div>
@@ -142,9 +143,9 @@ export default function Careers() {
               </div>
 
               {/* right column: QR */}
-              <div className="flex justify-center 2xl:-mt-8 3xl:-mr-40 4xl:-mr-80 md:justify-end">
+              <div className="flex justify-center 3xl:-mt-20 4xl:mt-0 2xl:-mt-8 3xl:-mr-40 4xl:-mr-80 md:justify-end">
                 <img
-                  src={require("../assets/Footer/qr-new.png")}
+                  src={require("../assets/Footer/final-qr.png")}
                   alt="QR code"
                   className="h-40 w-80 2xl:h-32 2xl:translate-y-16 2xl:translate-x-20 4xl:translate-y-24 4xl:h-48 object-contain"
                 />

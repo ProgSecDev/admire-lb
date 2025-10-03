@@ -1,4 +1,7 @@
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
+
 import PortfolioBanner from "./PortfolioBanner";
 import locationIcon from "../assets/Flags-and-Icons/location-01.svg";
 import phoneIcon from "../assets/Flags-and-Icons/phone-01.svg";
@@ -54,16 +57,16 @@ function ServiceCard({ title, imgSrc, iconSrc, titleOffset }) {
         />
 
         {/* Line Image */}
-      <div className="relative w-[300px] flex justify-center -mt-1 translate-y-[280px]">
-        <img
-          src={lineImage}
-          alt="divider line"
-          className="w-full object-cover"
-          draggable={false}
-        />
-      </div>
+        <div className="relative w-[300px] flex justify-center -mt-1 translate-y-[280px]">
+          <img
+            src={lineImage}
+            alt="divider line"
+            className="w-full object-cover"
+            draggable={false}
+          />
+        </div>
 
-        {/* Icon wrapper - same size for all */}
+        {/* Icon wrapper */}
         <div className="absolute -bottom-6 left-10 -translate-x-1/2">
           <div className="w-12 h-12 rounded-full bg-pink-600 flex items-center justify-center">
             <img
@@ -89,10 +92,19 @@ function ServiceCard({ title, imgSrc, iconSrc, titleOffset }) {
   );
 }
 
-
 const enableLinks = false;
 
 export default function PortfolioGrid() {
+  const [loadedIndexes, setLoadedIndexes] = useState([]);
+
+  useEffect(() => {
+    cardsA.forEach((_, idx) => {
+      setTimeout(() => {
+        setLoadedIndexes((prev) => [...prev, idx]);
+      }, idx * 200); // ✅ same stagger as Brands
+    });
+  }, []);
+
   return (
     <div className="bg-gray-300">
       <PortfolioBanner />
@@ -100,93 +112,81 @@ export default function PortfolioGrid() {
       <section className="relative z-20 py-16 px-4 text-center">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-            {cardsA.map((s) => {
-              const Card = (
-                <ServiceCard
-                  key={s.slug}
-                  title={s.title}
-                  imgSrc={s.imgSrc}
-                  iconSrc={s.iconSrc}
-                  titleOffset={s.titleOffset}
-                />
-              );
+  {cardsA.map((s, idx) => (
+    <motion.div
+      key={s.slug}
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: idx * 0.3 }}
+      viewport={{ once: true, amount: 0.2 }}
+      className={`w-full ${
+        idx % 2 === 0 ? "animate-float" : "animate-floatReverse"
+      }`} // ✅ same floating as HomeBanner
+    >
+      {enableLinks ? (
+        <Link
+          to={`/portfolio/${s.slug}`}
+          className="block hover:-translate-y-0.5 transition will-change-transform"
+          aria-label={s.title}
+        >
+          <ServiceCard {...s} />
+        </Link>
+      ) : (
+        <div>
+          <ServiceCard {...s} />
+        </div>
+      )}
+    </motion.div>
+  ))}
+</div>
 
-              return enableLinks ? (
-                <Link
-                  key={s.slug}
-                  to={`/portfolio/${s.slug}`}
-                  className="block hover:-translate-y-0.5 transition will-change-transform even:lg:mt-16"
-                  aria-label={s.title}
-                >
-                  {Card}
-                </Link>
-              ) : (
-                <div
-                  key={s.slug}
-                  className="block even:lg:mt-16"
-                >
-                  {Card}
-                </div>
-              );
-            })}
-          </div>
 
+
+          {/* Footer */}
           <footer className="relative w-full text-black ml-20">
-          <div className="relative z-10 mx-auto max-w-7xl 4xl:-ml-16 4xl:-mb-28 2xl:-mb-14 2xl:-ml-20 mt-48">
-            <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8">
-              {/* left column */}
-              <div className="flex flex-col items-center 3xl:-ml-48 3xl:-mt-10 4xl:mt-8 4xl:-ml-[450px] md:items-start gap-4">
-                <img
-                  src={require("../assets/Logos-and-Favicons/admire-logo-1.png")}
-                  alt="Logo"
-                  className="h-16 4xl:h-28 w-auto object-contain"
-                />
-
-                <div className="flex items-center 4xl:-mt-2 text-sm 4xl:text-2xl md:text-base text-center md:text-left -ml-9">
+            <div className="relative z-10 mx-auto max-w-7xl 4xl:-ml-16 4xl:-mb-28 2xl:-mb-14 2xl:-ml-20 mt-48">
+              <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8">
+                {/* left column */}
+                <div className="flex flex-col items-center 3xl:-ml-48 3xl:-mt-10 4xl:mt-2 4xl:-ml-[450px] md:items-start gap-4">
                   <img
-                    src={locationIcon}
-                    alt="Location"
-                    className="h-12 w-20 4xl:h-20 object-contain"
+                    src={require("../assets/Logos-and-Favicons/admire-logo-1.png")}
+                    alt="Logo"
+                    className="h-16 4xl:h-28 w-auto object-contain"
                   />
-                  <a
-                    href="https://maps.app.goo.gl/eFyidDwxjG3oq6NE7"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline text-black"
-                  >
+                  <div className="flex items-center 4xl:-mt-2 text-sm 4xl:text-2xl md:text-base text-center md:text-left -ml-9">
+                    <img src={locationIcon} alt="Location" className="h-12 w-20 4xl:h-20 object-contain" />
+                    <a
+                      href="https://maps.app.goo.gl/eFyidDwxjG3oq6NE7"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="hover:underline text-black"
+                    >
+                      <span>
+                        Antelias - Lebanon St. Nicolas center, 6th floor - Sawma Jaber street
+                      </span>
+                    </a>
+                  </div>
+                  <div className="flex items-center -mt-4 4xl:-mt-10 text-sm 4xl:text-2xl md:text-base flex-wrap text-center md:text-left -ml-9">
+                    <img src={phoneIcon} alt="Phone" className="h-12 w-20 4xl:h-20 object-contain" />
                     <span>
-                      Antelias - Lebanon St. Nicolas center, 6th floor - Sawma Jaber street
+                      LEB +961 4 444107 - +961 70 777013 &nbsp;&nbsp;&nbsp; CYP +357 94 087 777
                     </span>
-                  </a>
+                  </div>
                 </div>
 
-                <div className="flex items-center -mt-4 4xl:-mt-10 text-sm 4xl:text-2xl md:text-base flex-wrap text-center md:text-left -ml-9">
+                {/* right column: QR */}
+                <div className="flex justify-center 4xl:mb-32 3xl:-mr-40 4xl:-mr-80 md:justify-end">
                   <img
-                    src={phoneIcon}
-                    alt="Phone"
-                    className="h-12 w-20 4xl:h-20 object-contain"
+                    src={require("../assets/Footer/final-qr.png")}
+                    alt="QR code"
+                    className="h-40 w-80 2xl:h-32 4xl:translate-y-10 3xl:-translate-y-1 2xl:translate-y-10 4xl:h-48 object-contain"
                   />
-                  <span>
-                    LEB +961 4 444107 - +961 70 777013 &nbsp;&nbsp;&nbsp; CYP +357 94 087 777
-                  </span>
                 </div>
-              </div>
-
-              {/* right column: QR */}
-              <div className="flex justify-center 4xl:mb-40 3xl:-mr-40 4xl:-mr-80 md:justify-end">
-                <img
-                  src={require("../assets/Footer/qr-new.png")}
-                  alt="QR code"
-                  className="h-40 w-80 2xl:h-32 2xl:translate-y-10 4xl:h-48 object-contain"
-                />
               </div>
             </div>
-          </div>
-        </footer>
-
+          </footer>
         </div>
       </section>
     </div>
   );
 }
-

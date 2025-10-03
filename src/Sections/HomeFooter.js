@@ -1,5 +1,5 @@
 import logoImg from "../assets/Logos-and-Favicons/WHITE LOGO-01.png";
-import qrImg from "../assets/Footer/qr-new.png";
+import qrImg from "../assets/Footer/final-qr.png";
 import locationIcon from "../assets/Flags-and-Icons/location-01.svg";
 import phoneIcon from "../assets/Flags-and-Icons/phone-01.svg";
 import bgImg from "../assets/Home/main-03.jpg";
@@ -71,7 +71,7 @@ function HomeFooter() {
           </div>
 
           {/* right column: QR */}
-          <div className="flex justify-center 4xl:translate-y-10 2xl:mt-10 3xl:-mr-40 4xl:-mr-80 md:justify-end">
+          <div className="flex justify-center 4xl:translate-y-10 2xl:mt-10 3xl:-mr-40 3xl:-mt-0 4xl:-mr-80 md:justify-end">
             <img
               src={qrImg}
               alt="QR code"

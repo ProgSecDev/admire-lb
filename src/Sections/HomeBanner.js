@@ -1,6 +1,6 @@
 // src/components/HomeBanner.js
 import "react-responsive-carousel/lib/styles/carousel.min.css";
-import banner from "../assets/Home/banner.jpg";
+import banner from "../assets/Home/final-banner.png";
 import card1 from "../assets/Home/pic1.jpg";
 import card2 from "../assets/Home/pic2.jpg";
 import card3 from "../assets/Home/pic3.jpg";

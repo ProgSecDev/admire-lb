@@ -1,6 +1,6 @@
 // src/sections/AboutSection.js
 import { motion } from "framer-motion";
-import bgImage from "../assets/About-Us/new-joelle.png";
+import bgImage from "../assets/About-Us/joelle-latest.png";
 import TextType from "../Components/TextType/TextType";
 import Mission from "../assets/About-Us/mission-01.svg";
 import Vision from "../assets/About-Us/vision-01.svg";
@@ -19,8 +19,8 @@ export default function AboutSection() {
         <img
           src={bgImage}
           alt="Portrait background"
-          className="absolute 3xl:mt-20 h-full w-full 4xl:h-[2300px] 
-               3xl:object-contain 4xl:object-cover object-right"
+          className="absolute h-full w-full 4xl:h-[2300px] 
+               3xl:object-contain 4xl:object-contain object-right"
         />
       </div>
 
@@ -46,7 +46,7 @@ export default function AboutSection() {
           viewport={{ once: true, amount: 0.2 }}
         >
           <p>
-            Admire Established in 2012, Admire began with a clear vision: to craft impactful
+            Admire Established in 2012 with a clear vision: to craft impactful
             brand experiences through thoughtful design and strategic marketing. What started as
             a boutique agency has grown organically into a multinational presence, expanding
             every two years to now operate across Lebanon, Cyprus, Saudi Arabia, the UAE, and Qatar.
@@ -58,20 +58,20 @@ export default function AboutSection() {
             itself as a partner of choice for high-end brands, offering services that include
             premium branding, digital marketing, private label, and 3D interior modeling — with a
             specialized focus on the EMEA market. After more than a decade of experience, Admire
-            has become a recognized leader in private label solutions — not limited to one sector,
+            has become a recognized leader in private label solutions not limited to one sector,
             but spanning across industries. From concept creation to branding, packaging, and
             marketing, we provide businesses with complete brand-building expertise, making us the
             trusted partner for companies aiming to launch, grow, and elevate their own labels.
           </p>
 
           <p>
-            We don’t just design brands — we build identities, shape experiences, and help
+            We don’t just design brands we build identities, shape experiences, and help
             businesses communicate with clarity and confidence in competitive markets.
           </p>
 
           <p>
             As a woman-founded company, we take pride in our values of leadership, resilience, and
-            innovation — values that continue to shape our story and the stories we tell for our clients.
+            innovation values that continue to shape our story and the stories we tell for our clients.
           </p>
         </motion.div>
       </div>
@@ -130,10 +130,11 @@ export default function AboutSection() {
                 Mission
               </h3>
               <p className="text-left font-raleway text-black text-sm 4xl:text-lg leading-relaxed">
-                We empower great ideas and believe that innovative content comes from special
-                people just like you! We are dedicated to authentic brand stories and use
-                journalistic methods to create the largest possible value for both your budget
-                and your audience. We work hard to create inspired and effective work for your brand.
+                At Admire, we empower great ideas and believe that innovative comes from unique
+                people just like you. Our mission is to craft authentic brand stories that create meaningful
+                connections. By combining creativity with journalistic methods, we maximize value for both 
+                 and use your budget and your audience. We are dedicated to producing inspired, effective word 
+                 that helps every brand thrive.
               </p>
             </motion.div>
 
@@ -150,9 +151,8 @@ export default function AboutSection() {
                 Vision
               </h3>
               <p className="text-left font-raleway text-black text-sm 4xl:text-lg leading-relaxed">
-                To provide innovative and effective integrated brand marketing and public
-                relations solutions that help our clients grow their businesses and realize
-                their marketing goals.
+                Our vision is to deliver innovative and impactful integrated brand marketing and public relations
+                solutions that empower our clients to grow, achieve their goals, and build lasting success.
               </p>
             </motion.div>
 
@@ -169,10 +169,11 @@ export default function AboutSection() {
                 Values
               </h3>
               <p className="text-left font-raleway text-black text-sm 4xl:text-lg leading-relaxed">
-                Our people enjoy a personal stake in your continued success and take pride in what
-                we do. Our commitment to our customers is deeply ingrained in our corporate culture
-                and we go above and beyond every day to prove it. We produce clever work, but we
-                always keep the objective of each campaign at the top of our mind.
+                At Admire, we believe in building genuine partnerships with our clients. Our team takes 
+                personal pride in every project and shares a deep commitment to your success. Client 
+                service is at the heart of our culture, we go above and beyond every day to deliver. While
+                we valure creativity and clever ideas, we always keep your objectives at the core of every 
+                campaign.
               </p>
             </motion.div>
           </div>
@@ -221,9 +222,9 @@ export default function AboutSection() {
               </div>
 
               {/* right column: QR */}
-              <div className="flex justify-center 2xl:-mt-10 3xl:-mr-40 4xl:-mr-80 md:justify-end">
+              <div className="flex justify-center 3xl:-mt-20 4xl:mt-2 2xl:-mt-10 3xl:-mr-40 4xl:-mr-80 md:justify-end">
                 <img
-                  src={require("../assets/Footer/qr-new.png")}
+                  src={require("../assets/Footer/final-qr.png")}
                   alt="QR code"
                   className="h-40 w-80 2xl:h-32 2xl:translate-y-16 4xl:h-48 object-contain"
                 />

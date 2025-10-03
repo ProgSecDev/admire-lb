@@ -15,16 +15,16 @@ module.exports = {
       },
       keyframes: {
         float: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(-12px)" },
+          "0%, 100%": { transform: "translateY(-4px)" },
+          "50%": { transform: "translateY(4px)" },
         },
         floatReverse: {
-          "0%, 100%": { transform: "translateY(0)" },
-          "50%": { transform: "translateY(12px)" },
+          "0%, 100%": { transform: "translateY(4px)" },
+          "50%": { transform: "translateY(-4px)" },
         },
       },
       animation: {
-        float: "float 4s ease-in-out infinite",
+        float: "float 3s ease-in-out infinite",
         floatReverse: "floatReverse 4s ease-in-out infinite",
       },
       screens: {
