@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/admire-lb/static/css/main.588cf723.css",
-    "main.js": "/admire-lb/static/js/main.2e8e89a7.js",
+    "main.js": "/admire-lb/static/js/main.a784a69b.js",
     "static/js/453.6abb9b73.chunk.js": "/admire-lb/static/js/453.6abb9b73.chunk.js",
     "static/media/WhatsApp-Video-2023-09-28-at-13.01.02.mp4": "/admire-lb/static/media/WhatsApp-Video-2023-09-28-at-13.01.02.60b72e1e3ab8c16b54c7.mp4",
     "static/media/Al-Abbseye.mp4": "/admire-lb/static/media/Al-Abbseye.a1a2a0ad93621ce34db1.mp4",
@@ -316,11 +316,11 @@
     "static/media/value-01.svg": "/admire-lb/static/media/value-01.8a7bbb1e74d250e029ccc9b23e06d2ce.svg",
     "index.html": "/admire-lb/index.html",
     "main.588cf723.css.map": "/admire-lb/static/css/main.588cf723.css.map",
-    "main.2e8e89a7.js.map": "/admire-lb/static/js/main.2e8e89a7.js.map",
+    "main.a784a69b.js.map": "/admire-lb/static/js/main.a784a69b.js.map",
     "453.6abb9b73.chunk.js.map": "/admire-lb/static/js/453.6abb9b73.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.588cf723.css",
-    "static/js/main.2e8e89a7.js"
+    "static/js/main.a784a69b.js"
   ]
 }
