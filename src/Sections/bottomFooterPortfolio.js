@@ -46,7 +46,7 @@ const BottomFooter = () => {
           <img
             src={f.src}
             alt={f.label}
-            className="h-10 md:h-12 2xl:h-14 3xl:h-20 4xl:h-24 w-auto object-contain -mb-4"
+            className="h-10 md:h-12 1xl:h-16 2xl:h-14 3xl:h-20 4xl:h-24 w-auto object-contain -mb-4"
           />
           <span className="text-[10px] tracking-widest text-white/90 mt-1">
             {f.label}

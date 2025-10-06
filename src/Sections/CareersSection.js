@@ -25,7 +25,7 @@ export default function Careers() {
           FAMILY
         </h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-1 gap-8 items-start 2xl:mt-[400px] 3xl:mt-[450px] 4xl:mt-[700px]">
+        <div className="grid grid-cols-1 md:grid-cols-1 gap-8 items-start 1xl:mt-[200px] 2xl:!mt-[300px] 3xl:mt-[450px] 4xl:mt-[700px]">
           <div className="w-full flex items-center justify-center">
             <form className="w-full max-w-4xl p-8 rounded-lg bg-white/50 backdrop-blur-md shadow-lg">
               <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -105,7 +105,7 @@ export default function Careers() {
           <div className="relative z-10 mx-auto max-w-7xl 4xl:-mb-8">
             <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8">
               {/* left column */}
-              <div className="flex flex-col items-center 2xl:-ml-40 3xl:-ml-48 3xl:-mt-10 4xl:mt-8 4xl:-ml-[550px] md:items-start gap-4">
+              <div className="flex flex-col items-center 1xl:-ml-20 2xl:!-ml-40 3xl:-ml-48 3xl:-mt-10 4xl:mt-8 4xl:-ml-[550px] md:items-start gap-4">
                 <img
                   src={require("../assets/Logos-and-Favicons/admire-logo-1.png")}
                   alt="Logo"

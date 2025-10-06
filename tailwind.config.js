@@ -32,8 +32,8 @@ module.exports = {
         sm: "640px",
         md: "768px", // tablets and up
         lg: "1024px", // desktops and up
-        xl: "1280px",
-        "2xl": "1536px",
+        "1xl": "1280px", // Macbook Air
+        "2xl": "1536px", // laptops 15"
         "3xl": "1800px", // applies only for very large screens (24"+)
         "4xl": "2560px", // applies only for screens 2560 width
         tablet: { max: "1023px", min: "768px" },

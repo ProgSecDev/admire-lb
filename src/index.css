@@ -25,3 +25,31 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+/* Move founder ribbon left only on 1xl (1280px) screens */
+@media (min-width: 1280px) and (max-width: 1535px) {
+  .founder-ribbon-1xl-left {
+    right: 30rem !important; /* tweak this value as needed */
+  }
+}
+
+@layer utilities {
+  @media (min-width: 2560px) {
+    .about-text-4xl-shape {
+      max-width: 170rem; /* adjust until it matches your screenshot */
+      margin-left: 0rem; /* moves text block right to align with image */
+      line-height: 1.9; /* slightly increase readability */
+      text-align: left;
+    }
+
+    .about-text-4xl-shape h1 {
+      margin-bottom: 3rem;
+    }
+
+    .about-text-4xl-shape p {
+      margin-bottom: 2rem;
+      text-align: justify; /* gives that balanced, blocky text look */
+    }
+  }
+}

@@ -1,34 +1,32 @@
-// src/components/ServicesSection.js
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion"; // ✅ import motion
+import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
 import corporateidentity from "../assets/Services/latest/idenitty-01.svg";
 import corporatecatalogue from "../assets/Services/latest/catalogue-01.svg";
-import socialmedia from "../assets/Services/latest/social media-01.svg";
 import privatelabel from "../assets/Services/latest/private label-01.svg";
 import branding from "../assets/Services/latest/branding-01.svg";
-import modeling from "../assets/Services/latest/3d-01.svg";
-import printing from "../assets/Services/latest/printing-01.svg";
+import socialmedia from "../assets/Services/latest/social media-01.svg";
 import websitedesign from "../assets/Services/latest/website.svg";
+import modeling from "../assets/Services/latest/3d-01.svg";
 import animation from "../assets/Services/latest/animation-01.svg";
-import appDevelopment from "../assets/Services/latest/app-01.svg";
+import printing from "../assets/Services/latest/printing-01.svg";
 import outdoorAdvert from "../assets/Services/latest/outdoor-01.svg";
 import productphotography from "../assets/Services/latest/photography-01.svg";
+
 import bannerImage from "../assets/Services/latest/picture.png";
 import backgroundImage from "../assets/Services/latest/bg-midpic.png";
 
 const services = [
-  { icon: corporateidentity, lines: ["CORPORATE", "IDENTITY"], link: "/services/corporate-identity" },
-  { icon: corporatecatalogue, lines: ["CORPORATE", "CATALOGUES"], link: "/services/corporate-catalogues" },
-  { icon: socialmedia, lines: ["SOCIAL MEDIA", "MANAGEMENT"], link: "/services/social-media" },
-  { icon: privatelabel, lines: ["PRIVATE", "LABLES"], link: "/services/private-label" },
-  { icon: branding, lines: ["BRANDING"], link: "/services/branding" },
-  { icon: modeling, lines: ["3D MODELING"], link: "/services/modeling" },
-  { icon: printing, lines: ["PRINTING"], link: "/services/printing" },
-  { icon: websitedesign, lines: ["WEBSITE DESIGN"], link: "/services/website-design" },
-  { icon: animation, lines: ["ANIMATION"], link: "/services/animation" },
-  { icon: appDevelopment, lines: ["APP & DEVELOPMENT DESIGN"] },
+  { icon: corporateidentity, lines: ["CORPORATE", "IDENTITY"] },
+  { icon: corporatecatalogue, lines: ["CORPORATE", "CATALOGUES"] },
+  { icon: privatelabel, lines: ["PRIVATE", "LABLES"] },
+  { icon: branding, lines: ["BRANDING"] },
+  { icon: socialmedia, lines: ["SOCIAL MEDIA", "&", "MANAGEMENT"] },
+  { icon: websitedesign, lines: ["WEBSITE DESIGN", "&", "DEVELOPMENT"] },
+  { icon: modeling, lines: ["3D MODELING", "&", "INTERIOR"] },
+  { icon: animation, lines: ["3D ANIMATION", "&", "TV SPOT"] },
+  { icon: printing, lines: ["PRINTING"] },
   { icon: outdoorAdvert, lines: ["OUTDOOR ADVERTISING"] },
   { icon: productphotography, lines: ["PHOTOGRAPHY"] },
 ];
@@ -57,7 +55,7 @@ function ServiceCard({ icon, lines, isVisible }) {
       animate={{ opacity: isVisible ? 1 : 0 }}
       transition={{ duration: 0.5 }}
       className="
-        w-[250px] h-[160px]
+        w-[250px] h-[200px]
         bg-white 
         rounded-2xl 
         shadow-md hover:shadow-lg

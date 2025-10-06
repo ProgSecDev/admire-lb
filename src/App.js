@@ -49,16 +49,16 @@ const AppContent = () => {
         <Route path="/careers" element={<Careers />} />
         <Route path="/photography" element={<Photography />} />
 
-        <Route path="/services/corporate-identity" element={<CorporateIdentity />} />
-        <Route path="/services/corporate-catalogues" element={<CorporateCatalogue />} />
-        <Route path="/services/private-label" element={<PrivateLabel />} />
-        <Route path="/services/branding" element={<Branding />} />
-        <Route path="/services/website-design" element={<WebsiteDesign />} />
-        <Route path="/services/social-media" element={<SocialMedia />} />
-        <Route path="/services/modeling" element={<Modeling />} />
-        <Route path="/services/printing" element={<Printing />} />
-        <Route path="/services/productphotography" element={<ProductPhotography />} />
-        <Route path="/services/animation" element={<Animation />} />
+        <Route path="/portfolio/corporate-identity" element={<CorporateIdentity />} />
+        <Route path="/portfolio/corporate-catalogues" element={<CorporateCatalogue />} />
+        <Route path="/portfolio/private-label" element={<PrivateLabel />} />
+        <Route path="/portfolio/branding" element={<Branding />} />
+        <Route path="/portfolio/website-design" element={<WebsiteDesign />} />
+        <Route path="/portfolio/social-media" element={<SocialMedia />} />
+        <Route path="/portfolio/modeling" element={<Modeling />} />
+        <Route path="/portfolio/printing" element={<Printing />} />
+        <Route path="/portfolio/productphotography" element={<ProductPhotography />} />
+        <Route path="/portfolio/animation" element={<Animation />} />
       </Routes>
     </>
   );

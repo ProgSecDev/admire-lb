@@ -73,7 +73,7 @@ function ServicesFooter() {
             </div>
 
             {/* right column */}
-            <div className="flex justify-center 4xl:translate-y-10 4xl:mr-40 2xl:mt-10 3xl:-mr-10 3xl:-mt-1 md:justify-end">
+            <div className="flex justify-center 1xl:mt-20 4xl:translate-y-10 4xl:mr-40 2xl:mt-10 3xl:-mr-10 3xl:-mt-1 md:justify-end">
               <img
                 src={qrImg}
                 alt="QR code"

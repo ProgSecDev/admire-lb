@@ -153,7 +153,7 @@ const Brands = () => {
         </div>
 
         <footer className="relative w-full text-black mt-40">
-          <div className="relative z-10 mx-auto max-w-7xl 2xl:-mb-20 2xl:mt-14">
+          <div className="relative z-10 mx-auto max-w-7xl 1xl:-mb-20 2xl:-mb-20 2xl:mt-14">
             <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8">
               {/* left column */}
               <div className="flex flex-col items-center 3xl:-ml-48 3xl:-mt-10 4xl:mt-8 4xl:-ml-[550px] md:items-start gap-4">

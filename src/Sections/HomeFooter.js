@@ -27,7 +27,7 @@ function HomeFooter() {
         "
       />
 
-      <div className="relative z-10 mx-auto max-w-7xl px-4 py-2">
+      <div className="relative z-10 mx-auto max-w-7xl px-12 py-4">
         {/* top row */}
         <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8">
           {/* left column: logo + address + phones */}
@@ -71,11 +71,18 @@ function HomeFooter() {
           </div>
 
           {/* right column: QR */}
-          <div className="flex justify-center 4xl:translate-y-10 2xl:mt-10 3xl:-mr-40 3xl:-mt-0 4xl:-mr-80 md:justify-end">
+          <div className="flex justify-center 2xl:mt-10 3xl:-mr-40 3xl:-mt-0 4xl:-mr-80 4xl:translate-y-10 md:justify-end">
             <img
               src={qrImg}
               alt="QR code"
-              className="h-40 w-80 2xl:h-32 2xl:translate-y-16 4xl:h-48 object-contain"
+              className="
+    h-40 w-64
+    1xl:w-40 1xl:translate-y-20
+    2xl:h-32 2xl:w-72 2xl:translate-y-16
+    3xl:w-80
+    4xl:h-48 4xl:w-96
+    object-contain
+  "
             />
           </div>
         </div>

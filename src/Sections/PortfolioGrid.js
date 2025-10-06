@@ -32,16 +32,78 @@ import iconAnimationVideo from "../assets/Portfolio/animation-01.svg";
 import iconOutdoorAdvert from "../assets/Portfolio/outdoor-01.svg";
 
 const cardsA = [
-  { slug: "corporate-identity", title: "CORPORATE IDENTITY", imgSrc: imgCorporateIdentity, iconSrc: iconCorporateIdentity, titleOffset: "mt-6" },
-  { slug: "corporate-catalogues", title: "CORPORATE CATALOGUES", imgSrc: imgCorporateCatalogues, iconSrc: iconCorporateCatalogues },
-  { slug: "private-label", title: "PRIVATE LABEL", imgSrc: imgPrivateLabel, iconSrc: iconPrivateLabel },
-  { slug: "branding", title: "BRANDING", imgSrc: imgBranding, iconSrc: iconBranding, titleOffset: "mb-10" },
-  { slug: "social-media", title: "SOCIAL MEDIA MANAGEMENT", imgSrc: imgSocialMedia, iconSrc: iconSocialMedia, titleOffset: "mt-10" },
-  { slug: "website", title: "WEBSITE DESIGN & DEVELOPMENT", imgSrc: imgWebsite, iconSrc: iconWebsite },
-  { slug: "artwork", title: "ART WORK", imgSrc: imgArtWork, iconSrc: iconArtwork },
-  { slug: "3dmodeling", title: "3D MODELING", imgSrc: img3dmodeling, iconSrc: icon3dmodeling },
-  { slug: "animationvideo", title: "ANIMATION & VIDEO", imgSrc: imgAnimationVideo, iconSrc: iconAnimationVideo, titleOffset: "mt-20" },
-  { slug: "outdooradvertising", title: "OUTDOOR ADVERTISING", imgSrc: imgOutdoorAdvert, iconSrc: iconOutdoorAdvert },
+  { 
+    slug: "corporate-identity", 
+    title: "CORPORATE IDENTITY", 
+    imgSrc: imgCorporateIdentity, 
+    iconSrc: iconCorporateIdentity, 
+    link: "/portfolio/corporate-identity",
+    titleOffset: "mt-6" 
+  },
+  { 
+    slug: "corporate-catalogues", 
+    title: "CORPORATE CATALOGUES", 
+    imgSrc: imgCorporateCatalogues, 
+    link: "/portfolio/corporate-catalogues",
+    iconSrc: iconCorporateCatalogues 
+  },
+  { 
+    slug: "private-label", 
+    title: "PRIVATE LABEL", 
+    imgSrc: imgPrivateLabel, 
+    iconSrc: iconPrivateLabel,
+    link: "/portfolio/private-label" 
+  },
+  { 
+    slug: "branding", 
+    title: "BRANDING", 
+    imgSrc: imgBranding, 
+    iconSrc: iconBranding, 
+    link: "/portfolio/branding",
+    titleOffset: "mb-10" 
+  },
+  { 
+    slug: "social-media", 
+    title: "SOCIAL MEDIA MANAGEMENT", 
+    imgSrc: imgSocialMedia, 
+    iconSrc: iconSocialMedia,
+    link: "/portfolio/social-media", 
+    titleOffset: "mt-10" 
+  },
+  { 
+    slug: "website", 
+    title: "WEBSITE DESIGN & DEVELOPMENT", 
+    imgSrc: imgWebsite, 
+    iconSrc: iconWebsite,
+    link: "/portfolio/website-design", 
+  },
+  { 
+    slug: "artwork", 
+    title: "ART WORK", 
+    imgSrc: imgArtWork, 
+    iconSrc: iconArtwork 
+  },
+  { 
+    slug: "3dmodeling", 
+    title: "3D MODELING", 
+    imgSrc: img3dmodeling, 
+    iconSrc: icon3dmodeling,
+    link: "/portfolio/modeling", 
+  },
+  { 
+    slug: "animationvideo", 
+    title: "ANIMATION & VIDEO", 
+    imgSrc: imgAnimationVideo, 
+    iconSrc: iconAnimationVideo,
+    link: "/portfolio/animation", 
+    titleOffset: "mt-20" 
+  },
+  { 
+    slug: "outdooradvertising", 
+    title: "OUTDOOR ADVERTISING", 
+    imgSrc: imgOutdoorAdvert, 
+    iconSrc: iconOutdoorAdvert 
+  },
 ];
 
 function ServiceCard({ title, imgSrc, iconSrc, titleOffset }) {
@@ -92,7 +154,7 @@ function ServiceCard({ title, imgSrc, iconSrc, titleOffset }) {
   );
 }
 
-const enableLinks = false;
+const enableLinks = true;
 
 export default function PortfolioGrid() {
   const [loadedIndexes, setLoadedIndexes] = useState([]);
@@ -112,39 +174,38 @@ export default function PortfolioGrid() {
       <section className="relative z-20 py-16 px-4 text-center">
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-8">
-  {cardsA.map((s, idx) => (
-    <motion.div
-      key={s.slug}
-      initial={{ opacity: 0, y: 30 }}
-      whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: idx * 0.3 }}
-      viewport={{ once: true, amount: 0.2 }}
-      className={`w-full ${
-        idx % 2 === 0 ? "animate-float" : "animate-floatReverse"
-      }`} // ✅ same floating as HomeBanner
-    >
-      {enableLinks ? (
-        <Link
-          to={`/portfolio/${s.slug}`}
-          className="block hover:-translate-y-0.5 transition will-change-transform"
-          aria-label={s.title}
-        >
-          <ServiceCard {...s} />
-        </Link>
-      ) : (
-        <div>
-          <ServiceCard {...s} />
-        </div>
-      )}
-    </motion.div>
-  ))}
-</div>
+            {cardsA.map((s, idx) => (
+              <motion.div
+                key={s.slug}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                transition={{ duration: 0.6, delay: idx * 0.3 }}
+                viewport={{ once: true, amount: 0.2 }}
+                className={`w-full ${idx % 2 === 0 ? "animate-float" : "animate-floatReverse"
+                  }`} // ✅ same floating as HomeBanner
+              >
+                {enableLinks ? (
+                  <Link
+                    to={`/portfolio/${s.slug}`}
+                    className="block hover:-translate-y-0.5 transition will-change-transform"
+                    aria-label={s.title}
+                  >
+                    <ServiceCard {...s} />
+                  </Link>
+                ) : (
+                  <div>
+                    <ServiceCard {...s} />
+                  </div>
+                )}
+              </motion.div>
+            ))}
+          </div>
 
 
 
           {/* Footer */}
           <footer className="relative w-full text-black ml-20">
-            <div className="relative z-10 mx-auto max-w-7xl 4xl:-ml-16 4xl:-mb-28 2xl:-mb-14 2xl:-ml-20 mt-48">
+            <div className="relative z-10 mx-auto max-w-7xl 1xl:-mb-16 4xl:-ml-16 4xl:-mb-28 2xl:-mb-14 2xl:-ml-20 mt-48">
               <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8">
                 {/* left column */}
                 <div className="flex flex-col items-center 3xl:-ml-48 3xl:-mt-10 4xl:mt-2 4xl:-ml-[450px] md:items-start gap-4">
@@ -175,7 +236,7 @@ export default function PortfolioGrid() {
                 </div>
 
                 {/* right column: QR */}
-                <div className="flex justify-center 4xl:mb-32 3xl:-mr-40 4xl:-mr-80 md:justify-end">
+                <div className="flex justify-center 1xl:-mb-16 4xl:mb-32 3xl:-mr-40 4xl:-mr-80 md:justify-end">
                   <img
                     src={require("../assets/Footer/final-qr.png")}
                     alt="QR code"
