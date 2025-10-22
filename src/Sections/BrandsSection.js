@@ -152,55 +152,57 @@ const Brands = () => {
           ))}
         </div>
 
-        <footer className="relative w-full text-black mt-40">
-          <div className="relative z-10 mx-auto max-w-7xl 1xl:-mb-20 2xl:-mb-20 2xl:mt-14">
-            <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8">
-              {/* left column */}
-              <div className="flex flex-col items-center 3xl:-ml-48 3xl:-mt-10 4xl:mt-8 4xl:-ml-[550px] md:items-start gap-4">
+        <footer className="relative w-full text-black mt-[clamp(2rem,8vw,6rem)]">
+          <div
+            className="
+              relative z-10 flex flex-wrap justify-between items-end
+              px-[clamp(2rem,18vw,18rem)] pb-[clamp(1rem,4vw,1rem])]
+              w-full max-w-[1920px] 2k:max-w-[2300px] mx-auto
+            "
+          >
+            {/* Left Side: Logo + Location + Phone */}
+            <div className="flex flex-col items-start gap-8 w-full md:w-auto 2k:ml-[0vw]">
+              <img
+                src={require('../assets/Logos-and-Favicons/admire-logo-1.png')}
+                alt="Logo"
+                className="h-16 4xl:h-28 w-auto object-contain"
+              />
+
+              <div className="flex items-start gap-3 text-sm md:text-base flex-wrap text-left">
                 <img
-                  src={require("../assets/Logos-and-Favicons/admire-logo-1.png")}
-                  alt="Logo"
-                  className="h-16 4xl:h-28 w-auto object-contain"
+                  src={locationIcon}
+                  alt="Location"
+                  className="h-6 w-6 md:h-8 md:w-8 object-contain"
                 />
-
-                <div className="flex items-center 2xl:-ml-8 3xl:-ml-8 4xl:-mt-2 4xl:text-2xl text-sm md:text-base text-center md:text-left">
-                  <img
-                    src={locationIcon}
-                    alt="Location"
-                    className="h-12 w-20 4xl:h-20 object-contain"
-                  />
-                  <a
-                    href="https://maps.app.goo.gl/eFyidDwxjG3oq6NE7"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="hover:underline text-black"
-                  >
-                    <span>
-                      Antelias - Lebanon St. Nicolas center, 6th floor - Sawma Jaber street
-                    </span>
-                  </a>
-                </div>
-
-                <div className="flex items-center -mt-4 2xl:-ml-8 3xl:-ml-8 4xl:-mt-10 4xl:text-2xl text-sm md:text-base flex-wrap text-center md:text-left">
-                  <img
-                    src={phoneIcon}
-                    alt="Phone"
-                    className="h-12 w-20 4xl:h-20 object-contain"
-                  />
-                  <span>
-                    LEB +961 4 444107 - +961 70 777013 &nbsp;&nbsp;&nbsp; CYP +357 94 087 777
-                  </span>
-                </div>
+                <a
+                  href="https://maps.app.goo.gl/eFyidDwxjG3oq6NE7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline text-black"
+                >
+                  Antelias - Lebanon St. Nicolas center, 6th floor - Sawma Jaber street
+                </a>
               </div>
 
-              {/* right column: QR */}
-              <div className="flex justify-center 2xl:-mt-10 3xl:-mt-20 4xl:mt-4 3xl:-mr-40 4xl:-mr-80 md:justify-end">
+              <div className="flex items-start gap-3 text-sm md:text-base flex-wrap text-left">
                 <img
-                  src={require("../assets/Footer/final-qr.png")}
-                  alt="QR code"
-                  className="h-40 w-80 2xl:h-32 2xl:translate-y-16 4xl:h-48 object-contain"
+                  src={phoneIcon}
+                  alt="Phone"
+                  className="h-6 w-6 md:h-8 md:w-8 object-contain"
                 />
+                <span>
+                  LEB +961 4 444107 - +961 70 777013 &nbsp;&nbsp; CYP +357 94 087 777
+                </span>
               </div>
+            </div>
+
+            {/* Right Side: QR */}
+            <div className="flex justify-end items-end w-full md:w-auto mt-10 md:mt-0 2k:mr-[0vw]">
+              <img
+                src={require('../assets/Footer/final-qr.png')}
+                alt="QR code"
+                className="w-[min(25vw,250px)] max-h-[150px] h-auto object-contain"
+              />
             </div>
           </div>
         </footer>

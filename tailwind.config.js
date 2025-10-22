@@ -28,14 +28,17 @@ module.exports = {
         floatReverse: "floatReverse 4s ease-in-out infinite",
       },
       screens: {
-        sm2: { max: "639px" },
+        mobilesm: "320px",
+        mobilemed: "480px",
+        mobilebig: "768", 
         sm: "640px",
-        md: "768px", // tablets and up
-        lg: "1024px", // desktops and up
-        "1xl": "1280px", // Macbook Air
-        "2xl": "1536px", // laptops 15"
-        "3xl": "1800px", // applies only for very large screens (24"+)
-        "4xl": "2560px", // applies only for screens 2560 width
+        md: "768px",
+        lg: "1024px",
+        xl: "1280px",
+        laptop: "1440px", // 15.3 inch laptops
+        "2xl": "1536px",
+        'hd': '1920px',  // optional clarity
+        '2k': '2560px',
         tablet: { max: "1023px", min: "768px" },
       },
       backgroundImage: {

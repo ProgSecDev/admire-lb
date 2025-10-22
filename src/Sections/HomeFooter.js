@@ -71,20 +71,24 @@ function HomeFooter() {
           </div>
 
           {/* right column: QR */}
-          <div className="flex justify-center 2xl:mt-10 3xl:-mr-40 3xl:-mt-0 4xl:-mr-80 4xl:translate-y-10 md:justify-end">
-            <img
-              src={qrImg}
-              alt="QR code"
-              className="
-    h-40 w-64
-    1xl:w-40 1xl:translate-y-20
-    2xl:h-32 2xl:w-72 2xl:translate-y-16
-    3xl:w-80
-    4xl:h-48 4xl:w-96
-    object-contain
-  "
-            />
-          </div>
+<div className="
+  flex justify-center md:justify-end items-end
+  relative
+  w-full h-full
+">
+  <img
+    src={qrImg}
+    alt="QR code"
+    className="
+      h-auto
+      w-[min(25vw,250px)]
+      max-h-[150px]
+      translate-y-[5%]
+      object-contain
+    "
+  />
+</div>
+
         </div>
       </div>
     </footer>

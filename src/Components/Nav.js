@@ -1,4 +1,3 @@
-// src/Sections/Nav.js
 import React, { useEffect, useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import logo from "../assets/Logos-and-Favicons/admire-logo-1.png";
@@ -12,6 +11,7 @@ function Nav() {
   const location = useLocation();
   const menuRef = useRef(null);
   const triggerRef = useRef(null);
+  const navRef = useRef(null);
 
   const openMenu = () => {
     setMenuVisible(true);
@@ -49,6 +49,19 @@ function Nav() {
     };
   }, [menuVisible]);
 
+  // --- Report nav height to CSS var for layout offset (WHY: keep content below fixed header)
+  useEffect(() => {
+    const setNavHeightVar = () => {
+      if (navRef.current) {
+        const h = navRef.current.offsetHeight;
+        document.documentElement.style.setProperty("--nav-h", `${h}px`);
+      }
+    };
+    setNavHeightVar();
+    window.addEventListener("resize", setNavHeightVar);
+    return () => window.removeEventListener("resize", setNavHeightVar);
+  }, []);
+
   const links = [
     { to: "/home", label: "Home" },
     { to: "/about-us", label: "About Us" },
@@ -67,7 +80,10 @@ function Nav() {
   ];
 
   return (
-    <nav className="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100">
+    <nav
+      ref={navRef}
+      className="fixed inset-x-0 top-0 z-50 bg-white/95 backdrop-blur border-b border-gray-100"
+    >
       <div className="container mx-auto px-4 sm:px-6">
         <div
           className="grid grid-cols-[auto_1fr_auto] items-center gap-4 sm:gap-6 py-3 sm:py-4"
@@ -86,7 +102,6 @@ function Nav() {
             </Link>
           </div>
 
-          {/* center: empty for spacing */}
           <div></div>
 
           {/* right: socials + hamburger */}
@@ -153,6 +168,7 @@ function Nav() {
       )}
 
       <style>{`
+        :root { --nav-h: 72px; } /* default to avoid layout shift before JS runs */
         @keyframes menu-in {
           0% { opacity: 0; transform: translateX(16px); }
           100% { opacity: 1; transform: translateX(0); }

@@ -36,6 +36,7 @@ const BottomFooter = () => {
       max-w-7xl mx-auto
       px-2 sm:px-6 lg:px-12
       py-1
+      -mt-16
       flex flex-col items-center justify-center text-center
     "
   >
@@ -56,7 +57,7 @@ const BottomFooter = () => {
     </div>
 
         {/* Copyright */}
-        <div className="mt-4 text-[10px] text-white">
+        <div className="mt-4 ml-4 text-[5px] text-white">
           Copyright © 2025 Admire Advertising, All Rights Reserved.
         </div>
       </div>

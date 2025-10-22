@@ -38,21 +38,23 @@ const cardsA = [
     imgSrc: imgCorporateIdentity, 
     iconSrc: iconCorporateIdentity, 
     link: "/portfolio/corporate-identity",
-    titleOffset: "mt-6" 
+    titleOffset: "mb-6"
   },
   { 
     slug: "corporate-catalogues", 
     title: "CORPORATE CATALOGUES", 
     imgSrc: imgCorporateCatalogues, 
     link: "/portfolio/corporate-catalogues",
-    iconSrc: iconCorporateCatalogues 
+    iconSrc: iconCorporateCatalogues,
+    titleOffset: "mb-6"
   },
   { 
     slug: "private-label", 
     title: "PRIVATE LABEL", 
     imgSrc: imgPrivateLabel, 
     iconSrc: iconPrivateLabel,
-    link: "/portfolio/private-label" 
+    link: "/portfolio/private-label",
+    titleOffset: "mb-6" 
   },
   { 
     slug: "branding", 
@@ -64,7 +66,7 @@ const cardsA = [
   },
   { 
     slug: "social-media", 
-    title: "SOCIAL MEDIA MANAGEMENT", 
+    title: ["SOCIAL MEDIA","&","MANAGEMENT"], 
     imgSrc: imgSocialMedia, 
     iconSrc: iconSocialMedia,
     link: "/portfolio/social-media", 
@@ -72,7 +74,7 @@ const cardsA = [
   },
   { 
     slug: "website", 
-    title: "WEBSITE DESIGN & DEVELOPMENT", 
+    title: ["WEBSITE DESIGN", "&", "DEVELOPMENT"], 
     imgSrc: imgWebsite, 
     iconSrc: iconWebsite,
     link: "/portfolio/website-design", 
@@ -81,18 +83,19 @@ const cardsA = [
     slug: "artwork", 
     title: "ART WORK", 
     imgSrc: imgArtWork, 
-    iconSrc: iconArtwork 
+    iconSrc: iconArtwork,
+    titleOffset: "mb-10" 
   },
   { 
     slug: "3dmodeling", 
-    title: "3D MODELING", 
+    title: ["3D MODELING","&","INTERIOR"], 
     imgSrc: img3dmodeling, 
     iconSrc: icon3dmodeling,
     link: "/portfolio/modeling", 
   },
   { 
     slug: "animationvideo", 
-    title: "ANIMATION & VIDEO", 
+    title: ["3D ANIMATION", "&", "SPOT TV"], 
     imgSrc: imgAnimationVideo, 
     iconSrc: iconAnimationVideo,
     link: "/portfolio/animation", 
@@ -102,17 +105,20 @@ const cardsA = [
     slug: "outdooradvertising", 
     title: "OUTDOOR ADVERTISING", 
     imgSrc: imgOutdoorAdvert, 
-    iconSrc: iconOutdoorAdvert 
+    iconSrc: iconOutdoorAdvert,
+    titleOffset: "mb-6"
   },
 ];
 
 function ServiceCard({ title, imgSrc, iconSrc, titleOffset }) {
+  const lines = Array.isArray(title) ? title : [title];
+
   return (
     <div className="relative rounded-3xl overflow-hidden bg-white shadow-lg transition-all duration-300 hover:shadow-xl">
       <div className="relative w-full h-72">
         <img
           src={imgSrc}
-          alt={title}
+          alt={Array.isArray(title) ? title.join(" ") : title}
           className="absolute inset-0 w-full h-full object-cover"
           loading="lazy"
           draggable={false}
@@ -121,7 +127,7 @@ function ServiceCard({ title, imgSrc, iconSrc, titleOffset }) {
         {/* Line Image */}
         <div className="relative w-[300px] flex justify-center -mt-1 translate-y-[280px]">
           <img
-            src={lineImage}
+            src={require("../assets/Portfolio/LINE-02.png")}
             alt="divider line"
             className="w-full object-cover"
             draggable={false}
@@ -143,16 +149,24 @@ function ServiceCard({ title, imgSrc, iconSrc, titleOffset }) {
       </div>
 
       {/* Title Section */}
-      <div className="pt-10 pb-4 px-6 h-[130px] flex items-end justify-center">
-        <h2
+      <div className="pt-10 pb-4 px-6 h-[150px] flex items-end justify-center">
+        <div
           className={`font-azonix text-2xl text-center text-pink-600 font-medium uppercase tracking-wide leading-tight ${titleOffset}`}
-        >
-          {title}
-        </h2>
+        > 
+          {lines.map((line, i) => (
+            <div
+              key={i}
+              className="text-pink-600 font-azonix text-2xl font-medium tracking-wide leading-tight"
+            >
+              {line}
+            </div>
+          ))}
+        </div>
       </div>
     </div>
   );
 }
+
 
 const enableLinks = true;
 
@@ -204,48 +218,60 @@ export default function PortfolioGrid() {
 
 
           {/* Footer */}
-          <footer className="relative w-full text-black ml-20">
-            <div className="relative z-10 mx-auto max-w-7xl 1xl:-mb-16 4xl:-ml-16 4xl:-mb-28 2xl:-mb-14 2xl:-ml-20 mt-48">
-              <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8">
-                {/* left column */}
-                <div className="flex flex-col items-center 3xl:-ml-48 3xl:-mt-10 4xl:mt-2 4xl:-ml-[450px] md:items-start gap-4">
-                  <img
-                    src={require("../assets/Logos-and-Favicons/admire-logo-1.png")}
-                    alt="Logo"
-                    className="h-16 4xl:h-28 w-auto object-contain"
-                  />
-                  <div className="flex items-center 4xl:-mt-2 text-sm 4xl:text-2xl md:text-base text-center md:text-left -ml-9">
-                    <img src={locationIcon} alt="Location" className="h-12 w-20 4xl:h-20 object-contain" />
-                    <a
-                      href="https://maps.app.goo.gl/eFyidDwxjG3oq6NE7"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:underline text-black"
-                    >
-                      <span>
-                        Antelias - Lebanon St. Nicolas center, 6th floor - Sawma Jaber street
-                      </span>
-                    </a>
-                  </div>
-                  <div className="flex items-center -mt-4 4xl:-mt-10 text-sm 4xl:text-2xl md:text-base flex-wrap text-center md:text-left -ml-9">
-                    <img src={phoneIcon} alt="Phone" className="h-12 w-20 4xl:h-20 object-contain" />
-                    <span>
-                      LEB +961 4 444107 - +961 70 777013 &nbsp;&nbsp;&nbsp; CYP +357 94 087 777
-                    </span>
-                  </div>
-                </div>
+          <footer className="relative w-full text-black mt-[clamp(2rem,8vw,6rem)]">
+          <div
+            className="
+              relative z-10 flex flex-wrap justify-between items-end
+              px-[clamp(1rem,8vw,1rem)] pb-[clamp(0rem,4vw,0rem)]
+              w-full max-w-[1920px] 2k:max-w-[2300px] mx-auto
+            "
+          >
+            {/* Left Side: Logo + Location + Phone */}
+            <div className="flex flex-col items-start gap-8 w-full md:w-auto 2k:ml-[0vw]">
+              <img
+                src={require('../assets/Logos-and-Favicons/admire-logo-1.png')}
+                alt="Logo"
+                className="h-16 4xl:h-28 w-auto object-contain"
+              />
 
-                {/* right column: QR */}
-                <div className="flex justify-center 1xl:-mb-16 4xl:mb-32 3xl:-mr-40 4xl:-mr-80 md:justify-end">
-                  <img
-                    src={require("../assets/Footer/final-qr.png")}
-                    alt="QR code"
-                    className="h-40 w-80 2xl:h-32 4xl:translate-y-10 3xl:-translate-y-1 2xl:translate-y-10 4xl:h-48 object-contain"
-                  />
-                </div>
+              <div className="flex items-start gap-3 text-sm md:text-base flex-wrap text-left">
+                <img
+                  src={locationIcon}
+                  alt="Location"
+                  className="h-6 w-6 md:h-8 md:w-8 object-contain"
+                />
+                <a
+                  href="https://maps.app.goo.gl/eFyidDwxjG3oq6NE7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline text-black"
+                >
+                  Antelias - Lebanon St. Nicolas center, 6th floor - Sawma Jaber street
+                </a>
+              </div>
+
+              <div className="flex items-start gap-3 text-sm md:text-base flex-wrap text-left">
+                <img
+                  src={phoneIcon}
+                  alt="Phone"
+                  className="h-6 w-6 md:h-8 md:w-8 object-contain"
+                />
+                <span>
+                  LEB +961 4 444107 - +961 70 777013 &nbsp;&nbsp; CYP +357 94 087 777
+                </span>
               </div>
             </div>
-          </footer>
+
+            {/* Right Side: QR */}
+            <div className="flex justify-end items-end w-full md:w-auto mt-10 md:mt-0 2k:mr-[0vw]">
+              <img
+                src={require('../assets/Footer/final-qr.png')}
+                alt="QR code"
+                className="w-[min(25vw,250px)] max-h-[150px] h-auto object-contain"
+              />
+            </div>
+          </div>
+        </footer>
         </div>
       </section>
     </div>

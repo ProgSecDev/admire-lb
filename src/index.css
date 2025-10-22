@@ -1,3 +1,9 @@
+.container-limit {
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
 @font-face {
     font-family: 'SilverForteGrungeGrunge';
     src: url('./font/SilverForteGrunge.ttf') format('truetype');
@@ -39,7 +45,7 @@
     .about-text-4xl-shape {
       max-width: 170rem; /* adjust until it matches your screenshot */
       margin-left: 0rem; /* moves text block right to align with image */
-      line-height: 1.9; /* slightly increase readability */
+      line-height: 2.5; /* slightly increase readability */
       text-align: left;
     }
 

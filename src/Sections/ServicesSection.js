@@ -17,6 +17,20 @@ import productphotography from "../assets/Services/latest/photography-01.svg";
 import bannerImage from "../assets/Services/latest/picture.png";
 import backgroundImage from "../assets/Services/latest/bg-midpic.png";
 
+// Floating animation keyframes
+const floatAnimations = `
+@keyframes float {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(-8px); }
+}
+@keyframes floatReverse {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(8px); }
+}
+.animate-float { animation: float 4s ease-in-out infinite; }
+.animate-floatReverse { animation: floatReverse 4s ease-in-out infinite; }
+`;
+
 const services = [
   { icon: corporateidentity, lines: ["CORPORATE", "IDENTITY"] },
   { icon: corporatecatalogue, lines: ["CORPORATE", "CATALOGUES"] },
@@ -25,9 +39,9 @@ const services = [
   { icon: socialmedia, lines: ["SOCIAL MEDIA", "&", "MANAGEMENT"] },
   { icon: websitedesign, lines: ["WEBSITE DESIGN", "&", "DEVELOPMENT"] },
   { icon: modeling, lines: ["3D MODELING", "&", "INTERIOR"] },
-  { icon: animation, lines: ["3D ANIMATION", "&", "TV SPOT"] },
+  { icon: animation, lines: ["3D ANIMATION", "&", "SPOT TV"] },
   { icon: printing, lines: ["PRINTING"] },
-  { icon: outdoorAdvert, lines: ["OUTDOOR ADVERTISING"] },
+  { icon: outdoorAdvert, lines: ["OUTDOOR CAMPAIGN"] },
   { icon: productphotography, lines: ["PHOTOGRAPHY"] },
 ];
 
@@ -46,27 +60,27 @@ function Banner() {
   );
 }
 
-function ServiceCard({ icon, lines, isVisible }) {
-  const labelText = Array.isArray(lines) ? lines.join(" ") : String(lines);
-
+function ServiceCard({ icon, lines, isVisible, index }) {
   return (
     <motion.div
-      initial={{ opacity: 0 }}
-      animate={{ opacity: isVisible ? 1 : 0 }}
-      transition={{ duration: 0.5 }}
-      className="
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      transition={{ duration: 0.6, delay: index * 0.2 }}
+      viewport={{ once: true, amount: 0.2 }}
+      className={`
         w-[250px] h-[200px]
         bg-white 
         rounded-2xl 
         shadow-md hover:shadow-lg
-        transition-shadow duration-300 ease-linear
+        transition-all duration-300 ease-linear
         flex flex-col items-center justify-center
         text-center mx-auto
-      "
+        ${index % 2 === 0 ? "animate-float" : "animate-floatReverse"}
+      `}
     >
       <img
         src={icon}
-        alt={labelText}
+        alt={Array.isArray(lines) ? lines.join(" ") : String(lines)}
         className="w-20 h-20 sm:w-24 sm:h-24 2xl:w-28 2xl:h-28 object-contain select-none mb-2 transition-transform duration-300 ease-in-out hover:scale-110"
         draggable={false}
       />
@@ -91,12 +105,14 @@ export default function ServicesSection() {
     services.forEach((_, idx) => {
       setTimeout(() => {
         setLoadedIndexes((prev) => [...prev, idx]);
-      }, idx * 300); // stagger like BrandsSection
+      }, idx * 200);
     });
   }, []);
 
   return (
     <>
+      <style>{floatAnimations}</style>
+
       <Banner />
 
       {/* Outer wrapper stays black full-width */}
@@ -127,29 +143,17 @@ export default function ServicesSection() {
                 </p>
               </div>
 
+              {/* Grid with same animation style as PortfolioGrid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
-                {services.map((s, i) => {
-                  const Card = (
-                    <ServiceCard
-                      key={i}
-                      icon={s.icon}
-                      lines={s.lines}
-                      isVisible={loadedIndexes.includes(i)}
-                    />
-                  );
-                  return s.link ? (
-                    <Link
-                      to={s.link}
-                      key={i}
-                      className="block hover:-translate-y-0.5 transition will-change-transform"
-                      aria-label={Array.isArray(s.lines) ? s.lines.join(" ") : String(s.lines)}
-                    >
-                      {Card}
-                    </Link>
-                  ) : (
-                    <div key={i}>{Card}</div>
-                  );
-                })}
+                {services.map((s, i) => (
+                  <ServiceCard
+                    key={i}
+                    icon={s.icon}
+                    lines={s.lines}
+                    isVisible={loadedIndexes.includes(i)}
+                    index={i}
+                  />
+                ))}
               </div>
             </div>
           </div>

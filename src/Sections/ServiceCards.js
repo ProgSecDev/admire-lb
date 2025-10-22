@@ -12,7 +12,7 @@ function Story() {
       title: "STRATEGY",
       desc: (
         <>
-          Focus on creating be it a product, a project, or a service.
+          Focus on creating whether it's a product, a project, or a service.
         </>
       ),
     },
@@ -30,7 +30,7 @@ function Story() {
       title: "RESULT",
       desc: (
         <>
-          Develop and refine the concept to get an effective visual communication of an idea or concept.
+          Develop and refine concepts to deliver effective visual communication of ideas.
         </>
       )
     },

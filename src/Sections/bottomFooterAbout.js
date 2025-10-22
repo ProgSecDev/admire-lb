@@ -56,7 +56,7 @@ const BottomFooter = () => {
     </div>
 
     {/* Copyright */}
-    <div className="mt-4 text-[10px] text-white">
+    <div className="mt-4 ml-4 text-[5px] text-white">
       Copyright © 2025 Admire Advertising, All Rights Reserved.
     </div>
   </div>

@@ -14,7 +14,7 @@ const values = [
       animation: { hidden: { opacity: 0, x: -80 }, visible: { opacity: 1, x: 0 } },
     },
   { 
-    number: "2", 
+    number: "2",
     title: "CREATIVITY", 
     desc: (
       <> 

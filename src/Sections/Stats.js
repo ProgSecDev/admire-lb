@@ -5,8 +5,8 @@ import backgroundImage from "../assets/Home/main-03.jpg";
 // NOTE: numbers are the targets (e.g., 125000 -> 125,000)
 const stats = [
   { number: 14, desc: "Years of experience" },
-  { number: 125000, desc: "We gained dozen of clients from all over the world" },
-  { number: 200000, desc: "We have successfully completed a total of 200,000 of projects" },
+  { number: 800, desc: "We gained high volume of clients from all over the world" },
+  { number: 15000, desc: "We have successfully completed a total of 15,000 projects" },
 ];
 
 function CountUp({ end, start = 0, duration = 2, shouldStart, formatter }) {

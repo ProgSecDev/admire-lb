@@ -71,15 +71,24 @@ function ServicesFooter() {
                 </span>
               </div>
             </div>
-
-            {/* right column */}
-            <div className="flex justify-center 1xl:mt-20 4xl:translate-y-10 4xl:mr-40 2xl:mt-10 3xl:-mr-10 3xl:-mt-1 md:justify-end">
-              <img
-                src={qrImg}
-                alt="QR code"
-                className="h-40 w-80 2xl:h-32 2xl:translate-y-16 4xl:h-48 object-contain"
-              />
-            </div>
+            {/* right column: QR */}
+<div className="
+  flex justify-center md:justify-end items-end
+  relative
+  w-full h-full
+">
+  <img
+    src={qrImg}
+    alt="QR code"
+    className="
+      h-auto
+      w-[min(25vw,250px)]
+      max-h-[150px]
+      -translate-y-[5%]
+      object-contain
+    "
+  />
+</div>
           </div>
         </div>
       </div>
