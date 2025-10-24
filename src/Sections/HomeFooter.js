@@ -35,15 +35,15 @@ function HomeFooter() {
             <img
               src={logoImg}
               alt="Logo"
-              className="h-52 4xl:h-80 3xl:mt-10 4xl:-mt-10 w-auto object-contain"
+              className="h-52 mobilesm:-mt-10 w-auto object-contain"
             />
 
             {/* address */}
-            <div className="flex items-center -mt-16 4xl:-mt-28 text-sm 4xl:text-2xl md:text-base text-center md:text-left">
+            <div className="flex items-center mobilesm:text-[12px] mobilesm:-ml-8 -mt-16 text-sm md:text-base text-center md:text-left">
               <img
                 src={locationIcon}
                 alt="Location"
-                className="h-12 w-20 4xl:h-20 object-contain"
+                className="h-12 w-12 object-contain"
               />
               <a
                 href="https://maps.app.goo.gl/eFyidDwxjG3oq6NE7"
@@ -56,11 +56,11 @@ function HomeFooter() {
             </div>
 
             {/* phones */}
-            <div className="flex items-center -mt-4 4xl:-mt-10 text-sm 4xl:text-2xl md:text-base flex-wrap text-center md:text-left">
+            <div className="flex items-center mobilesm:text-[12px] mobilesm:-ml-8 -mt-4 text-sm md:text-base text-center md:text-left">
               <img
                 src={phoneIcon}
                 alt="Phone"
-                className="h-12 w-20 4xl:h-20 object-contain"
+                className="h-12 w-12 object-contain"
               />
               <span>
                 {phones
@@ -71,23 +71,23 @@ function HomeFooter() {
           </div>
 
           {/* right column: QR */}
-<div className="
+          <div className="
   flex justify-center md:justify-end items-end
   relative
   w-full h-full
 ">
-  <img
-    src={qrImg}
-    alt="QR code"
-    className="
+            <img
+              src={qrImg}
+              alt="QR code"
+              className="
       h-auto
       w-[min(25vw,250px)]
       max-h-[150px]
       translate-y-[5%]
       object-contain
     "
-  />
-</div>
+            />
+          </div>
 
         </div>
       </div>

@@ -91,7 +91,7 @@ function CoreValuesGrid() {
 
   return (
     <section
-      className="-mt-12 md:-mt-20 py-10 md:py-16 px-3 sm:px-4 sm:bg-fixed sm2:bg-fixed md:bg-fixed bg-center bg-contain relative overflow-x-hidden"
+      className="-mt-12 md:-mt-20 py-10 md:py-16 px-3 sm:px-4 sm:bg-fixed mobilesm:bg-fixed mobilemed:bg-fixed mobilebig:bg-fixed md:bg-fixed bg-center bg-contain relative overflow-x-hidden"
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* overlay with side gaps */}

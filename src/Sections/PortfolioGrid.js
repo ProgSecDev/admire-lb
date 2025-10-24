@@ -32,79 +32,79 @@ import iconAnimationVideo from "../assets/Portfolio/animation-01.svg";
 import iconOutdoorAdvert from "../assets/Portfolio/outdoor-01.svg";
 
 const cardsA = [
-  { 
-    slug: "corporate-identity", 
-    title: "CORPORATE IDENTITY", 
-    imgSrc: imgCorporateIdentity, 
-    iconSrc: iconCorporateIdentity, 
+  {
+    slug: "corporate-identity",
+    title: "CORPORATE IDENTITY",
+    imgSrc: imgCorporateIdentity,
+    iconSrc: iconCorporateIdentity,
     link: "/portfolio/corporate-identity",
     titleOffset: "mb-6"
   },
-  { 
-    slug: "corporate-catalogues", 
-    title: "CORPORATE CATALOGUES", 
-    imgSrc: imgCorporateCatalogues, 
+  {
+    slug: "corporate-catalogues",
+    title: "CORPORATE CATALOGUES",
+    imgSrc: imgCorporateCatalogues,
     link: "/portfolio/corporate-catalogues",
     iconSrc: iconCorporateCatalogues,
     titleOffset: "mb-6"
   },
-  { 
-    slug: "private-label", 
-    title: "PRIVATE LABEL", 
-    imgSrc: imgPrivateLabel, 
+  {
+    slug: "private-label",
+    title: "PRIVATE LABEL",
+    imgSrc: imgPrivateLabel,
     iconSrc: iconPrivateLabel,
     link: "/portfolio/private-label",
-    titleOffset: "mb-6" 
+    titleOffset: "mb-6"
   },
-  { 
-    slug: "branding", 
-    title: "BRANDING", 
-    imgSrc: imgBranding, 
-    iconSrc: iconBranding, 
+  {
+    slug: "branding",
+    title: "BRANDING",
+    imgSrc: imgBranding,
+    iconSrc: iconBranding,
     link: "/portfolio/branding",
-    titleOffset: "mb-10" 
+    titleOffset: "mb-10"
   },
-  { 
-    slug: "social-media", 
-    title: ["SOCIAL MEDIA","&","MANAGEMENT"], 
-    imgSrc: imgSocialMedia, 
+  {
+    slug: "social-media",
+    title: ["SOCIAL MEDIA", "&", "MANAGEMENT"],
+    imgSrc: imgSocialMedia,
     iconSrc: iconSocialMedia,
-    link: "/portfolio/social-media", 
-    titleOffset: "mt-10" 
+    link: "/portfolio/social-media",
+    titleOffset: "mt-10"
   },
-  { 
-    slug: "website", 
-    title: ["WEBSITE DESIGN", "&", "DEVELOPMENT"], 
-    imgSrc: imgWebsite, 
+  {
+    slug: "website",
+    title: ["WEBSITE DESIGN", "&", "DEVELOPMENT"],
+    imgSrc: imgWebsite,
     iconSrc: iconWebsite,
-    link: "/portfolio/website-design", 
+    link: "/portfolio/website-design",
   },
-  { 
-    slug: "artwork", 
-    title: "ART WORK", 
-    imgSrc: imgArtWork, 
+  {
+    slug: "artwork",
+    title: "ART WORK",
+    imgSrc: imgArtWork,
     iconSrc: iconArtwork,
-    titleOffset: "mb-10" 
+    titleOffset: "mb-10"
   },
-  { 
-    slug: "3dmodeling", 
-    title: ["3D MODELING","&","INTERIOR"], 
-    imgSrc: img3dmodeling, 
+  {
+    slug: "3dmodeling",
+    title: ["3D MODELING", "&", "INTERIOR"],
+    imgSrc: img3dmodeling,
     iconSrc: icon3dmodeling,
-    link: "/portfolio/modeling", 
+    link: "/portfolio/modeling",
   },
-  { 
-    slug: "animationvideo", 
-    title: ["3D ANIMATION", "&", "SPOT TV"], 
-    imgSrc: imgAnimationVideo, 
+  {
+    slug: "animationvideo",
+    title: ["3D ANIMATION", "&", "SPOT TV"],
+    imgSrc: imgAnimationVideo,
     iconSrc: iconAnimationVideo,
-    link: "/portfolio/animation", 
-    titleOffset: "mt-20" 
+    link: "/portfolio/animation",
+    titleOffset: "mt-20"
   },
-  { 
-    slug: "outdooradvertising", 
-    title: "OUTDOOR ADVERTISING", 
-    imgSrc: imgOutdoorAdvert, 
+  {
+    slug: "outdooradvertising",
+    title: "OUTDOOR ADVERTISING",
+    imgSrc: imgOutdoorAdvert,
     iconSrc: iconOutdoorAdvert,
     titleOffset: "mb-6"
   },
@@ -152,7 +152,7 @@ function ServiceCard({ title, imgSrc, iconSrc, titleOffset }) {
       <div className="pt-10 pb-4 px-6 h-[150px] flex items-end justify-center">
         <div
           className={`font-azonix text-2xl text-center text-pink-600 font-medium uppercase tracking-wide leading-tight ${titleOffset}`}
-        > 
+        >
           {lines.map((line, i) => (
             <div
               key={i}
@@ -222,23 +222,24 @@ export default function PortfolioGrid() {
           <div
             className="
               relative z-10 flex flex-wrap justify-between items-end
-              px-[clamp(1rem,8vw,1rem)] pb-[clamp(0rem,4vw,0rem)]
+              px-4 sm:px-6 md:px-10 lg:px-[clamp(2rem,18vw,18rem)]
+              pb-6 lg:pb-[clamp(1rem,4vw,2rem)]
               w-full max-w-[1920px] 2k:max-w-[2300px] mx-auto
             "
           >
             {/* Left Side: Logo + Location + Phone */}
-            <div className="flex flex-col items-start gap-8 w-full md:w-auto 2k:ml-[0vw]">
+            <div className="flex flex-col items-center 3xl:-ml-48 3xl:-mt-20 4xl:mt-8 4xl:-ml-[550px] md:items-start gap-4">
               <img
                 src={require('../assets/Logos-and-Favicons/admire-logo-1.png')}
                 alt="Logo"
-                className="h-16 4xl:h-28 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
 
-              <div className="flex items-start gap-3 text-sm md:text-base flex-wrap text-left">
+              <div className="flex items-center mobilesm:text-[12px] mobilesm:-ml-4 lg:-ml-8 xl:-ml-8 laptop:-ml-8 2xl:-ml-8 hd:-ml-8 2k:-ml-8 mobilesm:mt-4 md:text-base text-center md:text-left">
                 <img
                   src={locationIcon}
                   alt="Location"
-                  className="h-6 w-6 md:h-8 md:w-8 object-contain"
+                  className="h-12 w-12 object-contain"
                 />
                 <a
                   href="https://maps.app.goo.gl/eFyidDwxjG3oq6NE7"
@@ -250,11 +251,11 @@ export default function PortfolioGrid() {
                 </a>
               </div>
 
-              <div className="flex items-start gap-3 text-sm md:text-base flex-wrap text-left">
+              <div className="flex items-center mobilesm:text-[12px] mobilesm:-ml-4 mobilemed:-translate-x-4 -mt-4 text-sm md:text-base text-center md:text-left">
                 <img
                   src={phoneIcon}
                   alt="Phone"
-                  className="h-6 w-6 md:h-8 md:w-8 object-contain"
+                  className="h-12 w-12 object-contain"
                 />
                 <span>
                   LEB +961 4 444107 - +961 70 777013 &nbsp;&nbsp; CYP +357 94 087 777
@@ -263,11 +264,11 @@ export default function PortfolioGrid() {
             </div>
 
             {/* Right Side: QR */}
-            <div className="flex justify-end items-end w-full md:w-auto mt-10 md:mt-0 2k:mr-[0vw]">
+            <div className="flex justify-center items-center w-full md:w-auto mt-8 md:mt-0 2k:mr-[0vw]">
               <img
                 src={require('../assets/Footer/final-qr.png')}
                 alt="QR code"
-                className="w-[min(25vw,250px)] max-h-[150px] h-auto object-contain"
+                className="w-[min(45vw,220px)] md:w-[min(30vw,250px)] max-h-[150px] h-auto object-contain"
               />
             </div>
           </div>

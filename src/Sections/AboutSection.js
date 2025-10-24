@@ -24,7 +24,7 @@ export default function AboutSection() {
             max-h-[85vh] mt-[clamp(4rem,6vh,6rem)]
             xl:max-h-[80vh] xl:-translate-y-[58%]
             laptop:max-h-[80vh] laptop:-translate-y-[63%]
-            hd:max-h-[60vh] hd:-translate-y-[63%] hd:-translate-x-[10%]
+            hd:max-h-[60vh] hd:-translate-y-[70%] hd:-translate-x-[10%]
             2k:max-h-[75vh] 2k:-translate-y-[36%]
           "
         />
@@ -225,18 +225,18 @@ export default function AboutSection() {
             "
           >
             {/* Left Side: Logo + Location + Phone */}
-            <div className="flex flex-col items-start gap-6 sm:gap-8 w-full md:w-auto 2k:ml-[0vw]">
+            <div className="flex flex-col items-center 3xl:-ml-48 3xl:-mt-20 4xl:mt-8 4xl:-ml-[550px] md:items-start gap-4">
               <img
                 src={require('../assets/Logos-and-Favicons/admire-logo-1.png')}
                 alt="Logo"
-                className="h-12 sm:h-16 4xl:h-28 w-auto object-contain"
+                className="h-16 w-auto object-contain"
               />
 
-              <div className="flex items-start gap-3 text-sm md:text-base flex-wrap text-left">
+              <div className="flex items-center mobilesm:text-[12px] mobilesm:-ml-4 lg:-ml-8 xl:-ml-8 laptop:-ml-8 2xl:-ml-8 hd:-ml-8 2k:-ml-8 mobilesm:mt-4 md:text-base text-center md:text-left">
                 <img
                   src={locationIcon}
                   alt="Location"
-                  className="h-5 w-5 md:h-8 md:w-8 object-contain"
+                  className="h-12 w-12 object-contain"
                 />
                 <a
                   href="https://maps.app.goo.gl/eFyidDwxjG3oq6NE7"
@@ -248,11 +248,11 @@ export default function AboutSection() {
                 </a>
               </div>
 
-              <div className="flex items-start gap-3 text-sm md:text-base flex-wrap text-left">
+              <div className="flex items-center mobilesm:text-[12px] mobilesm:-ml-4 mobilemed:-translate-x-4 -mt-4 text-sm md:text-base text-center md:text-left">
                 <img
                   src={phoneIcon}
                   alt="Phone"
-                  className="h-5 w-5 md:h-8 md:w-8 object-contain"
+                  className="h-12 w-12 object-contain"
                 />
                 <span>
                   LEB +961 4 444107 - +961 70 777013 &nbsp;&nbsp; CYP +357 94 087 777
@@ -261,7 +261,7 @@ export default function AboutSection() {
             </div>
 
             {/* Right Side: QR */}
-            <div className="flex justify-end items-end w-full md:w-auto mt-8 md:mt-0 2k:mr-[0vw]">
+            <div className="flex justify-center items-center w-full md:w-auto mt-8 md:mt-0 2k:mr-[0vw]">
               <img
                 src={require('../assets/Footer/final-qr.png')}
                 alt="QR code"

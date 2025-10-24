@@ -41,7 +41,7 @@ function ServicesFooter() {
               />
 
               {/* address */}
-              <div className="flex items-center -mt-16 4xl:-mt-28 text-sm 4xl:text-2xl md:text-base text-center md:text-left">
+              <div className="flex items-center mobilesm:text-[12px] mobilesm:-ml-8 -mt-16 text-sm md:text-base text-center md:text-left">
                 <img
                   src={locationIcon}
                   alt="Location"
@@ -58,7 +58,7 @@ function ServicesFooter() {
               </div>
 
               {/* phones */}
-              <div className="flex items-center -mt-4 4xl:-mt-10 text-sm 4xl:text-2xl md:text-base flex-wrap text-center md:text-left">
+              <div className="flex items-center mobilesm:text-[12px] mobilesm:-ml-8 -mt-4 text-sm md:text-base text-center md:text-left">
                 <img
                   src={phoneIcon}
                   alt="Phone"

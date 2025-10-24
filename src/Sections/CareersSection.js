@@ -13,7 +13,7 @@ export default function Careers() {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* ======= Header Section ======= */}
-      <div className="w-full max-w-6xl mx-auto text-center mt-[15vh] sm:mt-[20vh] md:mt-[22vh] lg:mt-[35vh] lg:ml-[60vh]">
+      <div className="w-full max-w-6xl mx-auto text-center mt-[15vh] sm:mt-[20vh] md:mt-[22vh] lg:mt-[35vh] lg:ml-[60vh] mobilesm:translate-y-40">
         <h1
   className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-widest text-black"
   style={{ fontFamily: "Azonix" }}
@@ -48,7 +48,7 @@ export default function Careers() {
       <div
         className="relative z-10 w-full max-w-5xl mx-auto 
                    mt-[min(35vh,20rem)] sm:mt-[28vh] md:mt-[40vh] 
-                   px-4 sm:px-8 md:px-16"
+                   px-4 sm:px-8 md:px-16 mobilesm:mt-[500px]"
       >
         <form className="w-full bg-white/60 backdrop-blur-md rounded-2xl shadow-xl p-6 sm:p-8 md:p-12">
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -169,58 +169,61 @@ export default function Careers() {
       </div>
 
       {/* ======= Footer ======= */}
-      <footer className="relative w-full text-black mt-[clamp(2rem,8vw,6rem)] px-4 sm:px-8">
-        <div
-          className="relative z-10 flex flex-wrap justify-between items-end
-                     px-[clamp(2rem,10vw,12rem)] pb-[clamp(1rem,4vw,2rem)]
-                     w-full max-w-[1920px] mx-auto"
-        >
-          {/* Left Side: Logo + Location + Phone */}
-          <div className="flex flex-col items-start gap-8 w-full md:w-auto">
-            <img
-              src={require("../assets/Logos-and-Favicons/admire-logo-1.png")}
-              alt="Logo"
-              className="h-16 4xl:h-28 w-auto object-contain"
-            />
-
-            <div className="flex items-center text-sm 4xl:text-2xl md:text-base text-center md:text-left">
+      <footer className="relative w-full text-black mt-[clamp(2rem,8vw,6rem)]">
+          <div
+            className="
+              relative z-10 flex flex-wrap justify-between items-end
+              px-4 sm:px-6 md:px-10 lg:px-[clamp(2rem,18vw,18rem)]
+              pb-6 lg:pb-[clamp(1rem,4vw,2rem)]
+              w-full max-w-[1920px] 2k:max-w-[2300px] mx-auto
+            "
+          >
+            {/* Left Side: Logo + Location + Phone */}
+            <div className="flex flex-col items-center 3xl:-ml-48 3xl:-mt-20 4xl:mt-8 4xl:-ml-[550px] md:items-start gap-4">
               <img
-                src={locationIcon}
-                alt="Location"
-                className="h-12 w-20 md:h-12 md:w-20 object-contain"
+                src={require('../assets/Logos-and-Favicons/admire-logo-1.png')}
+                alt="Logo"
+                className="h-16 w-auto object-contain"
               />
-              <a
-                href="https://maps.app.goo.gl/eFyidDwxjG3oq6NE7"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="hover:underline text-black"
-              >
-                Antelias - Lebanon St. Nicolas center, 6th floor - Sawma Jaber street
-              </a>
+
+              <div className="flex items-center mobilesm:text-[12px] mobilesm:-ml-4 lg:-ml-8 xl:-ml-8 laptop:-ml-8 2xl:-ml-8 hd:-ml-8 2k:-ml-8 mobilesm:mt-4 md:text-base text-center md:text-left">
+                <img
+                  src={locationIcon}
+                  alt="Location"
+                  className="h-12 w-12 object-contain"
+                />
+                <a
+                  href="https://maps.app.goo.gl/eFyidDwxjG3oq6NE7"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="hover:underline text-black"
+                >
+                  Antelias - Lebanon St. Nicolas center, 6th floor - Sawma Jaber street
+                </a>
+              </div>
+
+              <div className="flex items-center mobilesm:text-[12px] mobilesm:-ml-4 mobilemed:-translate-x-4 -mt-4 text-sm md:text-base text-center md:text-left">
+                <img
+                  src={phoneIcon}
+                  alt="Phone"
+                  className="h-12 w-12 object-contain"
+                />
+                <span>
+                  LEB +961 4 444107 - +961 70 777013 &nbsp;&nbsp; CYP +357 94 087 777
+                </span>
+              </div>
             </div>
 
-            <div className="flex items-center -mt-6 text-sm 4xl:text-2xl md:text-base flex-wrap text-center md:text-left">
+            {/* Right Side: QR */}
+            <div className="flex justify-center items-center w-full md:w-auto mt-8 md:mt-0 2k:mr-[0vw]">
               <img
-                src={phoneIcon}
-                alt="Phone"
-                className="h-12 w-20 md:h-12 md:w-20 object-contain"
+                src={require('../assets/Footer/final-qr.png')}
+                alt="QR code"
+                className="w-[min(45vw,220px)] md:w-[min(30vw,250px)] max-h-[150px] h-auto object-contain"
               />
-              <span>
-                LEB +961 4 444107 - +961 70 777013 &nbsp;&nbsp; CYP +357 94 087 777
-              </span>
             </div>
           </div>
-
-          {/* Right Side: QR */}
-          <div className="flex justify-end items-end w-full md:w-auto mt-10 md:mt-0">
-            <img
-              src={require("../assets/Footer/final-qr.png")}
-              alt="QR code"
-              className="w-[min(25vw,250px)] max-h-[150px] h-auto object-contain"
-            />
-          </div>
-        </div>
-      </footer>
+        </footer>
     </section>
   );
 }

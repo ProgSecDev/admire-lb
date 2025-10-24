@@ -96,7 +96,7 @@ function Nav() {
               <img
                 src={logo}
                 alt="Admire Advertising Agency logo"
-                className="h-12 sm:h-16 sm:ml-40 lg:ml-16 4xl:h-24 4xl:ml-24 md:ml-0 object-contain select-none"
+                className="h-12 sm:h-16 mobilesm:ml-auto mobilemed:ml-auto mobilebig:ml-auto lg:ml-16 4xl:h-24 4xl:ml-24 md:ml-0 object-contain select-none"
                 draggable={false}
               />
             </Link>
