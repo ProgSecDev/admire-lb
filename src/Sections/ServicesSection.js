@@ -1,4 +1,4 @@
-import { Link } from "react-router-dom";
+// src/sections/ServicesSection.js
 import { motion } from "framer-motion";
 import { useEffect, useState } from "react";
 
@@ -49,10 +49,9 @@ function Banner() {
   return (
     <div
       className="
-        relative 
-        w-full 
+        relative w-full
         h-[300px] sm:h-[400px] lg:h-[600px] 4xl:h-[700px]
-        bg-cover bg-center bg-no-repeat 
+        bg-cover bg-center bg-no-repeat
         flex items-center justify-center 2xl:-mb-10 3xl:mt-14 4xl:mt-28
       "
       style={{ backgroundImage: `url(${bannerImage})` }}
@@ -60,39 +59,43 @@ function Banner() {
   );
 }
 
-function ServiceCard({ icon, lines, isVisible, index }) {
+function ServiceCard({ icon, lines, index }) {
   return (
     <motion.div
       initial={{ opacity: 0, y: 30 }}
       whileInView={{ opacity: 1, y: 0 }}
-      transition={{ duration: 0.6, delay: index * 0.2 }}
+      transition={{ duration: 0.6, delay: index * 0.15 }}
       viewport={{ once: true, amount: 0.2 }}
       className={`
-        w-[250px] h-[200px]
-        bg-white 
-        rounded-2xl 
-        shadow-md hover:shadow-lg
-        transition-all duration-300 ease-linear
-        flex flex-col items-center justify-center
-        text-center mx-auto
+        group relative overflow-hidden
+        rounded-xl sm:rounded-2xl bg-white
+        shadow-md hover:shadow-lg transition
+        flex flex-col
         ${index % 2 === 0 ? "animate-float" : "animate-floatReverse"}
       `}
     >
-      <img
-        src={icon}
-        alt={Array.isArray(lines) ? lines.join(" ") : String(lines)}
-        className="w-20 h-20 sm:w-24 sm:h-24 2xl:w-28 2xl:h-28 object-contain select-none mb-2 transition-transform duration-300 ease-in-out hover:scale-110"
-        draggable={false}
-      />
-      <div className="leading-tight">
-        {lines.map((line, i) => (
-          <div
-            key={i}
-            className="text-black font-extrabold tracking-wide text-sm sm:text-base font-azonix"
-          >
-            {line}
-          </div>
-        ))}
+      {/* Square tile on mobile; fixed height on larger screens */}
+      <div className="relative w-full aspect-square sm:aspect-auto sm:h-56 md:h-64 flex items-center justify-center">
+        <img
+          src={icon}
+          alt={lines.join(" ")}
+          className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 object-contain select-none transition-transform duration-300 group-hover:scale-110"
+          draggable={false}
+        />
+      </div>
+
+      {/* Title block */}
+      <div className="px-2 sm:px-4 pb-3 sm:pb-4 pt-0 sm:pt-2">
+        <div className="text-center uppercase font-azonix tracking-wide leading-snug">
+          {lines.map((line, i) => (
+            <div
+              key={i}
+              className="text-pink-600 font-medium text-xs xs:text-sm sm:text-base"
+            >
+              {line}
+            </div>
+          ))}
+        </div>
       </div>
     </motion.div>
   );
@@ -102,11 +105,10 @@ export default function ServicesSection() {
   const [loadedIndexes, setLoadedIndexes] = useState([]);
 
   useEffect(() => {
-    services.forEach((_, idx) => {
-      setTimeout(() => {
-        setLoadedIndexes((prev) => [...prev, idx]);
-      }, idx * 200);
-    });
+    const timers = services.map((_, idx) =>
+      setTimeout(() => setLoadedIndexes((prev) => [...prev, idx]), idx * 200)
+    );
+    return () => timers.forEach(clearTimeout);
   }, []);
 
   return (
@@ -135,24 +137,17 @@ export default function ServicesSection() {
                 <p>
                   At Admire, we craft innovative strategies and creative solutions to
                   help brands stand out and connect with their audience. Our services
-                  cover the full <br /> spectrum of advertising - from branding, packaging,
+                  cover the full <br className="hidden md:block" /> spectrum of advertising — from branding, packaging,
                   and graphic design to digital marketing, social media management,
-                  content creation,<br /> and campaign execution. With a results-driven
-                  approach, we turn ideas into impactful experiences that drive
-                  growth.
+                  content creation, <br className="hidden md:block" /> and campaign execution. With a results-driven
+                  approach, we turn ideas into impactful experiences that drive growth.
                 </p>
               </div>
 
-              {/* Grid with same animation style as PortfolioGrid */}
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+              {/* Grid — 2 per row on mobile, 4 on lg */}
+              <div className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-4 gap-3 sm:gap-6">
                 {services.map((s, i) => (
-                  <ServiceCard
-                    key={i}
-                    icon={s.icon}
-                    lines={s.lines}
-                    isVisible={loadedIndexes.includes(i)}
-                    index={i}
-                  />
+                  <ServiceCard key={i} icon={s.icon} lines={s.lines} index={i} />
                 ))}
               </div>
             </div>

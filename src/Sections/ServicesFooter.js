@@ -17,7 +17,7 @@ function ServicesFooter() {
     <footer className="relative w-full text-white bg-black -mt-20">
       {/* background only behind content, sides remain black */}
       <div
-        className="relative mx-auto max-w-7xl 3xl:max-w-[1600px] 4xl:max-w-[2100px] bg-fixed bg-center bg-contain"
+        className="relative mx-auto max-w-7xl bg-fixed bg-center bg-contain"
         style={{ backgroundImage: `url(${bgImg})` }}
       >
         {/* overlay with side gaps */}
@@ -33,44 +33,44 @@ function ServicesFooter() {
           {/* top row */}
           <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8">
             {/* left column */}
-            <div className="flex flex-col items-center 3xl:-mt-20 4xl:mt-2 md:items-start gap-4">
+            <div className="flex flex-col items-center md:items-start gap-4">
               <img
                 src={logoImg}
                 alt="Logo"
-                className="h-52 4xl:h-80 3xl:mt-10 4xl:-mt-10 w-auto object-contain"
+                className="h-52 w-auto object-contain"
               />
 
               {/* address */}
               <div className="flex items-center mobilesm:text-[12px] mobilesm:-ml-8 -mt-16 text-sm md:text-base text-center md:text-left">
-                <img
-                  src={locationIcon}
-                  alt="Location"
-                  className="h-12 w-20 4xl:h-20 object-contain"
-                />
-                <a
-                  href="https://maps.app.goo.gl/eFyidDwxjG3oq6NE7"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  className="hover:underline text-white"
-                >
-                  {addressLine}
-                </a>
-              </div>
-
-              {/* phones */}
-              <div className="flex items-center mobilesm:text-[12px] mobilesm:-ml-8 -mt-4 text-sm md:text-base text-center md:text-left">
-                <img
-                  src={phoneIcon}
-                  alt="Phone"
-                  className="h-12 w-20 4xl:h-20 object-contain"
-                />
-                <span>
-                  {phones
-                    .map((p) => `${p.label} ${p.value}`)
-                    .join("\u00A0\u00A0\u00A0")}
-                </span>
-              </div>
+              <img
+                src={locationIcon}
+                alt="Location"
+                className="h-12 w-12 tablet:ml-10 xl:ml-10 mobilesm:ml-10 object-contain"
+              />
+              <a
+                href="https://maps.app.goo.gl/eFyidDwxjG3oq6NE7"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="hover:underline text-white"
+              >
+                {addressLine}
+              </a>
             </div>
+
+            {/* phones */}
+            <div className="flex items-center mobilesm:text-[12px] mobilesm:-ml-8 -mt-4 text-sm md:text-base text-center md:text-left">
+              <img
+                src={phoneIcon}
+                alt="Phone"
+                className="h-12 w-12 tablet:ml-10 xl:ml-10 mobilesm:ml-10 object-contain"
+              />
+              <span>
+                {phones
+                  .map((p) => `${p.label} ${p.value}`)
+                  .join("\u00A0\u00A0\u00A0")}
+              </span>
+            </div>
+          </div>
             {/* right column: QR */}
 <div className="
   flex justify-center md:justify-end items-end

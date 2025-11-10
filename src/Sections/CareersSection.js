@@ -13,7 +13,7 @@ export default function Careers() {
       style={{ backgroundImage: `url(${backgroundImage})` }}
     >
       {/* ======= Header Section ======= */}
-      <div className="w-full max-w-6xl mx-auto text-center mt-[15vh] sm:mt-[20vh] md:mt-[22vh] lg:mt-[35vh] lg:ml-[60vh] mobilesm:translate-y-40">
+      <div className="w-full max-w-6xl mx-auto text-center mt-[15vh] sm:mt-[20vh] md:mt-[22vh] lg:mt-[35vh] lg:ml-[60vh] tablet:mt-0 mobilesm:translate-y-40">
         <h1
   className="text-3xl sm:text-4xl md:text-5xl font-bold tracking-widest text-black"
   style={{ fontFamily: "Azonix" }}
@@ -202,7 +202,7 @@ export default function Careers() {
                 </a>
               </div>
 
-              <div className="flex items-center mobilesm:text-[12px] mobilesm:-ml-4 mobilemed:-translate-x-4 -mt-4 text-sm md:text-base text-center md:text-left">
+              <div className="flex items-center mobilesm:text-[12px] mobilesm:-ml-4 mobilemed:-translate-x-4 -mt-4 tablet:ml-0 text-sm md:text-base text-center md:text-left">
                 <img
                   src={phoneIcon}
                   alt="Phone"

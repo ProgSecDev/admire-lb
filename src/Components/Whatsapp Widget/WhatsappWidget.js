@@ -24,7 +24,7 @@ export default function WhatsAppWidget({
         damping: 10,
       }}
       className={`fixed z-50 p-2 rounded-full shadow-lg bg-green-500 cursor-pointer
-        bottom-6 ${position === "right" ? "right-16" : "left-6"}`}
+        bottom-16 ${position === "right" ? "right-4" : "left-6"}`}
     >
       <img src={WhatsAppIcon} alt="WhatsApp" className="w-12 h-12" />
     </motion.a>

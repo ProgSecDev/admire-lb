@@ -31,11 +31,11 @@ function HomeFooter() {
         {/* top row */}
         <div className="grid grid-cols-1 md:grid-cols-2 items-start gap-8">
           {/* left column: logo + address + phones */}
-          <div className="flex flex-col items-center 3xl:-ml-48 3xl:-mt-20 4xl:mt-8 4xl:-ml-[550px] md:items-start gap-4">
+          <div className="flex flex-col items-center md:items-start gap-4">
             <img
               src={logoImg}
               alt="Logo"
-              className="h-52 mobilesm:-mt-10 w-auto object-contain"
+              className="h-52 mobilesm:-mt-10 tablet:-ml-10  w-auto object-contain"
             />
 
             {/* address */}

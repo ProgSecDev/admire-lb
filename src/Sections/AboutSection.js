@@ -30,7 +30,7 @@ export default function AboutSection() {
         />
       </div>
 
-      {/* TEXT + (tablet-right / mobile-below) images */}
+      {/* TEXT + responsive images */}
       <div
         className="
           relative z-10
@@ -40,7 +40,7 @@ export default function AboutSection() {
           px-4 sm:px-6 md:px-8 lg:px-[clamp(1rem,6vw,2rem)]
           py-10 sm:py-12 md:py-14 lg:py-[clamp(2rem,6vw,5rem)]
           text-left leading-relaxed
-          md:flex md:items-start md:gap-6 lg:block
+          md:block lg:block
         "
       >
         {/* TEXT */}
@@ -99,31 +99,34 @@ export default function AboutSection() {
             </p>
           </motion.div>
 
-          {/* MOBILE-ONLY image (below text) — no margin so it touches the next section */}
+          {/* MOBILE-ONLY image (below text) — slight downward nudge */}
           <div className="block md:hidden mt-0">
             <img
               src={bgImage}
               alt="Founder portrait"
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-contain translate-y-10 sm:translate-y-3"
             />
           </div>
-        </div>
 
-        {/* TABLET-ONLY image (right of text) */}
-        <div className="hidden md:block lg:hidden md:w-[40%] md:shrink-0">
-          <img
-            src={bgImage}
-            alt="Founder portrait"
-            className="w-full h-auto object-contain md:mt-12"
-          />
+          {/* TABLET-ONLY image (enhanced card below text) */}
+          <div className="hidden md:block lg:hidden mt-8">
+            <div className="mx-auto max-w-[480px]">
+              <img
+                src={bgImage}
+                alt="Founder portrait"
+                className="
+                  w-full h-auto object-contain
+                  translate-y-20 sm:translate-y-14
+                "
+              />
+            </div>
+          </div>
         </div>
       </div>
 
       {/* Mission / Vision / Values + Footer Wrapper */}
-      {/* Why: mt-0 on mobile so the section starts exactly under the image; restore spacing on lg+ */}
       <div className="relative z-30 mt-0 sm:mt-0 lg:mt-10 w-full bg-gray-200/60 backdrop-blur-sm 2k:mt-72">
-        {/* Founder Ribbon */}
-        {/* Why: place ribbon flush to the top on mobile; keep absolute placement on lg+ */}
+        {/* Founder Ribbon — top-aligned on tablet, slightly up on mobile, normal on lg+ */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -135,7 +138,8 @@ export default function AboutSection() {
             lg:bottom-[46rem] xl:bottom-[51rem] 2k:bottom-[56rem]
             lg:right-[clamp(25%,15vw,200px)] 2k:right-[clamp(30%,15vw,200px)]
             flex justify-center lg:block
-            pt-0 md:pt-4 lg:pt-6
+            pt-0 md:pt-0 lg:pt-6
+            -translate-y-2 sm:-translate-y-3 md:-translate-y-10 lg:translate-y-0
           "
         >
           <div className="bg-pink-600 px-6 py-3 shadow-xl inline-block">
@@ -241,26 +245,22 @@ export default function AboutSection() {
         <footer className="relative w-full text-black mt-[clamp(2rem,8vw,6rem)]">
           <div
             className="
-              relative z-10 flex flex-wrap justify-between items-end
+              relative z-10 w-full max-w-[1920px] 2k:max-w-[2300px] mx-auto
               px-4 sm:px-6 md:px-10 lg:px-[clamp(2rem,18vw,18rem)]
               pb-6 lg:pb-[clamp(1rem,4vw,2rem)]
-              w-full max-w-[1920px] 2k:max-w-[2300px] mx-auto
+              flex flex-col md:flex-row md:items-end gap-6 md:gap-8
             "
           >
-            {/* Left Side: Logo + Location + Phone */}
-            <div className="flex flex-col items-center 3xl:-ml-48 3xl:-mt-20 4xl:mt-8 4xl:-ml-[550px] md:items-start gap-4">
+            {/* Left: Logo + Location + Phone */}
+            <div className="flex flex-col items-center md:items-start gap-4 md:flex-1">
               <img
-                src={require('../assets/Logos-and-Favicons/admire-logo-1.png')}
+                src={require("../assets/Logos-and-Favicons/admire-logo-1.png")}
                 alt="Logo"
                 className="h-16 w-auto object-contain"
               />
 
-              <div className="flex items-center mobilesm:text-[12px] mobilesm:-ml-4 lg:-ml-8 xl:-ml-8 laptop:-ml-8 2xl:-ml-8 hd:-ml-8 2k:-ml-8 mobilesm:mt-4 md:text-base text-center md:text-left">
-                <img
-                  src={locationIcon}
-                  alt="Location"
-                  className="h-12 w-12 object-contain"
-                />
+              <div className="flex items-center text-sm sm:text-base text-center md:text-left gap-3">
+                <img src={locationIcon} alt="Location" className="h-6 w-6 sm:h-8 tablet:h-12 tablet:w-12 tablet:-ml-4 sm:w-8 object-contain" />
                 <a
                   href="https://maps.app.goo.gl/eFyidDwxjG3oq6NE7"
                   target="_blank"
@@ -271,24 +271,18 @@ export default function AboutSection() {
                 </a>
               </div>
 
-              <div className="flex items-center mobilesm:text-[12px] mobilesm:-ml-4 mobilemed:-translate-x-4 -mt-4 text-sm md:text-base text-center md:text-left">
-                <img
-                  src={phoneIcon}
-                  alt="Phone"
-                  className="h-12 w-12 object-contain"
-                />
-                <span>
-                  LEB +961 4 444107 - +961 70 777013 &nbsp;&nbsp; CYP +357 94 087 777
-                </span>
+              <div className="flex items-center text-sm sm:text-base gap-3 -mt-2 md:mt-0">
+                <img src={phoneIcon} alt="Phone" className="h-6 w-6 sm:h-8 sm:w-8 tablet:h-12 tablet:w-12 tablet:-ml-4 object-contain" />
+                <span>LEB +961 4 444107 - +961 70 777013 &nbsp;&nbsp; CYP +357 94 087 777</span>
               </div>
             </div>
 
-            {/* Right Side: QR */}
-            <div className="flex justify-center items-center w-full md:w-auto mt-8 md:mt-0 2k:mr-[0vw]">
+            {/* Right: QR */}
+            <div className="w-full md:w-auto md:ml-auto flex justify-center md:justify-end">
               <img
-                src={require('../assets/Footer/final-qr.png')}
+                src={require("../assets/Footer/final-qr.png")}
                 alt="QR code"
-                className="w-[min(45vw,220px)] md:w-[min(30vw,250px)] max-h-[150px] h-auto object-contain"
+                className="w-[min(45vw,220px)] md:w-[min(28vw,240px)] max-h-[180px] h-auto object-contain"
               />
             </div>
           </div>
