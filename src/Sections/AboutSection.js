@@ -14,7 +14,7 @@ export default function AboutSection() {
       className="relative w-full bg-neutral-600 overflow-hidden"
       aria-label="About Admire agency"
     >
-      {/* Right-side portrait (hide on mobile/tablet to avoid overlap) */}
+      {/* Desktop/Laptop portrait (kept as-is; absolute) */}
       <div className="hidden lg:flex absolute inset-y-0 right-0 w-[min(55vw,900px)] z-20 justify-end items-center">
         <img
           src={bgImage}
@@ -30,7 +30,7 @@ export default function AboutSection() {
         />
       </div>
 
-      {/* Text content */}
+      {/* TEXT + (tablet-right / mobile-below) images */}
       <div
         className="
           relative z-10
@@ -40,67 +40,90 @@ export default function AboutSection() {
           px-4 sm:px-6 md:px-8 lg:px-[clamp(1rem,6vw,2rem)]
           py-10 sm:py-12 md:py-14 lg:py-[clamp(2rem,6vw,5rem)]
           text-left leading-relaxed
+          md:flex md:items-start md:gap-6 lg:block
         "
       >
-        <h1
-          className="mt-10 sm:mt-14 lg:mt-20 mb-6 sm:mb-8 lg:mb-10 tracking-[0.3em] text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2k:text-7xl font-light text-white"
-          style={{ fontFamily: "Azonix, sans-serif" }}
-        >
-          <TextType
-            text={["ABOUT US"]}
-            typingSpeed={75}
-            pauseDuration={1500}
-            showCursor={false}
-          />
-        </h1>
+        {/* TEXT */}
+        <div className="md:flex-1">
+          <h1
+            className="mt-10 sm:mt-14 lg:mt-20 mb-6 sm:mb-8 lg:mb-10 tracking-[0.3em] text-2xl sm:text-3xl md:text-4xl lg:text-5xl 2k:text-7xl font-light text-white"
+            style={{ fontFamily: "Azonix, sans-serif" }}
+          >
+            <TextType
+              text={["ABOUT US"]}
+              typingSpeed={75}
+              pauseDuration={1500}
+              showCursor={false}
+            />
+          </h1>
 
-        <motion.div
-          className="space-y-4 sm:space-y-5 text-white text-[0.9rem] sm:text-base leading-relaxed font-raleway 2k:text-3xl about-text-4xl-shape"
-          initial={{ opacity: 0, x: -80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 1 }}
-          viewport={{ once: true, amount: 0.2 }}
-        >
-          <p className="max-w-prose md:max-w-[60ch] lg:max-w-none">
-            Admire was Established in 2012 with a clear vision: to craft impactful
-            brand experiences through thoughtful <span className="hidden"><br /></span>
-            design and strategic marketing. What started as a boutique agency has grown
-            organically into a multinational <span className="hidden"><br /></span>
-            presence, expanding every two years to now operate across Lebanon, Cyprus,
-            Saudi Arabia, the UAE, and <span className="hidden"><br /></span>
-            Qatar. <br />
-            Our journey reflects our dedication to quality, creativity, and building
-            long-term partnerships with <span className="hidden"><br /></span>
-            clients who value excellence. Over the years, Admire has positioned itself
-            as a partner of choice <span className="hidden"><br /></span>
-            for high-end brands, offering services that include premium branding,
-            digital marketing, <span className="hidden"><br /></span>
-            private label, and 3D interior modeling with a specialized focus on the
-            EMEA market. After <span className="hidden"><br /></span>
-            more than a decade of experience, Admire has become a recognized leader in
-            private label <span className="hidden"><br /></span>
-            solutions not limited to one sector, but spanning across industries. From
-            concept creation to <span className="hidden"><br /></span>
-            branding, packaging, and marketing, we provide businesses with complete
-            brand-building <span className="hidden"><br /></span>
-            expertise, making us the trusted partner for companies aiming to launch,
-            grow, and elevate <span className="hidden"><br /></span>
-            their own labels. <br />
-            We don’t just design brands, we build identities, shape experiences, and
-            help businesses <span className="hidden"><br /></span>
-            communicate with clarity and confidence in competitive markets. <br />
-            As a woman-founded company, we take pride in our values of leadership,
-            resilience, and <span className="hidden"><br /></span>
-            innovation values that continue to shape our story and the stories we tell
-            for our clients.
-          </p>
-        </motion.div>
+          <motion.div
+            className="space-y-4 sm:space-y-5 text-white text-[0.9rem] sm:text-base leading-relaxed font-raleway 2k:text-3xl about-text-4xl-shape"
+            initial={{ opacity: 0, x: -80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 1 }}
+            viewport={{ once: true, amount: 0.2 }}
+          >
+            <p className="max-w-prose md:max-w-[60ch] lg:max-w-none">
+              Admire was Established in 2012 with a clear vision: to craft impactful
+              brand experiences through thoughtful <span className="hidden"><br /></span>
+              design and strategic marketing. What started as a boutique agency has grown
+              organically into a multinational <span className="hidden"><br /></span>
+              presence, expanding every two years to now operate across Lebanon, Cyprus,
+              Saudi Arabia, the UAE, and <span className="hidden"><br /></span>
+              Qatar. <br />
+              Our journey reflects our dedication to quality, creativity, and building
+              long-term partnerships with <span className="hidden"><br /></span>
+              clients who value excellence. Over the years, Admire has positioned itself
+              as a partner of choice <span className="hidden"><br /></span>
+              for high-end brands, offering services that include premium branding,
+              digital marketing, <span className="hidden"><br /></span>
+              private label, and 3D interior modeling with a specialized focus on the
+              EMEA market. After <span className="hidden"><br /></span>
+              more than a decade of experience, Admire has become a recognized leader in
+              private label <span className="hidden"><br /></span>
+              solutions not limited to one sector, but spanning across industries. From
+              concept creation to <span className="hidden"><br /></span>
+              branding, packaging, and marketing, we provide businesses with complete
+              brand-building <span className="hidden"><br /></span>
+              expertise, making us the trusted partner for companies aiming to launch,
+              grow, and elevate <span className="hidden"><br /></span>
+              their own labels. <br />
+              We don’t just design brands, we build identities, shape experiences, and
+              help businesses <span className="hidden"><br /></span>
+              communicate with clarity and confidence in competitive markets. <br />
+              As a woman-founded company, we take pride in our values of leadership,
+              resilience, and <span className="hidden"><br /></span>
+              innovation values that continue to shape our story and the stories we tell
+              for our clients.
+            </p>
+          </motion.div>
+
+          {/* MOBILE-ONLY image (below text) — no margin so it touches the next section */}
+          <div className="block md:hidden mt-0">
+            <img
+              src={bgImage}
+              alt="Founder portrait"
+              className="w-full h-auto object-contain"
+            />
+          </div>
+        </div>
+
+        {/* TABLET-ONLY image (right of text) */}
+        <div className="hidden md:block lg:hidden md:w-[40%] md:shrink-0">
+          <img
+            src={bgImage}
+            alt="Founder portrait"
+            className="w-full h-auto object-contain md:mt-12"
+          />
+        </div>
       </div>
 
       {/* Mission / Vision / Values + Footer Wrapper */}
-      <div className="relative z-30 mt-6 sm:mt-8 lg:mt-10 w-full bg-gray-200/60 backdrop-blur-sm 2k:mt-72">
-
-        {/* Founder Ribbon: stack on small screens; absolute only on lg+ */}
+      {/* Why: mt-0 on mobile so the section starts exactly under the image; restore spacing on lg+ */}
+      <div className="relative z-30 mt-0 sm:mt-0 lg:mt-10 w-full bg-gray-200/60 backdrop-blur-sm 2k:mt-72">
+        {/* Founder Ribbon */}
+        {/* Why: place ribbon flush to the top on mobile; keep absolute placement on lg+ */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -112,7 +135,7 @@ export default function AboutSection() {
             lg:bottom-[46rem] xl:bottom-[51rem] 2k:bottom-[56rem]
             lg:right-[clamp(25%,15vw,200px)] 2k:right-[clamp(30%,15vw,200px)]
             flex justify-center lg:block
-            pt-6
+            pt-0 md:pt-4 lg:pt-6
           "
         >
           <div className="bg-pink-600 px-6 py-3 shadow-xl inline-block">

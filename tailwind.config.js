@@ -30,7 +30,7 @@ module.exports = {
       screens: {
         mobilesm: "320px",
         mobilemed: "427px",
-        mobilebig: "768", 
+        mobilebig: "768px", 
         sm: "640px",
         md: "768px",
         lg: "1024px",
