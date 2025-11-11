@@ -4,54 +4,54 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const media = [
   {
-    image: require('../assets/Services/animation/Logos-07.jpg'),
+    image: require('../assets/Portfolio/animation/Logos-07.jpg'),
     videos: [
-      require('../assets/Services/animation/Logos-07-vid/Al-Abbseye.mp4')
+      require('../assets/Portfolio/animation/Logos-07-vid/Al-Abbseye.mp4')
     ]
   },
   {
-    image: require('../assets/Services/animation/Logos-06.jpg'),
+    image: require('../assets/Portfolio/animation/Logos-06.jpg'),
     videos: [
-      require('../assets/Services/animation/Logos-06-vid/MEDITOUR.mp4')
+      require('../assets/Portfolio/animation/Logos-06-vid/MEDITOUR.mp4')
     ]
   },
   {
-    image: require('../assets/Services/animation/Logos-05.jpg'),
+    image: require('../assets/Portfolio/animation/Logos-05.jpg'),
     videos: [
-      require('../assets/Services/animation/Logos-05-vid/WhatsApp-Video-2023-09-28-at-13.01.02.mp4'),
-      require('../assets/Services/animation/Logos-05-vid/Snapinsta.app_video_10000000_1673872286459483_216883073731739829_n.mp4')
+      require('../assets/Portfolio/animation/Logos-05-vid/WhatsApp-Video-2023-09-28-at-13.01.02.mp4'),
+      require('../assets/Portfolio/animation/Logos-05-vid/Snapinsta.app_video_10000000_1673872286459483_216883073731739829_n.mp4')
     ]
   },
   {
-    image: require('../assets/Services/animation/Logos-04.jpg'),
+    image: require('../assets/Portfolio/animation/Logos-04.jpg'),
     videos: [
-      require('../assets/Services/animation/Logos-04-vid/balkis-family.mp4'),
-      require('../assets/Services/animation/Logos-04-vid/balkis-apple.mp4'),
-      require('../assets/Services/animation/Logos-04-vid/balkis-lemons.mp4'),
-      require('../assets/Services/animation/Logos-04-vid/balkis-mawardi.mp4'),
-      require('../assets/Services/animation/Logos-04-vid/balkis-orange.mp4')
+      require('../assets/Portfolio/animation/Logos-04-vid/balkis-family.mp4'),
+      require('../assets/Portfolio/animation/Logos-04-vid/balkis-apple.mp4'),
+      require('../assets/Portfolio/animation/Logos-04-vid/balkis-lemons.mp4'),
+      require('../assets/Portfolio/animation/Logos-04-vid/balkis-mawardi.mp4'),
+      require('../assets/Portfolio/animation/Logos-04-vid/balkis-orange.mp4')
     ]
   },
   {
-    image: require('../assets/Services/animation/Logos-03.jpg'),
+    image: require('../assets/Portfolio/animation/Logos-03.jpg'),
     videos: [
-      require('../assets/Services/animation/Logos-03-vid/achnagal.mp4')
+      require('../assets/Portfolio/animation/Logos-03-vid/achnagal.mp4')
     ]
   },
   {
-    image: require('../assets/Services/animation/Logos-02.jpg'),
+    image: require('../assets/Portfolio/animation/Logos-02.jpg'),
     videos: [
-      require('../assets/Services/animation/Logos-02-vid/f-point.mp4'),
-      require('../assets/Services/animation/Logos-02-vid/F-point-group-motors.mp4')
+      require('../assets/Portfolio/animation/Logos-02-vid/f-point.mp4'),
+      require('../assets/Portfolio/animation/Logos-02-vid/F-point-group-motors.mp4')
     ]
   },
   {
-    image: require('../assets/Services/animation/Logos-01.jpg'),
+    image: require('../assets/Portfolio/animation/Logos-01.jpg'),
     videos: [
-      require('../assets/Services/animation/Logos-01-vid/foodys.mp4'),
-      require('../assets/Services/animation/Logos-01-vid/foodys-2.mp4'),
-      require('../assets/Services/animation/Logos-01-vid/Gif-2.mp4'),
-      require('../assets/Services/animation/Logos-01-vid/post24-gif.mp4'),
+      require('../assets/Portfolio/animation/Logos-01-vid/foodys.mp4'),
+      require('../assets/Portfolio/animation/Logos-01-vid/foodys-2.mp4'),
+      require('../assets/Portfolio/animation/Logos-01-vid/Gif-2.mp4'),
+      require('../assets/Portfolio/animation/Logos-01-vid/post24-gif.mp4'),
     ]
   },
 ];

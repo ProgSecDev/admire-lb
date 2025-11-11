@@ -28,6 +28,7 @@ import Modeling from "./Pages/Modeling";
 import Printing from "./Pages/Printing";
 import ProductPhotography from "./Pages/ProductPhotography";
 import Animation from "./Pages/Animation";
+import OutdoorAdv from "./Pages/OutdoorAdv";
 
 const AppContent = () => {
   const location = useLocation();
@@ -59,6 +60,7 @@ const AppContent = () => {
         <Route path="/portfolio/printing" element={<Printing />} />
         <Route path="/portfolio/productphotography" element={<ProductPhotography />} />
         <Route path="/portfolio/animation" element={<Animation />} />
+        <Route path="/portfolio/outdoor" element={<OutdoorAdv />} />
       </Routes>
     </>
   );

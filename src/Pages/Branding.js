@@ -3,16 +3,16 @@ import { X, ZoomIn, ZoomOut, ArrowLeft, ArrowRight, Search } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion';
 
 const images = [
-  require('../assets/Services/branding/Branding-9-1.jpg'),
-  require('../assets/Services/branding/Branding-9-scaled-2.jpg'),
-  require('../assets/Services/branding/Branding-2.jpg'),
-  require('../assets/Services/branding/Trucks-MU-02.jpg'),
-  require('../assets/Services/branding/Branding-4.jpg'),
-  require('../assets/Services/branding/MISSING-ONES-24-scaled.jpg'),
-  require('../assets/Services/branding/Branding-5.jpg'),
-  require('../assets/Services/branding/Branding-3.jpg'),
-  require('../assets/Services/branding/Branding-8-2.jpg'),
-  require('../assets/Services/branding/Branding-7.jpg'),
+  require('../assets/Portfolio/branding/Branding-9-1.jpg'),
+  require('../assets/Portfolio/branding/Branding-9-scaled-2.jpg'),
+  require('../assets/Portfolio/branding/Branding-2.jpg'),
+  require('../assets/Portfolio/branding/Trucks-MU-02.jpg'),
+  require('../assets/Portfolio/branding/Branding-4.jpg'),
+  require('../assets/Portfolio/branding/MISSING-ONES-24-scaled.jpg'),
+  require('../assets/Portfolio/branding/Branding-5.jpg'),
+  require('../assets/Portfolio/branding/Branding-3.jpg'),
+  require('../assets/Portfolio/branding/Branding-8-2.jpg'),
+  require('../assets/Portfolio/branding/Branding-7.jpg'),
 ];
 
 const Branding = () => {

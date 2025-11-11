@@ -3,23 +3,17 @@ import { X, ZoomIn, ZoomOut, ArrowLeft, ArrowRight, Search } from 'lucide-react'
 import { motion, AnimatePresence } from 'framer-motion';
 
 const images = [
-  require('../assets/Portfolio/web-design/Web-design-2.jpg'),
-  require('../assets/Portfolio/web-design/Web-design-4.jpg'),
-  require('../assets/Portfolio/web-design/Web-design-3.jpg'),
-  require('../assets/Portfolio/web-design/Web-design-10.jpg'),
-  require('../assets/Portfolio/web-design/Web-design-5-1.jpg'),
-  require('../assets/Portfolio/web-design/Web-design-9.jpg'),
-  require('../assets/Portfolio/web-design/Web-design-6-1-scaled.jpg'),
-  require('../assets/Portfolio/web-design/Web-design-7.jpg'),
-  require('../assets/Portfolio/web-design/Web-design-8.jpg'),
-  require('../assets/Portfolio/web-design/Web-design-11.jpg'),
-  require('../assets/Portfolio/web-design/Web-design-12-1.jpg'),
-  require('../assets/Portfolio/web-design/Web-design-13-2-scaled.jpg'),
-  require('../assets/Portfolio/web-design/Web-design-1-1-scaled.jpg'),
-  require('../assets/Portfolio/web-design/Web-design-2-1-scaled.jpg'),
+  require('../assets/Portfolio/outdoor/outdoor-1.jpg'),
+  require('../assets/Portfolio/outdoor/outdoor-2.jpg'),
+  require('../assets/Portfolio/outdoor/outdoor-3.jpg'),
+  require('../assets/Portfolio/outdoor/outdoor-4.jpg'),
+  require('../assets/Portfolio/outdoor/outdoor-5.jpg'),
+  require('../assets/Portfolio/outdoor/outdoor-6.jpg'),
+  require('../assets/Portfolio/outdoor/outdoor-7.jpg'),
+  require('../assets/Portfolio/outdoor/outdoor-8.jpg'),
 ];
 
-const WebsiteDesign = () => {
+const OutdoorAdv = () => {
   const [selectedIndex, setSelectedIndex] = useState(null);
   const [zoom, setZoom] = useState(1);
 
@@ -122,4 +116,4 @@ const WebsiteDesign = () => {
   );
 };
 
-export default WebsiteDesign;
+export default OutdoorAdv;

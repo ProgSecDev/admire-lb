@@ -4,66 +4,66 @@ import { motion, AnimatePresence } from 'framer-motion';
 
 const media = [
   {
-    image: require('../assets/Services/3d-modeling/cysense-logo.jpg'),
+    image: require('../assets/Portfolio/3d-modeling/cysense-logo.jpg'),
     images: [
-      require('../assets/Services/3d-modeling/cysense-folder/16.jpg'),
-      require('../assets/Services/3d-modeling/cysense-folder/14.jpg'),
-      require('../assets/Services/3d-modeling/cysense-folder/13-scaled.jpg'),
-      require('../assets/Services/3d-modeling/cysense-folder/12-scaled.jpg'),
-      require('../assets/Services/3d-modeling/cysense-folder/10-scaled.jpg'),
-      require('../assets/Services/3d-modeling/cysense-folder/2.jpg'),
-      require('../assets/Services/3d-modeling/cysense-folder/1-1.jpg'),
-      require('../assets/Services/3d-modeling/cysense-folder/4.jpg'),
-      require('../assets/Services/3d-modeling/cysense-folder/9-scaled.jpg'),
-      require('../assets/Services/3d-modeling/cysense-folder/7-scaled.jpg'),
-      require('../assets/Services/3d-modeling/cysense-folder/6-scaled.jpg'),
-      require('../assets/Services/3d-modeling/cysense-folder/8-scaled.jpg'),
+      require('../assets/Portfolio/3d-modeling/cysense-folder/16.jpg'),
+      require('../assets/Portfolio/3d-modeling/cysense-folder/14.jpg'),
+      require('../assets/Portfolio/3d-modeling/cysense-folder/13-scaled.jpg'),
+      require('../assets/Portfolio/3d-modeling/cysense-folder/12-scaled.jpg'),
+      require('../assets/Portfolio/3d-modeling/cysense-folder/10-scaled.jpg'),
+      require('../assets/Portfolio/3d-modeling/cysense-folder/2.jpg'),
+      require('../assets/Portfolio/3d-modeling/cysense-folder/1-1.jpg'),
+      require('../assets/Portfolio/3d-modeling/cysense-folder/4.jpg'),
+      require('../assets/Portfolio/3d-modeling/cysense-folder/9-scaled.jpg'),
+      require('../assets/Portfolio/3d-modeling/cysense-folder/7-scaled.jpg'),
+      require('../assets/Portfolio/3d-modeling/cysense-folder/6-scaled.jpg'),
+      require('../assets/Portfolio/3d-modeling/cysense-folder/8-scaled.jpg'),
     ]
   },
   {
-    image: require('../assets/Services/3d-modeling/twin-tower-LANDSCAPE-3-01.jpg'),
+    image: require('../assets/Portfolio/3d-modeling/twin-tower-LANDSCAPE-3-01.jpg'),
     images: [
-      require('../assets/Services/3d-modeling/twin-tower-folder/1-1.jpg'),
-      require('../assets/Services/3d-modeling/twin-tower-folder/2.jpg'),
-      require('../assets/Services/3d-modeling/twin-tower-folder/3-2.jpg'),
-      require('../assets/Services/3d-modeling/twin-tower-folder/4-1.jpg'),
-      require('../assets/Services/3d-modeling/twin-tower-folder/5-1.jpg'),
-      require('../assets/Services/3d-modeling/twin-tower-folder/6-1.jpg'),
-      require('../assets/Services/3d-modeling/twin-tower-folder/7-2.jpg'),
-      require('../assets/Services/3d-modeling/twin-tower-folder/8-2.jpg'),
-      require('../assets/Services/3d-modeling/twin-tower-folder/9-1.jpg'),
-      require('../assets/Services/3d-modeling/twin-tower-folder/10.jpg')
+      require('../assets/Portfolio/3d-modeling/twin-tower-folder/1-1.jpg'),
+      require('../assets/Portfolio/3d-modeling/twin-tower-folder/2.jpg'),
+      require('../assets/Portfolio/3d-modeling/twin-tower-folder/3-2.jpg'),
+      require('../assets/Portfolio/3d-modeling/twin-tower-folder/4-1.jpg'),
+      require('../assets/Portfolio/3d-modeling/twin-tower-folder/5-1.jpg'),
+      require('../assets/Portfolio/3d-modeling/twin-tower-folder/6-1.jpg'),
+      require('../assets/Portfolio/3d-modeling/twin-tower-folder/7-2.jpg'),
+      require('../assets/Portfolio/3d-modeling/twin-tower-folder/8-2.jpg'),
+      require('../assets/Portfolio/3d-modeling/twin-tower-folder/9-1.jpg'),
+      require('../assets/Portfolio/3d-modeling/twin-tower-folder/10.jpg')
     ]
   },
   {
-    image: require('../assets/Services/3d-modeling/Sky-tower-Logo.jpg'),
+    image: require('../assets/Portfolio/3d-modeling/Sky-tower-Logo.jpg'),
     images: [
-      require('../assets/Services/3d-modeling/sky-tower-folder/1-3.jpg'),
-      require('../assets/Services/3d-modeling/sky-tower-folder/2-2.jpg'),
-      require('../assets/Services/3d-modeling/sky-tower-folder/3-4.jpg'),
-      require('../assets/Services/3d-modeling/sky-tower-folder/4-3.jpg'),
-      require('../assets/Services/3d-modeling/sky-tower-folder/5-3.jpg'),
-      require('../assets/Services/3d-modeling/sky-tower-folder/6-3.jpg'),
-      require('../assets/Services/3d-modeling/sky-tower-folder/7-4.jpg'),
-      require('../assets/Services/3d-modeling/sky-tower-folder/8-4.jpg')
+      require('../assets/Portfolio/3d-modeling/sky-tower-folder/1-3.jpg'),
+      require('../assets/Portfolio/3d-modeling/sky-tower-folder/2-2.jpg'),
+      require('../assets/Portfolio/3d-modeling/sky-tower-folder/3-4.jpg'),
+      require('../assets/Portfolio/3d-modeling/sky-tower-folder/4-3.jpg'),
+      require('../assets/Portfolio/3d-modeling/sky-tower-folder/5-3.jpg'),
+      require('../assets/Portfolio/3d-modeling/sky-tower-folder/6-3.jpg'),
+      require('../assets/Portfolio/3d-modeling/sky-tower-folder/7-4.jpg'),
+      require('../assets/Portfolio/3d-modeling/sky-tower-folder/8-4.jpg')
     ]
   },
   {
-    image: require('../assets/Services/3d-modeling/royal-hills.jpg'),
+    image: require('../assets/Portfolio/3d-modeling/royal-hills.jpg'),
     images: [
-      require('../assets/Services/3d-modeling/royal-hills-folder/1-4.jpg'),
-      require('../assets/Services/3d-modeling/royal-hills-folder/2-3.jpg'),
-      require('../assets/Services/3d-modeling/royal-hills-folder/3-5.jpg'),
-      require('../assets/Services/3d-modeling/royal-hills-folder/4-4.jpg'),
-      require('../assets/Services/3d-modeling/royal-hills-folder/5-4.jpg'),
-      require('../assets/Services/3d-modeling/royal-hills-folder/6-4.jpg'),
-      require('../assets/Services/3d-modeling/royal-hills-folder/7-5.jpg'),
-      require('../assets/Services/3d-modeling/royal-hills-folder/8-5.jpg'),
-      require('../assets/Services/3d-modeling/royal-hills-folder/9-2.jpg'),
-      require('../assets/Services/3d-modeling/royal-hills-folder/10-1.jpg'),
-      require('../assets/Services/3d-modeling/royal-hills-folder/11.jpg'),
-      require('../assets/Services/3d-modeling/royal-hills-folder/12.jpg'),
-      require('../assets/Services/3d-modeling/royal-hills-folder/13.jpg')
+      require('../assets/Portfolio/3d-modeling/royal-hills-folder/1-4.jpg'),
+      require('../assets/Portfolio/3d-modeling/royal-hills-folder/2-3.jpg'),
+      require('../assets/Portfolio/3d-modeling/royal-hills-folder/3-5.jpg'),
+      require('../assets/Portfolio/3d-modeling/royal-hills-folder/4-4.jpg'),
+      require('../assets/Portfolio/3d-modeling/royal-hills-folder/5-4.jpg'),
+      require('../assets/Portfolio/3d-modeling/royal-hills-folder/6-4.jpg'),
+      require('../assets/Portfolio/3d-modeling/royal-hills-folder/7-5.jpg'),
+      require('../assets/Portfolio/3d-modeling/royal-hills-folder/8-5.jpg'),
+      require('../assets/Portfolio/3d-modeling/royal-hills-folder/9-2.jpg'),
+      require('../assets/Portfolio/3d-modeling/royal-hills-folder/10-1.jpg'),
+      require('../assets/Portfolio/3d-modeling/royal-hills-folder/11.jpg'),
+      require('../assets/Portfolio/3d-modeling/royal-hills-folder/12.jpg'),
+      require('../assets/Portfolio/3d-modeling/royal-hills-folder/13.jpg')
     ]
   }
 ];
