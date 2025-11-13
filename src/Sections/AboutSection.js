@@ -23,9 +23,9 @@ export default function AboutSection() {
             w-full h-auto object-contain object-right
             max-h-[85vh] mt-[clamp(4rem,6vh,6rem)]
             xl:max-h-[80vh] xl:-translate-y-[58%]
-            laptop:max-h-[80vh] laptop:-translate-y-[63%]
-            hd:max-h-[60vh] hd:-translate-y-[70%] hd:-translate-x-[10%]
-            2k:max-h-[75vh] 2k:-translate-y-[36%]
+            laptop:max-h-[80vh] laptop:-translate-y-[65%]
+            hd:max-h-[55vh] hd:-translate-y-[69%] hd:-translate-x-[10%]
+            2k:max-h-[75vh] 2k:-translate-y-[38%]
           "
         />
       </div>
